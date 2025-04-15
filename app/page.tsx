@@ -75,6 +75,59 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Plurality Tokyo Week 特別セクション */}
+        <section className="bg-gradient-to-r from-lime-600 to-lime-800 py-12 rounded-xl overflow-hidden my-20 relative">
+          <div className="absolute top-0 right-0 w-40 h-40 bg-lime-300 rounded-full blur-3xl opacity-20 transform translate-x-20 -translate-y-20"></div>
+          <div className="absolute bottom-0 left-0 w-40 h-40 bg-lime-300 rounded-full blur-3xl opacity-20 transform -translate-x-20 translate-y-20"></div>
+
+          <div className="mx-auto max-w-4xl px-4 lg:px-6 relative z-10">
+            <div className="flex flex-col md:flex-row md:items-center gap-8">
+              <div className="md:flex-1">
+                <div className="inline-block bg-black text-lime-400 px-3 py-1 rounded-full text-sm font-bold mb-4">
+                  特別イベント
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Plurality Tokyo Week 2024</h2>
+                <p className="text-white mb-6">
+                  5月6日〜12日、Audrey Tang と E. Glen Weyl を迎え、東京各地でプルーラリティについての対話を行います。東京大学、慶應義塾大学、SusHi Tech Tokyo、東京カレッジでのセッションなど、特別な1週間をお見逃しなく。
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Button asChild className="bg-black text-white hover:bg-gray-800">
+                    <Link href="/plurality-week">
+                      詳細を見る
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                    <Link href="#" target="_blank" rel="noopener noreferrer">
+                      参加登録
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="md:flex-1 flex justify-center">
+                <div className="bg-white rounded-lg p-4 transform rotate-3 shadow-xl w-full max-w-xs">
+                  <div className="bg-gray-100 p-4 rounded">
+                    <h3 className="text-black font-bold text-lg mb-2">Tokyo College Conference</h3>
+                    <p className="text-gray-700 text-sm mb-3">
+                      5月12日 15:00〜17:45
+                    </p>
+                    <div className="flex items-center text-gray-600 text-sm mb-1">
+                      <CalendarDays className="w-4 h-4 mr-2" />
+                      <span>2024年5月12日</span>
+                    </div>
+                    <div className="flex items-center text-gray-600 text-sm">
+                      <Users className="w-4 h-4 mr-2" />
+                      <span>Audrey Tang, Glen Weyl 他</span>
+                    </div>
+                    <div className="mt-4 bg-lime-100 text-lime-800 px-3 py-1 rounded text-xs font-bold inline-block">
+                      特別セッション
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Plurality Book Section */}
         <section className="bg-white text-black py-12 rounded-xl overflow-hidden my-12">
           <div className="mx-auto max-w-4xl px-4 lg:px-6">

@@ -9,7 +9,19 @@ export function getContentBySlug<T extends Content>(
     directory: string,
     slug: string
 ): T {
-    const fullPath = path.join(contentDirectory, directory, `${slug}.mdx`)
+    // .mdxファイルを優先的に確認し、なければ.mdファイルを確認
+    const mdxPath = path.join(contentDirectory, directory, `${slug}.mdx`)
+    const mdPath = path.join(contentDirectory, directory, `${slug}.md`)
+
+    let fullPath = ''
+    if (fs.existsSync(mdxPath)) {
+        fullPath = mdxPath
+    } else if (fs.existsSync(mdPath)) {
+        fullPath = mdPath
+    } else {
+        throw new Error(`File not found for slug: ${slug}`)
+    }
+
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
@@ -24,12 +36,16 @@ export function getContentBySlug<T extends Content>(
 
 export function getAllContent<T extends Content>(directory: string): T[] {
     const directoryPath = path.join(contentDirectory, directory)
+    if (!fs.existsSync(directoryPath)) {
+        return []
+    }
+
     const files = fs.readdirSync(directoryPath)
 
     return files
-        .filter((file) => file.endsWith('.mdx'))
+        .filter((file) => file.endsWith('.mdx') || file.endsWith('.md'))
         .map((file) => {
-            const slug = file.replace(/\.mdx$/, '')
+            const slug = file.replace(/\.(mdx|md)$/, '')
             return getContentBySlug<T>(directory, slug)
         })
         .sort((a, b) => {

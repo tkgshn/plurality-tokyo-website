@@ -49,6 +49,8 @@ export const EventList: React.FC<EventListProps> = ({
 
     const renderEventCard = (event: EventContent) => {
         const eventDate = new Date(event.metadata.date);
+        const coverImage = event.metadata.coverImage || (event.metadata.image ? event.metadata.image : null);
+        const fallbackImage = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000";
 
         return (
             <Link
@@ -56,16 +58,14 @@ export const EventList: React.FC<EventListProps> = ({
                 href={`/events/${event.metadata.slug}`}
                 className="block p-6 border border-gray-700 rounded-lg hover:shadow-lg hover:border-gray-500 transition-all duration-200 bg-gray-900"
             >
-                {event.metadata.image && (
-                    <div className="relative w-full h-40 mb-4 overflow-hidden rounded">
-                        <Image
-                            src={event.metadata.image}
-                            alt={event.metadata.title}
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-                )}
+                <div className="relative w-full h-40 mb-4 overflow-hidden rounded">
+                    <Image
+                        src={coverImage || fallbackImage}
+                        alt={event.metadata.title}
+                        fill
+                        className="object-cover"
+                    />
+                </div>
 
                 <h2 className="text-xl font-semibold mb-2 text-lime-400">{event.metadata.title}</h2>
 
@@ -86,8 +86,27 @@ export const EventList: React.FC<EventListProps> = ({
 
                 <p className="text-gray-300 mb-4 text-sm">{event.metadata.description}</p>
 
+                {/* スピーカー表示 */}
+                {event.metadata.speakers && event.metadata.speakers.length > 0 && (
+                    <div className="mt-4">
+                        <h3 className="text-sm font-medium text-gray-400 mb-2">Speakers</h3>
+                        <div className="flex -space-x-2 overflow-hidden">
+                            {event.metadata.speakers.map((speaker, index) => (
+                                <div key={index} className="relative inline-block w-8 h-8 rounded-full overflow-hidden border border-gray-800">
+                                    <Image
+                                        src={`/images/speakers/${speaker.name.toLowerCase().replace(/\s+/g, '-')}.jpg`}
+                                        alt={speaker.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 {event.metadata.tags && event.metadata.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mt-4">
                         {event.metadata.tags.map((tag) => (
                             <span
                                 key={tag}
