@@ -9,8 +9,9 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://plurality.tokyo'),
   title: "Plurality Tokyo",
-  description: "A community influenced by the Plurality movement, based in Tokyo, Japan.",
+  description: "Plurality Tokyo - Building a better future through digital democracy",
   generator: 'v0.dev'
 }
 

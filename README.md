@@ -1,6 +1,59 @@
 # Plurality Tokyo Website
 
-Plurality Tokyo の公式ウェブサイトです。多様性と包括性を重視したコミュニティイベントの情報を発信します。
+Plurality Tokyo のウェブサイトプロジェクトです。Next.js 14 を使用して構築されています。
+
+## 開発環境のセットアップ
+
+```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
+npm run dev
+```
+
+## プロジェクト構造
+
+```
+.
+├── app/              # Next.jsのアプリケーションコード
+├── components/       # 再利用可能なコンポーネント
+├── content/         # マークダウンコンテンツ
+│   ├── articles/    # 記事のマークダウンファイル
+│   └── events/      # イベントのマークダウンファイル
+├── lib/             # ユーティリティ関数
+└── public/          # 静的ファイル
+    └── images/      # 画像ファイル
+```
+
+## イベントの追加方法
+
+1. `content/events/` ディレクトリに新しいマークダウンファイルを作成
+2. 以下のフロントマターを含める：
+
+```markdown
+---
+title: イベントタイトル
+description: イベントの説明
+date: YYYY-MM-DD
+coverImage: /images/events/[event-name]/cover.jpg
+---
+
+イベントの本文をここに記述...
+```
+
+3. イベントの画像を `public/images/events/[event-name]/` に配置
+
+## 必要なパッケージ
+
+- next-themes: ダークモードサポート
+- react-markdown: マークダウンレンダリング
+- gray-matter: マークダウンのフロントマター解析
+
+## 注意事項
+
+- イベント画像が見つからない場合は、デフォルトのプレースホルダー画像が使用されます
+- 本番環境にデプロイする前に、必ず実際の画像ファイルを配置してください
 
 ## 技術スタック
 

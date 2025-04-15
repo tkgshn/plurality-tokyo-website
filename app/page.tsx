@@ -32,6 +32,24 @@ export default function Home() {
     )
     .slice(0, 3) // Get only the 3 most recent upcoming events
 
+  // イベントセクションの画像パスを一時的にUnsplashのプレースホルダー画像に変更
+  const events = [
+    {
+      title: 'Glen in Japan 2024',
+      date: '2024-03-15',
+      description: 'Glen Weylと共に...',
+      image: 'https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=2000&auto=format&fit=crop',
+      link: '/events/glen-in-japan-2024'
+    },
+    {
+      title: 'FTC Tokyo 2024',
+      date: '2024-04-20',
+      description: 'FTCカンファレンス...',
+      image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2000&auto=format&fit=crop',
+      link: '/events/ftc-tokyo-2024'
+    }
+  ];
+
   return (
     <div className="bg-black text-white min-h-screen">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
@@ -203,7 +221,7 @@ export default function Home() {
               <div key={event.metadata.slug} className="bg-gray-900 rounded-lg overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image
-                    src={event.metadata.cover_image_url || "/images/placeholder-event.jpg"}
+                    src="https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=2000&auto=format&fit=crop"
                     alt={event.metadata.title}
                     fill
                     className="object-cover"
@@ -250,16 +268,14 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {upcomingEvents.map((event) => (
                   <Card key={event.metadata.slug} className="bg-gray-900 border-gray-800 overflow-hidden">
-                    {event.metadata.cover_image_url && (
-                      <div className="h-48 relative">
-                        <Image
-                          src={event.metadata.cover_image_url}
-                          alt={event.metadata.title}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    )}
+                    <div className="relative h-48">
+                      <Image
+                        src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2000&auto=format&fit=crop"
+                        alt={event.metadata.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <CardContent className="p-6">
                       <div className="flex items-center text-gray-400 text-sm mb-3">
                         <CalendarDays className="h-4 w-4 mr-2" />
