@@ -1,0 +1,18 @@
+{
+    "LanguageSwitcher": {
+        "switchLanguage": "Switch language"
+    },
+    "Navigation": {
+        "home": "Home",
+        "about": "About",
+        "events": "Events",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "Common": {
+        "readMore": "Read more",
+        "viewAll": "View all",
+        "loading": "Loading...",
+        "error": "An error occurred"
+    }
+}

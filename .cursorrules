@@ -1,0 +1,66 @@
+{
+  "rules": {
+    "formatOnSave": true,
+    "formatOnType": true,
+    "autoImport": true,
+    "autoComplete": true,
+    "snippets": {
+      "component": {
+        "prefix": "comp",
+        "body": [
+          "import { FC } from 'react'",
+          "",
+          "interface ${1:ComponentName}Props {",
+          "  $2",
+          "}",
+          "",
+          "export const ${1:ComponentName}: FC<${1:ComponentName}Props> = ({ $3 }) => {",
+          "  return (",
+          "    <div>",
+          "      $4",
+          "    </div>",
+          "  )",
+          "}"
+        ]
+      },
+      "page": {
+        "prefix": "page",
+        "body": [
+          "import { Metadata } from 'next'",
+          "import { defaultMetadata } from '@/lib/metadata'",
+          "",
+          "export const metadata: Metadata = {",
+          "  ...defaultMetadata,",
+          "  title: '$1',",
+          "  description: '$2'",
+          "}",
+          "",
+          "export default function $3() {",
+          "  return (",
+          "    <main>",
+          "      $4",
+          "    </main>",
+          "  )",
+          "}"
+        ]
+      }
+    },
+    "linting": {
+      "eslint": true,
+      "prettier": true,
+      "typescript": true
+    },
+    "testing": {
+      "jest": true,
+      "cypress": true
+    },
+    "git": {
+      "autoCommit": false,
+      "branchPrefix": {
+        "feature": "feature/",
+        "bugfix": "bugfix/",
+        "hotfix": "hotfix/"
+      }
+    }
+  }
+}

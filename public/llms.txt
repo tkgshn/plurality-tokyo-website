@@ -1,0 +1,69 @@
+# LLMs.txt for Plurality Tokyo
+
+# Site Information
+title: Plurality Tokyo
+description: Plurality Tokyoは、多様性と包括性を重視したコミュニティイベントです。
+language: ja
+locale: ja_JP
+
+# Site Structure
+pages:
+  - path: /
+    title: ホーム
+    description: Plurality Tokyoのメインページ
+    priority: 1.0
+
+  - path: /about
+    title: 私たちについて
+    description: Plurality Tokyoの理念と目的
+    priority: 0.8
+
+  - path: /events
+    title: イベント
+    description: 開催予定のイベント一覧
+    priority: 0.9
+
+  - path: /speakers
+    title: スピーカー
+    description: イベントのスピーカー紹介
+    priority: 0.8
+
+  - path: /contact
+    title: お問い合わせ
+    description: お問い合わせフォーム
+    priority: 0.7
+
+# Content Guidelines
+content_types:
+  - type: event
+    description: イベント情報
+    fields:
+      - title: イベントタイトル
+      - date: 開催日
+      - location: 開催場所
+      - description: イベント説明
+      - speakers: スピーカー情報
+
+  - type: speaker
+    description: スピーカー情報
+    fields:
+      - name: 名前
+      - title: 肩書き
+      - bio: 経歴
+      - image: プロフィール画像
+
+# Keywords
+keywords:
+  - Plurality
+  - Tokyo
+  - イベント
+  - 多様性
+  - 包括性
+  - コミュニティ
+  - カンファレンス
+  - スピーカー
+  - セミナー
+
+# Update Frequency
+update_frequency: weekly
+last_updated: 2024-04-15
