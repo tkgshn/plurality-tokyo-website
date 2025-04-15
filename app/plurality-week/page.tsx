@@ -19,7 +19,7 @@ const events = [
         location: "東京都内",
         description: "SusHi Tech Tokyoでの特別コンテンツ「Focus on Plurality」セッション",
         url: "https://sushitech-startup.metro.tokyo.lg.jp/en/focus-on/",
-        image: "/images/plurality-week/sushitech.jpg", // この画像は後で追加
+        bgColor: "from-purple-500/30 to-purple-700/30",
     },
     {
         id: "ai-japan",
@@ -29,7 +29,7 @@ const events = [
         description: "AIと民主主義の未来についての特別講演会",
         url: "https://peatix.com/event/4337235",
         secondaryUrl: "https://www.ai-japan.org/news20250413",
-        image: "/images/plurality-week/ai-japan.jpg", // この画像は後で追加
+        bgColor: "from-blue-500/30 to-blue-700/30",
     },
     {
         id: "keio",
@@ -38,7 +38,7 @@ const events = [
         location: "慶應義塾大学三田キャンパス",
         description: "プルーラリティと日本社会の可能性について議論するセッション",
         url: "https://lu.ma/ienn4p0k",
-        image: "/images/plurality-week/keio.jpg", // この画像は後で追加
+        bgColor: "from-red-500/30 to-red-700/30",
     },
     {
         id: "tokyo-college",
@@ -96,7 +96,7 @@ const events = [
                 title: "Adjourn"
             }
         ],
-        image: "/images/plurality-week/tokyo-college.jpg", // この画像は後で追加
+        bgColor: "from-lime-500/30 to-lime-700/30",
     }
 ];
 
@@ -158,8 +158,8 @@ export default function PluralityWeekPage() {
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     {/* イベント画像 */}
                                     <div className="md:col-span-1 h-64 md:h-full relative">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-lime-500/30 to-lime-700/30"></div>
-                                        <div className="absolute inset-0 flex items-center justify-center text-white text-xl font-bold">
+                                        <div className={`absolute inset-0 bg-gradient-to-br ${event.bgColor || 'from-lime-500/30 to-lime-700/30'}`}></div>
+                                        <div className="absolute inset-0 flex items-center justify-center text-white text-xl font-bold p-4 text-center">
                                             {event.title}
                                         </div>
                                     </div>

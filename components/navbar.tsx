@@ -20,7 +20,6 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "Articles", href: "/articles" },
     { name: "Events", href: "/events" },
-    { name: "Plurality Week", href: "/plurality-week" },
     { name: "About", href: "/about" },
   ]
 
@@ -44,8 +43,7 @@ export default function Navbar() {
                   href={item.href}
                   className={cn(
                     "px-3 py-2 text-sm font-medium hover:text-gray-300",
-                    pathname === item.href ? "text-white" : "text-gray-300",
-                    item.href === "/plurality-week" ? "text-lime-400 hover:text-lime-300" : ""
+                    pathname === item.href ? "text-white" : "text-gray-300"
                   )}
                 >
                   {item.name}
@@ -79,8 +77,7 @@ export default function Navbar() {
                 href={item.href}
                 className={cn(
                   "block px-3 py-2 text-base font-medium",
-                  pathname === item.href ? "text-white" : "text-gray-300",
-                  item.href === "/plurality-week" ? "text-lime-400 hover:text-lime-300" : ""
+                  pathname === item.href ? "text-white" : "text-gray-300"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >

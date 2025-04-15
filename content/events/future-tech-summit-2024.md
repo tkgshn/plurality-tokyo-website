@@ -1,9 +1,9 @@
 ---
 title: Future Tech Summit 2024
-description: 最新のテクノロジーとプルーラリティの未来を探る国際サミット
-date: 2024-12-10
-end_date: 2024-12-12
-location: 東京、六本木ヒルズ
+description: International summit exploring the future of technology and plurality
+date: 2025-12-10
+end_date: 2025-12-12
+location: Tokyo, Roppongi Hills
 coverImage: /images/events/future-tech-summit-2024/cover.jpg
 speakers:
   - name: Glen Weyl
@@ -13,26 +13,26 @@ speakers:
   - name: Vitalik Buterin
     role: Co-founder, Ethereum
 tags:
-  - テクノロジー
-  - プルーラリティ
-  - 国際会議
+  - Technology
+  - Plurality
+  - International Conference
 ---
 
 # Future Tech Summit 2024
 
-Plurality Tokyo は、2024 年 12 月に開催される「Future Tech Summit 2024」を主催します。このサミットでは、最新のテクノロジーとプルーラリティの未来について議論します。
+Plurality Tokyo is hosting the "Future Tech Summit 2024" in December 2024. This summit will discuss the latest technologies and the future of plurality.
 
-## イベント概要
+## Event Overview
 
-Future Tech Summit 2024 は、テクノロジーの未来とプルーラリティの概念が社会にどのような影響を与えるかを探る 3 日間の国際会議です。世界中から専門家が集まり、講演、パネルディスカッション、ワークショップを通じて知識を共有します。
+Future Tech Summit 2024 is a three-day international conference exploring how emerging technologies and the concept of plurality will impact society. Experts from around the world will gather to share knowledge through keynotes, panel discussions, and workshops.
 
-## 主要トピック
+## Key Topics
 
-- デジタル民主主義の未来
-- 分散型テクノロジーと社会インフラ
-- プルーラリティと共創社会
-- AI と人間中心の技術開発
+- The future of digital democracy
+- Decentralized technologies and social infrastructure
+- Plurality and co-creative society
+- AI and human-centered technology development
 
-## 参加方法
+## How to Participate
 
-参加登録は 2024 年 9 月から開始予定です。詳細は後日発表いたします。
+Registration will open in September 2024. More details will be announced soon.

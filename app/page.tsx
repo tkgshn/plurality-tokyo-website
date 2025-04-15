@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { getAllArticles } from "@/lib/articles"
 import { CurationItem } from "@/components/CurationItem"
 import PageHeader from "@/components/page-header"
-import { Globe, Users, Calendar, ArrowRight, CalendarDays, ExternalLink } from "lucide-react"
+import { Globe, Users, Calendar, ArrowRight, CalendarDays, ExternalLink, Building2, Lightbulb, BookOpen, Microscope, BarChart3 } from "lucide-react"
 import { getAllEvents } from "@/lib/content"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -97,8 +97,8 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                    <Link href="#" target="_blank" rel="noopener noreferrer">
-                      参加登録
+                    <Link href="https://discord.com/invite/y4QXe6KtHh" target="_blank" rel="noopener noreferrer">
+                      コミュニティに参加
                     </Link>
                   </Button>
                 </div>
@@ -362,90 +362,110 @@ export default function Home() {
         )}
 
         {/* Ecosystem Section */}
-        <section className="bg-black text-white py-24">
+        <section className="bg-gray-950 text-white py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold mb-6">Our Ecosystem</h2>
             <p className="text-gray-300 mb-12 max-w-3xl">
               Plurality Tokyo connects with a global network of organizations and initiatives focused on innovative social technologies, digital democracy, and community governance.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-              <div className="bg-gray-900 p-6 rounded-lg">
-                <Link href="https://plurality.institute/" target="_blank" rel="noopener noreferrer" className="block">
-                  <h3 className="font-bold mb-2 hover:text-lime-400 flex items-center">
-                    Plurality Institute
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </h3>
-                  <p className="text-sm text-gray-400">Global organization researching and promoting Plurality principles.</p>
-                </Link>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {/* Plurality Institute */}
+              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-lime-500/20 transition-all duration-300 border-t-4 border-lime-500 group">
+                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
+                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-lime-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
+                    <Building2 className="w-12 h-12 text-lime-600" />
+                  </div>
+                </div>
+                <div className="px-6 pb-6">
+                  <Link
+                    href="https://plurality.institute/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="font-bold mb-2 group-hover:text-lime-400 transition-colors duration-300">Plurality Institute</h3>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Global organization researching and promoting Plurality principles.</p>
+                  </Link>
+                </div>
               </div>
 
-              <div className="bg-gray-900 p-6 rounded-lg">
-                <Link href="https://www.radicalxchange.org/" target="_blank" rel="noopener noreferrer" className="block">
-                  <h3 className="font-bold mb-2 hover:text-lime-400 flex items-center">
-                    RadicalxChange
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </h3>
-                  <p className="text-sm text-gray-400">Community exploring innovative social technologies for collective action.</p>
-                </Link>
+              {/* RadicalxChange */}
+              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 border-t-4 border-blue-500 group">
+                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
+                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
+                    <Lightbulb className="w-12 h-12 text-blue-600" />
+                  </div>
+                </div>
+                <div className="px-6 pb-6">
+                  <Link
+                    href="https://www.radicalxchange.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="font-bold mb-2 group-hover:text-blue-400 transition-colors duration-300">RadicalxChange</h3>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Community exploring innovative social technologies for collective action.</p>
+                  </Link>
+                </div>
               </div>
 
-              <div className="bg-gray-900 p-6 rounded-lg">
-                <Link href="https://fundingthecommons.io/" target="_blank" rel="noopener noreferrer" className="block">
-                  <h3 className="font-bold mb-2 hover:text-lime-400 flex items-center">
-                    Funding the Commons
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </h3>
-                  <p className="text-sm text-gray-400">Initiative exploring new funding models for public goods.</p>
-                </Link>
+              {/* Funding the Commons */}
+              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 border-t-4 border-purple-500 group">
+                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
+                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
+                    <BookOpen className="w-12 h-12 text-purple-600" />
+                  </div>
+                </div>
+                <div className="px-6 pb-6">
+                  <Link
+                    href="https://fundingthecommons.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="font-bold mb-2 group-hover:text-purple-400 transition-colors duration-300">Funding the Commons</h3>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Initiative exploring new funding models for public goods.</p>
+                  </Link>
+                </div>
               </div>
 
-              <div className="bg-gray-900 p-6 rounded-lg">
-                <Link href="https://scrapbox.io/hirotaiyohamada/Welcome_to_the_Decentralized_Science_(DeSci)_Tokyo_2023_Conference:_A_Brief_History_of_DeSci_Tokyo" target="_blank" rel="noopener noreferrer" className="block">
-                  <h3 className="font-bold mb-2 hover:text-lime-400 flex items-center">
-                    DeSci Tokyo
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </h3>
-                  <p className="text-sm text-gray-400">Organization building decentralized infrastructure for scientific research.</p>
-                </Link>
+              {/* DeSci Tokyo */}
+              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 border-t-4 border-green-500 group">
+                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
+                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-green-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
+                    <Microscope className="w-12 h-12 text-green-600" />
+                  </div>
+                </div>
+                <div className="px-6 pb-6">
+                  <Link
+                    href="https://scrapbox.io/hirotaiyohamada/Welcome_to_the_Decentralized_Science_(DeSci)_Tokyo_2023_Conference:_A_Brief_History_of_DeSci_Tokyo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="font-bold mb-2 group-hover:text-green-400 transition-colors duration-300">DeSci Tokyo</h3>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Organization building decentralized infrastructure for scientific research.</p>
+                  </Link>
+                </div>
               </div>
 
-              <div className="bg-gray-900 p-6 rounded-lg">
-                <Link href="https://smartnews-smri.com/research/research-2601/" target="_blank" rel="noopener noreferrer" className="block">
-                  <h3 className="font-bold mb-2 hover:text-lime-400 flex items-center">
-                    SMRI Digital Democracy Unit
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </h3>
-                  <p className="text-sm text-gray-400">Research unit exploring the implementation and scalability of digital democracy mechanisms in Japan.</p>
-                </Link>
+              {/* SMRI Digital Democracy Unit */}
+              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 border-t-4 border-orange-500 group">
+                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
+                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-orange-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
+                    <BarChart3 className="w-12 h-12 text-orange-600" />
+                  </div>
+                </div>
+                <div className="px-6 pb-6">
+                  <Link
+                    href="https://smartnews-smri.com/research/research-2601/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="font-bold mb-2 group-hover:text-orange-400 transition-colors duration-300">SMRI Digital Democracy Unit</h3>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Research unit exploring the implementation and scalability of digital democracy mechanisms in Japan.</p>
+                  </Link>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Join Community Section */}
-        <section className="bg-lime-400 text-black py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
-            <p className="text-gray-800 mb-10 max-w-2xl mx-auto">
-              Connect with other members interested in Plurality, stay updated about upcoming events, and participate in discussions.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-black text-white hover:bg-gray-800">
-                <Link href="https://discord.com/invite/y4QXe6KtHh" target="_blank" rel="noopener noreferrer">
-                  Join Discord
-                </Link>
-              </Button>
-              <Button asChild className="bg-black text-white hover:bg-gray-800">
-                <Link href="/events">
-                  Explore Events
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  )
-}

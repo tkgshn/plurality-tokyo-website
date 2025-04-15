@@ -1,42 +1,42 @@
 ---
-title: プルーラリティ実践ワークショップ 2024
-description: デジタル民主主義の実践的手法を学ぶワークショップ
+title: Plurality Practice Workshop 2024
+description: Workshop for learning practical methods of digital democracy
 date: 2024-08-15
 end_date: 2024-08-16
-location: 東京、渋谷
+location: Tokyo, Shibuya
 coverImage: /images/events/plurality-workshop-2024/cover.jpg
 speakers:
   - name: Glen Weyl
     role: Founder, Plurality Institute
 tags:
-  - ワークショップ
-  - 実践
-  - デジタル民主主義
+  - Workshop
+  - Practice
+  - Digital Democracy
 ---
 
-# プルーラリティ実践ワークショップ 2024
+# Plurality Practice Workshop 2024
 
-Plurality Tokyo では、2024 年 8 月に「プルーラリティ実践ワークショップ」を開催します。このワークショップでは、デジタル民主主義の実践的な手法について学びます。
+Plurality Tokyo will host the "Plurality Practice Workshop" in August 2024. This workshop will teach practical methods of digital democracy.
 
-## ワークショップの目的
+## Workshop Objectives
 
-このワークショップの目的は、プルーラリティの概念を実際のプロジェクトや組織に適用する方法を参加者に提供することです。理論的な理解だけでなく、実践的なスキルとツールを身につけることができます。
+The purpose of this workshop is to provide participants with methods to apply the concept of plurality to their actual projects and organizations. Participants will gain not only theoretical understanding but also practical skills and tools.
 
-## 対象者
+## Target Audience
 
-- コミュニティ運営者
-- 地方自治体職員
-- デジタル民主主義に興味のある開発者
-- 社会起業家
-- NPO/NGO 関係者
+- Community managers
+- Local government officials
+- Developers interested in digital democracy
+- Social entrepreneurs
+- NPO/NGO staff
 
-## プログラム内容
+## Program Content
 
-- プルーラリティの基本概念のおさらい
-- 事例研究：成功した実装例
-- ハンズオン：デジタルツールの使い方
-- グループワーク：自分たちのコンテキストでの適用計画
+- Review of basic plurality concepts
+- Case studies: Successful implementations
+- Hands-on: How to use digital tools
+- Group work: Application planning in your own context
 
-## 参加方法
+## How to Participate
 
-参加申し込みは 2024 年 6 月から開始予定です。定員は 30 名で、早めの申し込みをお勧めします。
+Registration will open in June 2024. Capacity is limited to 30 participants, so early registration is recommended.
