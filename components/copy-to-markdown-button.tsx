@@ -22,8 +22,8 @@ export const CopyToMarkdownButton: React.FC<CopyToMarkdownButtonProps> = ({ mark
                 navigator.clipboard.writeText(markdown)
             }}
         >
-            <ClipboardCopy className="h-4 w-4" />
-            <span>マークダウンとしてコピー</span>
+            <ClipboardCopy className="h-4 w-4 text-white" />
+            <span>Copy as Markdown</span>
         </Button>
     )
 }

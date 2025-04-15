@@ -4,10 +4,10 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { getAllArticles } from "@/lib/articles"
 import { CurationItem } from "@/components/CurationItem"
-import PageHeader from "@/components/page-header"
 import { Globe, Users, Calendar, ArrowRight, CalendarDays, ExternalLink, Building2, Lightbulb, BookOpen, Microscope, BarChart3 } from "lucide-react"
 import { getAllEvents } from "@/lib/content"
 import { Card, CardContent } from "@/components/ui/card"
+import { EventList } from "@/components/EventList"
 
 export const metadata: Metadata = {
   title: "Plurality Tokyo",
@@ -75,52 +75,63 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Plurality Tokyo Week 特別セクション */}
-        <section className="bg-gradient-to-r from-lime-600 to-lime-800 py-12 rounded-xl overflow-hidden my-20 relative">
-          <div className="absolute top-0 right-0 w-40 h-40 bg-lime-300 rounded-full blur-3xl opacity-20 transform translate-x-20 -translate-y-20"></div>
-          <div className="absolute bottom-0 left-0 w-40 h-40 bg-lime-300 rounded-full blur-3xl opacity-20 transform -translate-x-20 translate-y-20"></div>
+        {/* Plurality Tokyo Week Special Section */}
+        <section className="bg-gray-900 py-16 rounded-3xl overflow-hidden my-20 relative">
+          <div className="absolute inset-0">
+            <Image
+              src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2688&auto=format&fit=crop"
+              alt="Tokyo cityscape at night"
+              fill
+              className="object-cover opacity-20"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
 
-          <div className="mx-auto max-w-4xl px-4 lg:px-6 relative z-10">
-            <div className="flex flex-col md:flex-row md:items-center gap-8">
+          <div className="mx-auto max-w-6xl px-4 lg:px-6 relative z-10">
+            <div className="flex flex-col md:flex-row md:items-center gap-10">
               <div className="md:flex-1">
-                <div className="inline-block bg-black text-lime-400 px-3 py-1 rounded-full text-sm font-bold mb-4">
-                  特別イベント
+                <div className="inline-block bg-white text-black px-4 py-1 rounded-full text-sm font-bold mb-4">
+                  Special Event
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Plurality Tokyo Week 2024</h2>
-                <p className="text-white mb-6">
-                  5月6日〜12日、Audrey Tang と E. Glen Weyl を迎え、東京各地でプルーラリティについての対話を行います。東京大学、慶應義塾大学、SusHi Tech Tokyo、東京カレッジでのセッションなど、特別な1週間をお見逃しなく。
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Tokyo Plurality Week 2025</h2>
+                <p className="text-gray-300 mb-8 max-w-xl leading-relaxed">
+                  From May 6th to 12th, join us for a week of dialogue on plurality with Audrey Tang and E. Glen Weyl across Tokyo. Don't miss this special week featuring sessions at the University of Tokyo, Keio University, SusHi Tech Tokyo, and Tokyo College.
                 </p>
-                <div className="flex flex-wrap gap-3">
-                  <Button asChild className="bg-black text-white hover:bg-gray-800">
+                <div className="flex flex-wrap gap-4">
+                  <Button asChild className="bg-white text-black hover:bg-gray-200">
                     <Link href="/plurality-week">
-                      詳細を見る
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                    <Link href="https://discord.com/invite/y4QXe6KtHh" target="_blank" rel="noopener noreferrer">
-                      コミュニティに参加
+                      View Details
                     </Link>
                   </Button>
                 </div>
               </div>
-              <div className="md:flex-1 flex justify-center">
-                <div className="bg-white rounded-lg p-4 transform rotate-3 shadow-xl w-full max-w-xs">
-                  <div className="bg-gray-100 p-4 rounded">
-                    <h3 className="text-black font-bold text-lg mb-2">Tokyo College Conference</h3>
-                    <p className="text-gray-700 text-sm mb-3">
-                      5月12日 15:00〜17:45
-                    </p>
-                    <div className="flex items-center text-gray-600 text-sm mb-1">
-                      <CalendarDays className="w-4 h-4 mr-2" />
-                      <span>2024年5月12日</span>
+              <div className="md:flex-1 md:flex md:justify-end">
+                <div className="bg-gray-800 rounded-lg p-6 shadow-xl w-full max-w-md transform rotate-1 border border-gray-700">
+                  <div className="relative h-48 w-full mb-4 overflow-hidden rounded-lg">
+                    <Image
+                      src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2000&auto=format&fit=crop"
+                      alt="Tokyo College Conference"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div className="absolute bottom-2 left-2">
+                      <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-white">
+                        May 12th
+                      </div>
                     </div>
-                    <div className="flex items-center text-gray-600 text-sm">
-                      <Users className="w-4 h-4 mr-2" />
-                      <span>Audrey Tang, Glen Weyl 他</span>
-                    </div>
-                    <div className="mt-4 bg-lime-100 text-lime-800 px-3 py-1 rounded text-xs font-bold inline-block">
-                      特別セッション
-                    </div>
+                  </div>
+                  <h3 className="text-white font-bold text-lg mb-2">Tokyo College Conference</h3>
+                  <p className="text-gray-400 text-sm mb-3">
+                    The Future of Technology and Democracy
+                  </p>
+                  <div className="flex items-center text-gray-300 text-sm mb-1">
+                    <CalendarDays className="w-4 h-4 mr-2" />
+                    <span>May 12th, 2024 15:00-17:45</span>
+                  </div>
+                  <div className="flex items-center text-gray-300 text-sm">
+                    <Users className="w-4 h-4 mr-2" />
+                    <span>Audrey Tang, Glen Weyl & others</span>
                   </div>
                 </div>
               </div>
@@ -128,103 +139,77 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Plurality Book Section */}
-        <section className="bg-white text-black py-12 rounded-xl overflow-hidden my-12">
-          <div className="mx-auto max-w-4xl px-4 lg:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              <div>
-                <h2 className="text-xl font-bold mb-3">Plurality Book is NOW available!</h2>
-                <p className="text-gray-600 mb-3 text-sm">
-                  Audrey Tang's "PLURALITY: Collaborative Technology and the Future of Democracy" presents a new vision for democracy in the digital age. <span className="font-bold text-black">The Japanese translation is now available.</span>
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button asChild className="bg-black text-white hover:bg-gray-800 text-sm">
-                    <Link
-                      href="https://www.amazon.co.jp/dp/4909044574"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      Buy on Amazon JP
-                      <ExternalLink className="ml-2 h-3 w-3" />
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" className="bg-white border-black text-black hover:bg-black hover:text-white text-sm">
-                    <Link
-                      href="https://www.plurality.net/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      Official Website
-                      <ExternalLink className="ml-2 h-3 w-3" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="relative w-full max-w-[200px] mx-auto">
-                <Image
-                  src="/images/plurality-book.jpg"
-                  alt="PLURALITY: Collaborative Technology and the Future of Democracy by Audrey Tang"
-                  width={200}
-                  height={267}
-                  className="rounded-lg shadow-lg"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* What's the Plurality Tokyo? */}
         <section className="mb-24">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">What's the Plurality Tokyo?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-900 p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <Calendar className="h-8 w-8 text-lime-400 mr-3" />
-                <h3 className="text-xl font-bold">Conference</h3>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex-1 bg-gray-900 p-8 rounded-3xl relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="bg-lime-500/10 p-3 rounded-xl">
+                    <Calendar className="h-6 w-6 text-lime-400" />
+                  </div>
+                  <h3 className="text-xl font-bold ml-4">Conference</h3>
+                </div>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Conferences held irregularly to promote discussions about plurality in Japan.
+                </p>
+                <Link href="/events" className="inline-flex items-center text-lime-400 hover:text-lime-300 transition-colors">
+                  View all events <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-              <p className="text-gray-300 mb-4">
-                Conferences held irregularly to promote discussions about plurality in Japan.
-              </p>
-              <Link href="/events" className="text-lime-400 hover:underline">
-                View all events →
-              </Link>
             </div>
 
-            <div className="bg-gray-900 p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <Users className="h-8 w-8 text-lime-400 mr-3" />
-                <h3 className="text-xl font-bold">Discord group</h3>
+            <div className="flex-1 bg-gray-900 p-8 rounded-3xl relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="bg-lime-500/10 p-3 rounded-xl">
+                    <Users className="h-6 w-6 text-lime-400" />
+                  </div>
+                  <h3 className="text-xl font-bold ml-4">Discord group</h3>
+                </div>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  An online community for daily discussions and exchange of ideas about plurality.
+                </p>
+                <Link
+                  href="https://discord.com/invite/y4QXe6KtHh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-lime-400 hover:text-lime-300 transition-colors"
+                >
+                  Join Discord <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-              <p className="text-gray-300 mb-4">
-                An online community for daily discussions and exchange of ideas about plurality.
-              </p>
-              <Link
-                href="https://discord.com/invite/y4QXe6KtHh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lime-400 hover:underline"
-              >
-                Join Discord →
-              </Link>
             </div>
 
-            <div className="bg-gray-900 p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <Globe className="h-8 w-8 text-lime-400 mr-3" />
-                <h3 className="text-xl font-bold">Meetup</h3>
+            <div className="flex-1 bg-gray-900 p-8 rounded-3xl relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="bg-lime-500/10 p-3 rounded-xl">
+                    <Globe className="h-6 w-6 text-lime-400" />
+                  </div>
+                  <h3 className="text-xl font-bold ml-4">Meetup</h3>
+                </div>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Smaller meetups held irregularly as a place for more intimate exchanges.
+                </p>
+                <Link
+                  href="https://scrapbox.io/plurality-tokyo/search/page?q=salon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-lime-400 hover:text-lime-300 transition-colors"
+                >
+                  Check next meetup <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-              <p className="text-gray-300 mb-4">
-                Smaller meetups held irregularly as a place for more intimate exchanges.
-              </p>
-              <Link href="https://scrapbox.io/plurality-tokyo/search/page?q=salon" target="_blank" rel="noopener noreferrer" className="text-lime-400 hover:underline">
-                Check next meetup →
-              </Link>
             </div>
           </div>
         </section>
+
 
         {/* News from the Ecosystem */}
         <section className="mb-24">
@@ -261,211 +246,197 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Previous Event */}
-        <section>
+        {/* Events Section */}
+        <section className="mb-24">
           <div className="flex justify-between items-end mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold">Previous Event</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold">Events</h2>
             <Link href="/events" className="text-lime-400 hover:text-lime-300 flex items-center">
               See all <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {sortedEvents.slice(0, 2).map((event) => (
-              <div key={event.metadata.slug} className="bg-gray-900 rounded-lg overflow-hidden">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src="https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=2000&auto=format&fit=crop"
-                    alt={event.metadata.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">
-                    <Link href={`/events/${event.metadata.slug}`} className="hover:text-lime-400">
-                      {event.metadata.title}
-                    </Link>
-                  </h3>
-                  <div className="flex items-center text-gray-400 mb-3">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>{new Date(event.metadata.date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}</span>
-                  </div>
-                  <p className="text-gray-300 mb-4 line-clamp-2">{event.metadata.description}</p>
-                  <Link href={`/events/${event.metadata.slug}`} className="text-lime-400 hover:underline">
-                    View details →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+
+          <EventList
+            events={allEvents}
+            showPast={true}
+            showUpcoming={true}
+            maxItems={3}
+          />
         </section>
 
-        {/* Upcoming Events Section */}
-        {upcomingEvents.length > 0 && (
-          <section className="bg-black text-white py-24">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="flex justify-between items-end mb-12">
-                <div>
-                  <h2 className="text-3xl font-bold">Upcoming Events</h2>
-                  <p className="text-gray-400 mt-2">Join us at one of our upcoming events</p>
-                </div>
-                <Link href="/events" className="text-lime-400 flex items-center hover:text-lime-300">
-                  View all events <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {upcomingEvents.map((event) => (
-                  <Card key={event.metadata.slug} className="bg-gray-900 border-gray-800 overflow-hidden">
-                    <div className="relative h-48">
-                      <Image
-                        src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2000&auto=format&fit=crop"
-                        alt={event.metadata.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <div className="flex items-center text-gray-400 text-sm mb-3">
-                        <CalendarDays className="h-4 w-4 mr-2" />
-                        {new Date(event.metadata.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </div>
-                      <h3 className="text-xl font-bold mb-2 text-lime-400">{event.metadata.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{event.metadata.description}</p>
-
-                      {event.metadata.speakers_count && (
-                        <div className="flex items-center text-gray-400 text-sm mb-4">
-                          <Users className="h-4 w-4 mr-2" />
-                          {event.metadata.speakers_count} speakers
-                        </div>
-                      )}
-
-                      <Button asChild className="w-full bg-gray-800 hover:bg-gray-700 mt-2">
-                        <Link href={`/events/${event.metadata.slug}`}>
-                          View Event Details
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* Ecosystem Section */}
-        <section className="bg-gray-950 text-white py-24">
+        <section className="text-white py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold mb-6">Our Ecosystem</h2>
-            <p className="text-gray-300 mb-12 max-w-3xl">
+            <p className="text-gray-300 mb-10 max-w-3xl">
               Plurality Tokyo connects with a global network of organizations and initiatives focused on innovative social technologies, digital democracy, and community governance.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {/* Plurality Institute */}
-              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-lime-500/20 transition-all duration-300 border-t-4 border-lime-500 group">
-                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
-                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-lime-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
-                    <Building2 className="w-12 h-12 text-lime-600" />
-                  </div>
-                </div>
-                <div className="px-6 pb-6">
+            {/* ロゴスライダーセクション */}
+            <div className="overflow-hidden py-8 relative">
+              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-950 to-transparent z-10"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-950 to-transparent z-10"></div>
+
+              <div className="flex items-center space-x-20 overflow-hidden">
+                <div className="flex items-center space-x-20 animate-scroll">
+                  {/* Plurality Institute */}
                   <Link
                     href="https://plurality.institute/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
+                    className="flex flex-col items-center min-w-[120px] group"
                   >
-                    <h3 className="font-bold mb-2 group-hover:text-lime-400 transition-colors duration-300">Plurality Institute</h3>
-                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Global organization researching and promoting Plurality principles.</p>
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <Building2 className="w-10 h-10 text-lime-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-lime-400 transition-colors">Plurality Institute</span>
                   </Link>
-                </div>
-              </div>
 
-              {/* RadicalxChange */}
-              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 border-t-4 border-blue-500 group">
-                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
-                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
-                    <Lightbulb className="w-12 h-12 text-blue-600" />
-                  </div>
-                </div>
-                <div className="px-6 pb-6">
+                  {/* RadicalxChange */}
                   <Link
                     href="https://www.radicalxchange.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
+                    className="flex flex-col items-center min-w-[120px] group"
                   >
-                    <h3 className="font-bold mb-2 group-hover:text-blue-400 transition-colors duration-300">RadicalxChange</h3>
-                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Community exploring innovative social technologies for collective action.</p>
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <Lightbulb className="w-10 h-10 text-blue-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-blue-400 transition-colors">RadicalxChange</span>
                   </Link>
-                </div>
-              </div>
 
-              {/* Funding the Commons */}
-              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 border-t-4 border-purple-500 group">
-                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
-                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
-                    <BookOpen className="w-12 h-12 text-purple-600" />
-                  </div>
-                </div>
-                <div className="px-6 pb-6">
+                  {/* Funding the Commons */}
                   <Link
                     href="https://fundingthecommons.io/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
+                    className="flex flex-col items-center min-w-[120px] group"
                   >
-                    <h3 className="font-bold mb-2 group-hover:text-purple-400 transition-colors duration-300">Funding the Commons</h3>
-                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Initiative exploring new funding models for public goods.</p>
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <BookOpen className="w-10 h-10 text-purple-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-purple-400 transition-colors">Funding the Commons</span>
                   </Link>
-                </div>
-              </div>
 
-              {/* DeSci Tokyo */}
-              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 border-t-4 border-green-500 group">
-                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
-                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-green-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
-                    <Microscope className="w-12 h-12 text-green-600" />
-                  </div>
-                </div>
-                <div className="px-6 pb-6">
+                  {/* DeSci Tokyo */}
                   <Link
                     href="https://scrapbox.io/hirotaiyohamada/Welcome_to_the_Decentralized_Science_(DeSci)_Tokyo_2023_Conference:_A_Brief_History_of_DeSci_Tokyo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
+                    className="flex flex-col items-center min-w-[120px] group"
                   >
-                    <h3 className="font-bold mb-2 group-hover:text-green-400 transition-colors duration-300">DeSci Tokyo</h3>
-                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Organization building decentralized infrastructure for scientific research.</p>
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <Microscope className="w-10 h-10 text-green-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-green-400 transition-colors">DeSci Tokyo</span>
                   </Link>
-                </div>
-              </div>
 
-              {/* SMRI Digital Democracy Unit */}
-              <div className="bg-gray-900 rounded-lg overflow-hidden flex flex-col items-center text-center hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 border-t-4 border-orange-500 group">
-                <div className="pt-8 px-6 pb-4 flex justify-center items-center h-40 w-full">
-                  <div className="flex items-center justify-center w-24 h-24 bg-gradient-to-br from-orange-50 to-white rounded-full shadow-md transform transition-transform group-hover:scale-110 duration-300">
-                    <BarChart3 className="w-12 h-12 text-orange-600" />
-                  </div>
-                </div>
-                <div className="px-6 pb-6">
+                  {/* SMRI Digital Democracy Unit */}
                   <Link
                     href="https://smartnews-smri.com/research/research-2601/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
+                    className="flex flex-col items-center min-w-[120px] group"
                   >
-                    <h3 className="font-bold mb-2 group-hover:text-orange-400 transition-colors duration-300">SMRI Digital Democracy Unit</h3>
-                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Research unit exploring the implementation and scalability of digital democracy mechanisms in Japan.</p>
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <BarChart3 className="w-10 h-10 text-orange-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-orange-400 transition-colors">SMRI Digital Democracy Unit</span>
+                  </Link>
+
+                  {/* ループさせるために同じアイテムを繰り返し */}
+                  {/* Plurality Institute */}
+                  <Link
+                    href="https://plurality.institute/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center min-w-[120px] group"
+                  >
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <Building2 className="w-10 h-10 text-lime-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-lime-400 transition-colors">Plurality Institute</span>
+                  </Link>
+
+                  {/* RadicalxChange */}
+                  <Link
+                    href="https://www.radicalxchange.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center min-w-[120px] group"
+                  >
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <Lightbulb className="w-10 h-10 text-blue-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-blue-400 transition-colors">RadicalxChange</span>
+                  </Link>
+
+                  {/* Funding the Commons */}
+                  <Link
+                    href="https://fundingthecommons.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center min-w-[120px] group"
+                  >
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <BookOpen className="w-10 h-10 text-purple-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-purple-400 transition-colors">Funding the Commons</span>
+                  </Link>
+
+                  {/* DeSci Tokyo */}
+                  <Link
+                    href="https://scrapbox.io/hirotaiyohamada/Welcome_to_the_Decentralized_Science_(DeSci)_Tokyo_2023_Conference:_A_Brief_History_of_DeSci_Tokyo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center min-w-[120px] group"
+                  >
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <Microscope className="w-10 h-10 text-green-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-green-400 transition-colors">DeSci Tokyo</span>
+                  </Link>
+
+                  {/* SMRI Digital Democracy Unit */}
+                  <Link
+                    href="https://smartnews-smri.com/research/research-2601/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center min-w-[120px] group"
+                  >
+                    <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-md mb-3 transition-transform group-hover:scale-110 duration-300">
+                      <BarChart3 className="w-10 h-10 text-orange-600" />
+                    </div>
+                    <span className="font-medium text-sm text-center group-hover:text-orange-400 transition-colors">SMRI Digital Democracy Unit</span>
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Join Community Section */}
+        <section className="bg-lime-400 text-black py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
+            <p className="text-gray-800 mb-10 max-w-2xl mx-auto">
+              Connect with other members interested in Plurality, stay updated about upcoming events, and participate in discussions.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="bg-black text-white hover:bg-gray-800">
+                <Link href="https://discord.com/invite/y4QXe6KtHh" target="_blank" rel="noopener noreferrer">
+                  Join Discord
+                </Link>
+              </Button>
+              <Button asChild className="bg-black text-white hover:bg-gray-800">
+                <Link href="/events">
+                  Explore Events
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}

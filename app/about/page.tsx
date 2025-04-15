@@ -74,7 +74,7 @@ export default function AboutPage() {
           {/* Vision */}
           <section className="bg-white/5 p-8 rounded-2xl border border-white/10">
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-              <GlobeIcon className="h-8 w-8 text-lime-400" />
+              <GlobeIcon className="h-8 w-8 text-white" />
               <span>Our Vision</span>
             </h2>
             <p className="text-lg leading-relaxed text-gray-300">
@@ -85,7 +85,7 @@ export default function AboutPage() {
           {/* Activities */}
           <section>
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-              <CalendarIcon className="h-8 w-8 text-lime-400" />
+              <CalendarIcon className="h-8 w-8 text-white" />
               <span>Key Activities</span>
             </h2>
             <div className="grid gap-8">
@@ -111,7 +111,7 @@ export default function AboutPage() {
           {/* Network */}
           <section className="bg-white/5 p-8 rounded-2xl border border-white/10">
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-              <UsersIcon className="h-8 w-8 text-lime-400" />
+              <UsersIcon className="h-8 w-8 text-white" />
               <span>Our Network</span>
             </h2>
             <p className="text-lg leading-relaxed text-gray-300 mb-4">

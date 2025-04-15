@@ -176,7 +176,7 @@ export const EventList: React.FC<EventListProps> = ({
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {limitedPastEvents.map((event) => renderEventCard(event, false))}
                     </div>
-                    {maxItems && pastEvents.length > maxItems && (
+                    {/* {maxItems && pastEvents.length > maxItems && (
                         <div className="mt-8 text-center">
                             <Link
                                 href="/events"
@@ -185,7 +185,7 @@ export const EventList: React.FC<EventListProps> = ({
                                 View All Past Events
                             </Link>
                         </div>
-                    )}
+                    )} */}
                 </section>
             )}
 
