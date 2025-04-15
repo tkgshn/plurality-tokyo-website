@@ -1,0 +1,31 @@
+---
+title: FTC Tokyo 2024
+description: FTCカンファレンス - 最新のブロックチェーン技術とデジタルガバナンスの動向について
+date: 2024-04-20
+end_date: 2024-04-21
+location: Tokyo, Japan
+coverImage: /images/events/ftc-tokyo-2024/cover.jpg
+speakers:
+  - name: Vitalik Buterin
+    role: Co-founder, Ethereum
+  - name: Audrey Tang
+    role: Digital Minister of Taiwan
+---
+
+FTC Tokyo 2024 - ブロックチェーン技術とデジタルガバナンスの最前線
+
+## イベント概要
+
+FTC Tokyo 2024 は、ブロックチェーン技術やデジタルガバナンスの最新動向について議論する 2 日間のカンファレンスです。世界的に著名な講演者を招き、技術デモンストレーションやパネルディスカッションを通じて、これらの技術が社会に与える影響を探ります。
+
+## 主なトピック
+
+- ブロックチェーン技術の最新動向
+- デジタル公共財の資金調達メカニズム
+- 分散型自律組織（DAO）による新しいガバナンスモデル
+- アジアにおける Web3 エコシステムの発展
+
+## イベント詳細
+
+開催日: 2024 年 4 月 20 日〜21 日
+場所: 東京国際フォーラム

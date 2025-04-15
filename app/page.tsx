@@ -130,7 +130,7 @@ export default function Home() {
             <div className="bg-gray-900 p-8 rounded-lg">
               <div className="flex items-center mb-4">
                 <Calendar className="h-8 w-8 text-lime-400 mr-3" />
-                <h3 className="text-xl font-bold">(irregularity) conference</h3>
+                <h3 className="text-xl font-bold">Conference</h3>
               </div>
               <p className="text-gray-300 mb-4">
                 Conferences held irregularly to promote discussions about plurality in Japan.
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="bg-gray-900 p-8 rounded-lg">
               <div className="flex items-center mb-4">
                 <Globe className="h-8 w-8 text-lime-400 mr-3" />
-                <h3 className="text-xl font-bold">(irregularity) meetup</h3>
+                <h3 className="text-xl font-bold">Meetup</h3>
               </div>
               <p className="text-gray-300 mb-4">
                 Smaller meetups held irregularly as a place for more intimate exchanges.
