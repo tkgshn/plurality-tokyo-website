@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { LanguageSwitcher } from './LanguageSwitcher'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

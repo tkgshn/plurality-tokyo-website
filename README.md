@@ -97,3 +97,94 @@ Vercel を使用して自動デプロイを設定しています。
 ## ライセンス
 
 MIT License
+
+## コンテンツの追加方法
+
+### ブログ記事の追加
+
+1. `/content/blog` ディレクトリに新しいマークダウンファイルを作成します。
+2. ファイル名は `YYYY-MM-DD-title.md` の形式で作成します。
+3. 以下のフロントマターを追加します：
+
+```markdown
+---
+title: 記事タイトル
+date: YYYY-MM-DD
+excerpt: 記事の要約
+tags: [tag1, tag2]
+author: 著者名
+---
+
+ここに本文を書きます。
+```
+
+### イベント情報の追加
+
+1. `/content/events` ディレクトリに新しいマークダウンファイルを作成します。
+2. ファイル名は `YYYY-MM-DD-event-title.md` の形式で作成します。
+3. 以下のフロントマターを追加します：
+
+```markdown
+---
+title: イベントタイトル
+date: YYYY-MM-DD
+time: HH:MM
+location: 開催場所
+excerpt: イベントの要約
+tags: [tag1, tag2]
+organizer: 主催者名
+---
+
+ここにイベントの詳細を書きます。
+```
+
+### 著者プロフィールの追加
+
+1. `/content/authors` ディレクトリに新しいマークダウンファイルを作成します。
+2. ファイル名は `author-name.md` の形式で作成します。
+3. 以下のフロントマターを追加します：
+
+```markdown
+---
+name: 著者名
+role: 役職
+bio: 簡単な自己紹介
+social:
+  twitter: Twitterのユーザー名
+  github: GitHubのユーザー名
+  website: 個人サイトのURL
+---
+
+ここに詳細なプロフィールを書きます。
+```
+
+### 画像の追加
+
+1. 画像は `/public/images` ディレクトリに保存します。
+2. ブログ記事やイベント情報で画像を使用する場合は、以下のように記述します：
+
+```markdown
+![画像の説明](/images/filename.jpg)
+```
+
+### コンテンツのプレビュー
+
+1. 開発サーバーを起動します：
+
+```bash
+pnpm dev
+```
+
+2. ブラウザで `http://localhost:3000` にアクセスして、変更を確認します。
+
+### コンテンツの公開
+
+1. 変更をコミットしてプッシュします：
+
+```bash
+git add .
+git commit -m "feat: 新しいコンテンツを追加"
+git push
+```
+
+2. Vercel が自動的にデプロイを行い、変更が反映されます。
