@@ -37,24 +37,20 @@ export default function Markdown({ content, plainContent }: MarkdownProps) {
 
         <div className="flex items-center gap-2">
           <CopyToMarkdownButton
-            content={viewMode === "markdown" ? content : plainContent || content}
+            markdown={viewMode === "markdown" ? content : plainContent || content}
           />
         </div>
       </div>
 
       {viewMode === "markdown" ? (
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeRaw]}
-          components={{
-            // 親要素に prose クラスを適用
-            root: ({ node, ...props }) => (
-              <div className="prose dark:prose-invert max-w-none" {...props} />
-            ),
-          }}
-        >
-          {displayContent}
-        </ReactMarkdown>
+        <div className="prose dark:prose-invert max-w-none">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+          >
+            {displayContent}
+          </ReactMarkdown>
+        </div>
       ) : (
         <pre className="whitespace-pre-wrap bg-gray-900 p-4 rounded-lg text-gray-300 font-mono text-sm">
           {displayContent}

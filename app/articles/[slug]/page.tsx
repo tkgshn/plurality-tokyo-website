@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getArticleBySlug } from '@/lib/content'
-import { MDXRemote } from 'next-mdx-remote/rsc'
+// import { MDXRemote } from 'next-mdx-remote/rsc'
 import { Button } from '@/components/ui/button'
 import { CopyIcon } from 'lucide-react'
-import { toast } from 'sonner'
+// import { toast } from 'sonner'
 
 interface ArticlePageProps {
     params: {
@@ -37,12 +37,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
         notFound()
     }
 
+    // Simplified copy function without toast
     const handleCopyContent = async () => {
         try {
             await navigator.clipboard.writeText(article.content)
-            toast.success('コンテンツをコピーしました')
+            alert('コンテンツをコピーしました')
         } catch (error) {
-            toast.error('コピーに失敗しました')
+            alert('コピーに失敗しました')
         }
     }
 
@@ -75,7 +76,12 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             </div>
 
             <div className="prose prose-lg">
-                <MDXRemote source={article.content} />
+                {/* <MDXRemote source={article.content} /> */}
+                <div>
+                    {article.content.split('\n').map((line, index) => (
+                        <p key={index}>{line}</p>
+                    ))}
+                </div>
             </div>
         </article>
     )

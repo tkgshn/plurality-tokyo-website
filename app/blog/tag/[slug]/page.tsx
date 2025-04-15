@@ -1,8 +1,17 @@
 import { notFound } from "next/navigation"
-import { createServerSupabaseClient } from "@/lib/supabase"
-import PostCard from "@/components/PostCard"
+// import { createServerSupabaseClient } from "@/lib/supabase"
+// import PostCard from "@/components/PostCard"
 
 export default async function TagPage({ params }: { params: { slug: string } }) {
+  // Functionality temporarily disabled for deployment
+  return (
+    <div className="container mx-auto py-12">
+      <h1 className="text-2xl font-bold mb-4">Tag: {params.slug}</h1>
+      <p>This functionality is currently under maintenance.</p>
+    </div>
+  )
+
+  /* Original code
   const supabase = createServerSupabaseClient()
 
   // Fetch tag by slug
@@ -54,4 +63,5 @@ export default async function TagPage({ params }: { params: { slug: string } }) 
       </div>
     </div>
   )
+  */
 }

@@ -46,7 +46,7 @@ export function getContentBySlug<T extends { slug: string }>(
         ...data,
         slug,
         content,
-    } as T
+    } as unknown as T
 }
 
 export function getAllContent<T extends { slug: string, date?: string }>(directory: string): T[] {

@@ -1,10 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { createServerSupabaseClient } from "@/lib/supabase"
-import { formatDate } from "@/lib/utils"
+// import { createServerSupabaseClient } from "@/lib/supabase"
+// import { formatDate } from "@/lib/utils"
 
 export default async function AuthorPage({ params }: { params: { slug: string } }) {
+  // Functionality temporarily disabled for deployment
+  return (
+    <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <h1 className="text-3xl font-bold mb-4">Author Profile: {params.slug}</h1>
+      <p>This functionality is currently under maintenance.</p>
+    </div>
+  )
+
+  /* Original code
   const supabase = createServerSupabaseClient()
 
   // Fetch author by slug
@@ -18,11 +27,11 @@ export default async function AuthorPage({ params }: { params: { slug: string } 
   const { data: posts } = await supabase
     .from("posts")
     .select(`
-      id, 
-      title, 
-      slug, 
-      short_description, 
-      cover_image_url, 
+      id,
+      title,
+      slug,
+      short_description,
+      cover_image_url,
       published_at
     `)
     .eq("author_id", author.id)
@@ -134,4 +143,5 @@ export default async function AuthorPage({ params }: { params: { slug: string } 
       </div>
     </div>
   )
+  */
 }

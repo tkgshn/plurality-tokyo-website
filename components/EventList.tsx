@@ -49,7 +49,7 @@ export const EventList: React.FC<EventListProps> = ({
 
     const renderEventCard = (event: EventContent, isUpcoming: boolean = false) => {
         const eventDate = new Date(event.metadata.date);
-        const coverImage = event.metadata.coverImage || (event.metadata.image ? event.metadata.image : null);
+        const coverImage = event.metadata.cover_image_url || (event.metadata.image ? event.metadata.image : null);
         const fallbackImage = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000";
 
         // Style for upcoming events

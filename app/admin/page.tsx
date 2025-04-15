@@ -1,8 +1,17 @@
 import { redirect } from "next/navigation"
-import { createServerSupabaseClient } from "@/lib/supabase"
-import AdminDashboard from "@/components/admin/dashboard"
+// import { createServerSupabaseClient } from "@/lib/supabase"
+// import AdminDashboard from "@/components/admin/dashboard"
 
 export default async function AdminPage() {
+  // Temporarily disabled for production build
+  return (
+    <div className="container mx-auto py-12">
+      <h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
+      <p className="text-lg">This functionality is currently under maintenance.</p>
+    </div>
+  )
+
+  /* Original functionality
   const supabase = createServerSupabaseClient()
 
   // Check if user is authenticated
@@ -22,4 +31,5 @@ export default async function AdminPage() {
   ])
 
   return <AdminDashboard postsCount={postsCount || 0} eventsCount={eventsCount || 0} authorsCount={authorsCount || 0} />
+  */
 }
