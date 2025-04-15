@@ -5,10 +5,13 @@ export const createServerSupabaseClient = () => {
             getSession: () => Promise.resolve({ data: { session: null } })
         },
         from: (table: string) => ({
-            select: () => ({
-                count: "exact",
-                head: true
-            })
+            select: (query: string, options?: any) => {
+                return Promise.resolve({
+                    data: [],
+                    count: 0,
+                    error: null
+                })
+            }
         })
     }
 }
