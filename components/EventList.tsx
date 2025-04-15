@@ -47,27 +47,45 @@ export const EventList: React.FC<EventListProps> = ({
     const limitedUpcomingEvents = maxItems ? upcomingEvents.slice(0, maxItems) : upcomingEvents;
     const limitedPastEvents = maxItems ? pastEvents.slice(0, maxItems) : pastEvents;
 
-    const renderEventCard = (event: EventContent) => {
+    const renderEventCard = (event: EventContent, isUpcoming: boolean = false) => {
         const eventDate = new Date(event.metadata.date);
         const coverImage = event.metadata.coverImage || (event.metadata.image ? event.metadata.image : null);
         const fallbackImage = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000";
+
+        // 未来のイベント用のスタイルを追加
+        const cardStyle = isUpcoming
+            ? "block p-6 border border-lime-500 rounded-lg hover:shadow-lg hover:border-lime-400 transition-all duration-200 bg-gradient-to-br from-gray-900 to-gray-800"
+            : "block p-6 border border-gray-700 rounded-lg hover:shadow-lg hover:border-gray-500 transition-all duration-200 bg-gray-900";
+
+        // 未来のイベント用の追加表示
+        const upcomingBadge = isUpcoming && (
+            <div className="absolute top-4 right-4 bg-lime-500 text-black px-3 py-1 rounded-full font-medium text-sm z-10">
+                近日開催
+            </div>
+        );
 
         return (
             <Link
                 key={event.metadata.slug}
                 href={`/events/${event.metadata.slug}`}
-                className="block p-6 border border-gray-700 rounded-lg hover:shadow-lg hover:border-gray-500 transition-all duration-200 bg-gray-900"
+                className={cardStyle}
             >
                 <div className="relative w-full h-40 mb-4 overflow-hidden rounded">
+                    {upcomingBadge}
                     <Image
                         src={coverImage || fallbackImage}
                         alt={event.metadata.title}
                         fill
                         className="object-cover"
                     />
+                    {isUpcoming && (
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    )}
                 </div>
 
-                <h2 className="text-xl font-semibold mb-2 text-lime-400">{event.metadata.title}</h2>
+                <h2 className={`text-xl font-semibold mb-2 ${isUpcoming ? 'text-lime-400' : 'text-lime-400'}`}>
+                    {event.metadata.title}
+                </h2>
 
                 <div className="flex items-center text-sm text-gray-400 mb-4">
                     <time dateTime={event.metadata.date}>
@@ -110,11 +128,19 @@ export const EventList: React.FC<EventListProps> = ({
                         {event.metadata.tags.map((tag) => (
                             <span
                                 key={tag}
-                                className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs"
+                                className={`px-2 py-1 rounded-full text-xs ${isUpcoming ? 'bg-lime-900/50 text-lime-200' : 'bg-gray-800 text-gray-300'}`}
                             >
                                 {tag}
                             </span>
                         ))}
+                    </div>
+                )}
+
+                {isUpcoming && (
+                    <div className="mt-6">
+                        <button className="w-full py-2 px-4 bg-lime-500 hover:bg-lime-600 text-black font-medium rounded transition-colors duration-200">
+                            詳細を見る
+                        </button>
                     </div>
                 )}
             </Link>
@@ -126,9 +152,9 @@ export const EventList: React.FC<EventListProps> = ({
             {/* Upcoming Events */}
             {showUpcoming && limitedUpcomingEvents.length > 0 && (
                 <section>
-                    <h2 className="text-3xl font-bold mb-8 text-lime-400">Upcoming Events</h2>
+                    <h2 className="text-3xl font-bold mb-8 text-lime-400">開催予定のイベント</h2>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {limitedUpcomingEvents.map(renderEventCard)}
+                        {limitedUpcomingEvents.map((event) => renderEventCard(event, true))}
                     </div>
                     {maxItems && upcomingEvents.length > maxItems && (
                         <div className="mt-8 text-center">
@@ -136,7 +162,7 @@ export const EventList: React.FC<EventListProps> = ({
                                 href="/events"
                                 className="inline-block px-4 py-2 rounded bg-lime-800 hover:bg-lime-700 transition-colors"
                             >
-                                View All Upcoming Events
+                                すべての開催予定イベントを見る
                             </Link>
                         </div>
                     )}
@@ -146,9 +172,9 @@ export const EventList: React.FC<EventListProps> = ({
             {/* Past Events */}
             {showPast && limitedPastEvents.length > 0 && (
                 <section>
-                    <h2 className="text-3xl font-bold mb-8">Past Events</h2>
+                    <h2 className="text-3xl font-bold mb-8">過去のイベント</h2>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {limitedPastEvents.map(renderEventCard)}
+                        {limitedPastEvents.map((event) => renderEventCard(event, false))}
                     </div>
                     {maxItems && pastEvents.length > maxItems && (
                         <div className="mt-8 text-center">
@@ -156,7 +182,7 @@ export const EventList: React.FC<EventListProps> = ({
                                 href="/events"
                                 className="inline-block px-4 py-2 rounded bg-gray-800 hover:bg-gray-700 transition-colors"
                             >
-                                View All Past Events
+                                すべての過去イベントを見る
                             </Link>
                         </div>
                     )}
@@ -165,7 +191,7 @@ export const EventList: React.FC<EventListProps> = ({
 
             {/* No Events */}
             {((showUpcoming && limitedUpcomingEvents.length === 0) && (showPast && limitedPastEvents.length === 0)) && (
-                <p className="text-gray-400">No events found.</p>
+                <p className="text-gray-400">イベントが見つかりませんでした。</p>
             )}
         </div>
     );
