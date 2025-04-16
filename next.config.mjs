@@ -29,17 +29,19 @@ const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     // 本番ビルド時のみ実行
     if (!dev && isServer) {
-      const originalEmit = config.output.futureEmitAssets;
-      config.output.futureEmitAssets = async function(compilation) {
-        await originalEmit.apply(this, arguments);
-        try {
-          // build完了後にllms.txt生成スクリプトを実行
-          console.log('Running llms.txt generator script...');
-          const { execSync } = require('child_process');
-          execSync('node scripts/generate-llms-txt.js', { stdio: 'inherit' });
-        } catch (error) {
-          console.error('Error running llms.txt generator:', error);
+      // ビルド後にllms.txt生成スクリプトを実行するように設定
+      const originalEntry = config.entry;
+      config.entry = async () => {
+        const entries = await originalEntry();
+        // ビルド完了後にスクリプトを実行
+        if (entries['main.js'] && !entries['main.js'].includes('scripts/generate-llms-txt.js')) {
+          if (Array.isArray(entries['main.js'])) {
+            entries['main.js'].push('scripts/generate-llms-txt.js');
+          } else {
+            entries['main.js'] = [entries['main.js'], 'scripts/generate-llms-txt.js'];
+          }
         }
+        return entries;
       };
     }
     return config;
