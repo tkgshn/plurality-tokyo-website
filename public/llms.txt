@@ -1,69 +1,29 @@
-# LLMs.txt for Plurality Tokyo
+# Plurality Tokyo
 
-# Site Information
-title: Plurality Tokyo
-description: Plurality Tokyoは、多様性と包括性を重視したコミュニティEventsです。
-language: ja
-locale: ja_JP
+> Plurality Tokyoは、分散型技術や多様性、包括性に焦点を当てたコミュニティEventsです。技術革新と社会の多様性について議論し、新しいアイデアや関係性を育むプラットフォームを提供しています。
 
-# Site Structure
-pages:
-  - path: /
-    title: Home
-    description: Plurality Tokyoのメインページ
-    priority: 1.0
+Plurality Tokyoは、技術とコミュニティの交差点にあるEventsシリーズです。私たちは、Web3、分散型技術、そして多様で包括的な未来に関する対話を促進します。
 
-  - path: /about
-    title: 私たちについて
-    description: Plurality Tokyoの理念と目的
-    priority: 0.8
+## Events
 
-  - path: /events
-    title: Events
-    description: 開催予定のEvents一覧
-    priority: 0.9
+- [Future Tech Summit 2024](/events/future-tech-summit-2024.html.md): 2025/12/10にTokyo, Roppongi Hillsで開催。International summit exploring the future of technology and plurality
+- [Plurality Practice Workshop 2024](/events/plurality-workshop-2024.html.md): 2024/8/15にTokyo, Shibuyaで開催。Workshop for learning practical methods of digital democracy
+- [Glen in Japan 2024](/events/glen-in-japan-2024.html.md): 2024/5/20にTokyo, Japanで開催。A series of talks and workshops by Glen Weyl on Plurality, Digital Democracy, and the Future of Governance
+- [Funding the Commons Tokyo 2024](/events/funding-the-commons-tokyo-2024.html.md): 2024/5/17にTokyo, Japanで開催。A three-day conference exploring innovative funding mechanisms for public goods, with a focus on Japan and Asia
+- [April 23 Meetup](/events/april-23-meetup-2024.html.md): 2024/4/23にTokyo, Japanで開催。A casual meetup for Plurality enthusiasts to discuss and share ideas
 
-  - path: /speakers
-    title: スピーカー
-    description: Eventsのスピーカー紹介
-    priority: 0.8
+## 記事
 
-  - path: /contact
-    title: お問い合わせ
-    description: お問い合わせフォーム
-    priority: 0.7
+- [The Future of Web3 and Decentralized Society](/articles/web3-future.html.md): An exploration of how Web3 technologies are transforming society
+- [The Future of AI and Creativity](/articles/ai-creativity.html.md): An analysis of how AI impacts creative work
+- [New Forms of Organizational Management with DAOs](/articles/dao-governance.html.md): Innovations in organizational management brought by Decentralized Autonomous Organizations (DAOs)
 
-# Content Guidelines
-content_types:
-  - type: event
-    description: Events情報
-    fields:
-      - title: Eventsタイトル
-      - date: 開催日
-      - location: 開催場所
-      - description: Events説明
-      - speakers: スピーカー情報
+## スピーカー
 
-  - type: speaker
-    description: スピーカー情報
-    fields:
-      - name: 名前
-      - title: 肩書き
-      - bio: 経歴
-      - image: プロフィール画像
+- [Glen Weyl](/speakers/glen-weyl.html.md): Principal Fellow at Microsoft, Founder of RadicalxChange at Microsoft, RadicalxChange
 
-# Keywords
-keywords:
-  - Plurality
-  - Tokyo
-  - Events
-  - 多様性
-  - 包括性
-  - コミュニティ
-  - カンファレンス
-  - スピーカー
-  - セミナー
+## Optional
 
-# Update Frequency
-update_frequency: weekly
-last_updated: 2024-04-15
+- [過去のEventsアーカイブ](/events/index.html.md): 過去に開催された全てのEvents記録
+- [すべての記事](/articles/index.html.md): 公開されている全ての記事
+- [お問い合わせ](/contact/index.html.md): お問い合わせフォーム
