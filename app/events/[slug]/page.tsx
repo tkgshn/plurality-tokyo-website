@@ -2,11 +2,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import PageHeader from "@/components/page-header"
 import { getEventBySlug, getAllEvents, Event } from "@/lib/events"
 import { EventContent } from "@/types/content"
 import { Metadata } from "next"
 import ReactMarkdown from "react-markdown"
+import { CalendarIcon, MapPinIcon, UserIcon, UsersIcon, FileTextIcon, ExternalLinkIcon, PlayIcon } from "lucide-react"
 
 interface EventPageProps {
   params: {
@@ -25,64 +25,165 @@ export async function generateMetadata({ params }: EventPageProps): Promise<Meta
 export default function EventPage({ params }: EventPageProps) {
   const event: Event = getEventBySlug(params.slug)
   const fallbackImage = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000"
+  const isEventEnded = new Date(event.date) < new Date();
+
+  // Eventsに登場するスピーカーの数
+  const speakersCount = event.speakers?.length || 0;
+  // 参加者数（仮）- 実際のデータがあればそれを使用
+  const attendeesCount = event.attendees_count || 0;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="relative h-64 md:h-96 mb-8">
-        <Image
-          src={event.coverImage || fallbackImage}
-          alt={event.title}
-          fill
-          className="object-cover rounded-lg"
-          priority
-        />
-      </div>
-      <h1 className="text-4xl font-bold mb-4">{event.title}</h1>
+    <div className="bg-black text-white">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        {/* Eventsタイトルとステータス */}
+        <div className="mb-12">
+          <h1 className="text-5xl font-bold mb-4">#{event.slug.replace(/-/g, '')}</h1>
+          {isEventEnded && (
+            <div className="text-red-500 text-xl mb-6">THIS EVENT HAS ENDED, Thank you</div>
+          )}
+          <hr className="border-gray-700 my-6" />
+        </div>
 
-      {/* 日付と場所の表示 */}
-      <div className="flex items-center text-gray-500 mb-6">
-        <time dateTime={event.date} className="mr-4">
-          {new Date(event.date).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
-          {event.end_date && ` - ${new Date(event.end_date).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}`}
-        </time>
-        {event.location && (
-          <span className="flex items-center">
-            <span className="mx-2">•</span>
-            {event.location}
-          </span>
-        )}
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* 左カラム: Events詳細 */}
+          <div>
+            <div className="mb-12">
+              <p className="text-lg mb-8">{event.description}</p>
 
-      {/* スピーカーの表示 */}
-      {event.speakers && event.speakers.length > 0 && (
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Speakers</h2>
-          <div className="flex flex-wrap gap-6">
-            {event.speakers.map((speaker, index) => (
-              <div key={index} className="flex items-center">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-3">
-                  <Image
-                    src={`/images/speakers/${speaker.name.toLowerCase().replace(/\s+/g, '-')}.jpg`}
-                    alt={speaker.name}
-                    fill
-                    className="object-cover"
-                  />
+              {/* EventsレポートとEventsページへのリンク */}
+              <div className="flex flex-wrap gap-4">
+                {event.report_url && (
+                  <Link href={event.report_url} passHref>
+                    <Button variant="outline" className="border-white hover:bg-white hover:text-black">
+                      <FileTextIcon className="mr-2 h-4 w-4" />
+                      Event report
+                    </Button>
+                  </Link>
+                )}
+                {event.event_page_url && (
+                  <Link href={event.event_page_url} passHref>
+                    <Button variant="outline" className="border-white hover:bg-white hover:text-black">
+                      <ExternalLinkIcon className="mr-2 h-4 w-4" />
+                      Event page
+                    </Button>
+                  </Link>
+                )}
+              </div>
+            </div>
+
+            {/* 参加者情報 */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold mb-6">Attendees</h2>
+              {event.video_url && (
+                <p className="mb-6">you missed? full video on youtube:</p>
+              )}
+
+              <div className="grid grid-cols-2 gap-8">
+                <div>
+                  <div className="text-4xl font-bold">{speakersCount}</div>
+                  <div className="text-gray-400">speakers</div>
                 </div>
                 <div>
-                  <div className="font-medium">{speaker.name}</div>
-                  {speaker.role && <div className="text-sm text-gray-500">{speaker.role}</div>}
+                  <div className="text-4xl font-bold">{attendeesCount}+</div>
+                  <div className="text-gray-400">participated</div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* スライド情報 */}
+            {event.slides_url && (
+              <div className="mb-12">
+                <h2 className="text-3xl font-bold mb-6">Glen's talk slide</h2>
+                <Link href={event.slides_url} passHref>
+                  <Button variant="outline" className="border-white hover:bg-white hover:text-black">
+                    See the slide
+                  </Button>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* 右カラム: メディア */}
+          <div>
+            {/* Events画像 */}
+            <div className="relative aspect-video mb-8">
+              <Image
+                src={event.coverImage || fallbackImage}
+                alt={event.title}
+                fill
+                className="object-cover rounded-lg"
+                priority
+              />
+            </div>
+
+            {/* YouTubeビデオ */}
+            {event.video_url && (
+              <div className="aspect-video mb-8">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${getYoutubeId(event.video_url)}`}
+                  title={`${event.title} Video`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            )}
+
+            {/* スライド画像プレビュー */}
+            {event.slides_preview_image && (
+              <div className="relative aspect-video">
+                <Image
+                  src={event.slides_preview_image}
+                  alt="Slide preview"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            )}
           </div>
         </div>
-      )}
 
-      <div className="prose prose-lg max-w-none">
-        <ReactMarkdown>{event.content}</ReactMarkdown>
+        {/* スピーカーセクション */}
+        {event.speakers && event.speakers.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-5xl font-bold mb-8">Speakers</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {event.speakers.map((speaker, index) => (
+                <div key={index} className="mb-12">
+                  <div className="relative h-48 w-full mb-4">
+                    <Image
+                      src={`/images/speakers/${speaker.name.toLowerCase().replace(/\s+/g, '-')}.jpg`}
+                      alt={speaker.name}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{speaker.name}</h3>
+                  {speaker.role && <p className="text-gray-400 mb-3">{speaker.role}</p>}
+                  {speaker.bio && <p className="text-sm">{speaker.bio}</p>}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Events詳細コンテンツ */}
+        <div className="mt-16 prose prose-lg prose-invert max-w-none">
+          <ReactMarkdown>{event.content}</ReactMarkdown>
+        </div>
       </div>
     </div>
   )
+}
+
+// YouTubeのURLからビデオIDを抽出する関数
+function getYoutubeId(url: string): string {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : '';
 }
 
 export async function generateStaticParams() {

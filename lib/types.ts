@@ -63,3 +63,22 @@ export interface Event {
         bronze?: Sponsor[]
     }
 }
+
+// ブログ記事の著者、Eventsの講演者など人物を表す共通インターフェース
+export interface Person {
+    id?: string;
+    name: string;
+    slug: string;
+    role?: string;
+    position?: string;
+    company?: string;
+    bio?: string;
+    avatar_url?: string;
+    image?: string;
+    social?: {
+        twitter?: string;
+        linkedin?: string;
+        github?: string;
+        website?: string;
+    };
+}

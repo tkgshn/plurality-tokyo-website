@@ -7,6 +7,7 @@ const contentDirectory = path.join(process.cwd(), 'content')
 export interface Speaker {
     name: string;
     role?: string;
+    bio?: string;
 }
 
 export interface Event {
@@ -18,6 +19,14 @@ export interface Event {
     location?: string;
     coverImage?: string;
     image?: string;
+    cover_image_url?: string;
+    report_url?: string;
+    event_page_url?: string;
+    video_url?: string;
+    slides_url?: string;
+    slides_preview_image?: string;
+    attendees_count?: number;
+    speakers_count?: number;
     speakers?: Speaker[];
     content: string;
 }

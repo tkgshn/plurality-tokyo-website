@@ -25,7 +25,7 @@ export function CurationItem({ item }: CurationItemProps) {
                     {item.category === 'event' && (
                         <>
                             <span>•</span>
-                            <span className="bg-gray-100 px-2 py-1 rounded-full">イベント</span>
+                            <span className="bg-gray-100 px-2 py-1 rounded-full">Events</span>
                         </>
                     )}
                 </div>

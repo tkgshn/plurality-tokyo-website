@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Plurality Tokyo Week 2024",
-    description: "特別なイベントウィークで複数の場所でプルーラリティについて探求する一週間",
+    title: "Tokyo Plurality Week 2025",
+    description: "A special events week exploring plurality across multiple venues in Tokyo",
 }
 
 export default function PluralityWeekLayout({

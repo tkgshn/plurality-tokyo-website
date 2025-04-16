@@ -110,7 +110,7 @@ export function getAllArticles(): Article[] {
     return articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
-// イベントを取得する関数
+// Eventsを取得する関数
 export function getAllEvents(): Event[] {
     const eventsDirectory = path.join(process.cwd(), 'content/events')
     const fileNames = fs.readdirSync(eventsDirectory)
@@ -150,7 +150,7 @@ export function getArticleById(id: string): Article | null {
     }
 }
 
-// イベントをIDで取得する関数
+// EventsをIDで取得する関数
 export function getEventById(id: string): Event | null {
     try {
         const fullPath = path.join(process.cwd(), 'content/events', `${id}.mdx`)

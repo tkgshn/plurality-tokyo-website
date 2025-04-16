@@ -32,7 +32,7 @@ export default function Home() {
     )
     .slice(0, 3) // Get only the 3 most recent upcoming events
 
-  // イベントセクションの画像パスを一時的にUnsplashのプレースホルダー画像に変更
+  // Eventsセクションの画像パスを一時的にUnsplashのプレースホルダー画像に変更
   const events = [
     {
       title: 'Glen in Japan 2024',
@@ -64,14 +64,12 @@ export default function Home() {
             A community exploring new social technological ideas in Japan, connecting global theory with local practice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild className="bg-lime-400 text-black hover:bg-lime-500">
-              <Link href="/events">Explore Events</Link>
-            </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-              <Link href="https://discord.com/invite/y4QXe6KtHh" target="_blank" rel="noopener noreferrer">
-                Join Discord
-              </Link>
-            </Button>
+            <Link
+              href="/directory"
+              className="inline-block px-4 py-2 text-white border border-white rounded-md hover:bg-white/10 transition-colors"
+            >
+              Copy directory for LLM
+            </Link>
           </div>
         </section>
 

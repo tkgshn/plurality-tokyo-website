@@ -18,7 +18,7 @@ interface Event {
   status: string
 }
 
-// 仮のイベントデータ
+// 仮のEventsデータ
 const mockEvents: Event[] = [
   {
     id: "1",

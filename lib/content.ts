@@ -1,7 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { Content, EventContent, ArticleContent, SpeakerContent } from '@/types/content'
+import { Content, EventContent, ArticleContent } from '@/types/content'
+import { Person } from '@/lib/types'
 
 const contentDirectory = path.join(process.cwd(), 'content')
 
@@ -72,10 +73,26 @@ export function getAllArticles(): ArticleContent[] {
     return getAllContent<ArticleContent>('articles')
 }
 
-export function getSpeakerBySlug(slug: string): SpeakerContent {
-    return getContentBySlug<SpeakerContent>('authors', slug)
+export function getPersonBySlug(slug: string, directory = 'authors'): Content & { metadata: { [key: string]: any } } {
+    return getContentBySlug<Content>(directory, slug)
 }
 
-export function getAllSpeakers(): SpeakerContent[] {
-    return getAllContent<SpeakerContent>('authors')
+export function getAllPeople(directory = 'authors'): Array<Content & { metadata: { [key: string]: any } }> {
+    return getAllContent<Content>(directory)
+}
+
+export function getSpeakerBySlug(slug: string): Content & { metadata: { [key: string]: any } } {
+    return getPersonBySlug(slug)
+}
+
+export function getAllSpeakers(): Array<Content & { metadata: { [key: string]: any } }> {
+    return getAllPeople()
+}
+
+export function getAuthorBySlug(slug: string): Content & { metadata: { [key: string]: any } } {
+    return getPersonBySlug(slug)
+}
+
+export function getAllAuthors(): Array<Content & { metadata: { [key: string]: any } }> {
+    return getAllPeople()
 }

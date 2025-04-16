@@ -7,7 +7,7 @@
 以下のディレクトリにマークダウンファイル（.md または .mdx）を追加・編集することで、ウェブサイトのコンテンツを更新できます：
 
 - `/content/blog`: ブログ記事
-- `/content/events`: イベント情報
+- `/content/events`: Events 情報
 - `/content/articles`: 記事コンテンツ
 - `/content/authors`: 著者プロフィール
 
@@ -37,26 +37,26 @@ tags: ["tag1", "tag2"]
 ![画像の説明](/path/to/image.jpg)
 ```
 
-## イベントページのフォーマット
+## Events ページのフォーマット
 
-イベントページには以下のフィールドが必要です：
+Events ページには以下のフィールドが必要です：
 
 ```md
 ---
-title: "イベントタイトル"
+title: "Eventsタイトル"
 date: "2024-04-15"
 end_date: "2024-04-15" # 終了日（省略可）
 location: "開催場所"
-description: "イベントの説明"
+description: "Eventsの説明"
 status: "upcoming" # upcoming, ongoing, ended
 speakers:
   - name: "スピーカー名"
     avatar_url: "/images/speakers/avatar.jpg"
 ---
 
-# イベントタイトル
+# Events タイトル
 
-イベントの詳細内容...
+Events の詳細内容...
 ```
 
 ## 著者ページのフォーマット

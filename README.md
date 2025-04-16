@@ -20,29 +20,29 @@ npm run dev
 ├── components/       # 再利用可能なコンポーネント
 ├── content/         # マークダウンコンテンツ
 │   ├── articles/    # 記事のマークダウンファイル
-│   └── events/      # イベントのマークダウンファイル
+│   └── events/      # Eventsのマークダウンファイル
 ├── lib/             # ユーティリティ関数
 └── public/          # 静的ファイル
     └── images/      # 画像ファイル
 ```
 
-## イベントの追加方法
+## Events の追加方法
 
 1. `content/events/` ディレクトリに新しいマークダウンファイルを作成
 2. 以下のフロントマターを含める：
 
 ```markdown
 ---
-title: イベントタイトル
-description: イベントの説明
+title: Eventsタイトル
+description: Eventsの説明
 date: YYYY-MM-DD
 coverImage: /images/events/[event-name]/cover.jpg
 ---
 
-イベントの本文をここに記述...
+Events の本文をここに記述...
 ```
 
-3. イベントの画像を `public/images/events/[event-name]/` に配置
+3. Events の画像を `public/images/events/[event-name]/` に配置
 
 ## 必要なパッケージ
 
@@ -52,7 +52,7 @@ coverImage: /images/events/[event-name]/cover.jpg
 
 ## 注意事項
 
-- イベント画像が見つからない場合は、デフォルトのプレースホルダー画像が使用されます
+- Events 画像が見つからない場合は、デフォルトのプレースホルダー画像が使用されます
 - 本番環境にデプロイする前に、必ず実際の画像ファイルを配置してください
 
 ## 技術スタック
@@ -92,7 +92,7 @@ pnpm dev
 このサイトはマークダウン（MDX）ベースのコンテンツ管理システムを採用しています。コンテンツの更新は以下のディレクトリのマークダウンファイルを編集するだけで反映されます：
 
 - `/content/blog`: ブログ記事
-- `/content/events`: イベント情報
+- `/content/events`: Events 情報
 - `/content/authors`: 著者プロフィール
 
 マークダウンファイルを編集して GitHub にプッシュするだけで、自動的にサイトに反映されます。
@@ -171,7 +171,7 @@ author: 著者名
 ここに本文を書きます。
 ```
 
-### イベント情報の追加
+### Events 情報の追加
 
 1. `/content/events` ディレクトリに新しいマークダウンファイルを作成します。
 2. ファイル名は `YYYY-MM-DD-event-title.md` の形式で作成します。
@@ -179,16 +179,16 @@ author: 著者名
 
 ```markdown
 ---
-title: イベントタイトル
+title: Eventsタイトル
 date: YYYY-MM-DD
 time: HH:MM
 location: 開催場所
-excerpt: イベントの要約
+excerpt: Eventsの要約
 tags: [tag1, tag2]
 organizer: 主催者名
 ---
 
-ここにイベントの詳細を書きます。
+ここに Events の詳細を書きます。
 ```
 
 ### 著者プロフィールの追加
@@ -214,7 +214,7 @@ social:
 ### 画像の追加
 
 1. 画像は `/public/images` ディレクトリに保存します。
-2. ブログ記事やイベント情報で画像を使用する場合は、以下のように記述します：
+2. ブログ記事や Events 情報で画像を使用する場合は、以下のように記述します：
 
 ```markdown
 ![画像の説明](/images/filename.jpg)
@@ -241,3 +241,31 @@ git push
 ```
 
 2. Vercel が自動的にデプロイを行い、変更が反映されます。
+
+## LLMs.txt Support
+
+このプロジェクトは[llms.txt 仕様](https://llmstxt.org/)に対応しています。
+llms.txt は、LLM（大規模言語モデル）がウェブサイトの情報を効率的に理解できるようにするための標準です。
+
+### 機能
+
+- `/llms.txt` - サイトのコンテンツ構造やリソースを説明するマークダウンファイル
+- `.html.md` 拡張子 - 各ページのマークダウンバージョンを提供（例: `/events/event-name.html.md`）
+
+### 仕組み
+
+ビルド時に、次の処理が行われます：
+
+1. サイト内の全コンテンツ（Events、記事、スピーカー情報など）を解析
+2. llms.txt 仕様に従ったマークダウンファイルを生成
+3. 各コンテンツページのマークダウンバージョンを生成
+
+これにより、LLM はサイトの構造と内容を理解しやすくなり、より適切な応答を提供できるようになります。
+
+### 手動生成
+
+llms.txt を手動で生成するには、以下のコマンドを実行します：
+
+```bash
+npm run generate-llms
+```

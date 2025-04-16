@@ -5,8 +5,8 @@ export const defaultMetadata: Metadata = {
         default: 'Plurality Tokyo',
         template: '%s | Plurality Tokyo'
     },
-    description: 'Plurality Tokyoは、多様性と包括性を重視したコミュニティイベントです。',
-    keywords: ['Plurality', 'Tokyo', 'イベント', '多様性', '包括性', 'コミュニティ'],
+    description: 'Plurality Tokyoは、多様性と包括性を重視したコミュニティEventsです。',
+    keywords: ['Plurality', 'Tokyo', 'Events', '多様性', '包括性', 'コミュニティ'],
     authors: [{ name: 'Plurality Tokyo Team' }],
     creator: 'Plurality Tokyo Team',
     publisher: 'Plurality Tokyo',
@@ -25,7 +25,7 @@ export const defaultMetadata: Metadata = {
         url: 'https://plurality.tokyo',
         siteName: 'Plurality Tokyo',
         title: 'Plurality Tokyo',
-        description: 'Plurality Tokyoは、多様性と包括性を重視したコミュニティイベントです。',
+        description: 'Plurality Tokyoは、多様性と包括性を重視したコミュニティEventsです。',
         images: [
             {
                 url: '/og-image.jpg',
@@ -38,7 +38,7 @@ export const defaultMetadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Plurality Tokyo',
-        description: 'Plurality Tokyoは、多様性と包括性を重視したコミュニティイベントです。',
+        description: 'Plurality Tokyoは、多様性と包括性を重視したコミュニティEventsです。',
         images: ['/og-image.jpg'],
         creator: '@plurality_tokyo',
     },
