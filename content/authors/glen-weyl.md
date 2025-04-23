@@ -1,11 +1,12 @@
 ---
-title: "Glen Weyl"
-description: "Economist, Principal Fellow at Microsoft, Founder of RadicalxChange"
-position: "Principal Fellow at Microsoft, Founder of RadicalxChange"
-company: "Microsoft, RadicalxChange"
+title: "E. Glen Weyl"
+description: "Economist; Research Lead of the Plural Technology Collaboratory at Microsoft Research; Founder of RadicalxChange & Plurality Institute"
+position: "Research Lead, Microsoft Research; Founder, RadicalxChange & Plurality Institute"
+company: "Microsoft Research, RadicalxChange Foundation"
+avatar_url: "/images/speakers/glen-weyl.png"
 social:
   twitter: "glenweyl"
-  linkedin: "glenweyl"
+  linkedin: "eglenweyl"
 slug: "glen-weyl"
 ---
 

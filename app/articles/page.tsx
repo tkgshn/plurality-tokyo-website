@@ -4,58 +4,58 @@ import { format } from 'date-fns'
 import { getAllArticles } from '@/lib/articles'
 import PageHeader from '@/components/page-header'
 import { ExternalLink } from 'lucide-react'
+import { cookies } from 'next/headers'
+import { Locale, defaultLocale, translate } from "@/lib/i18n"
 
 export const metadata: Metadata = {
-    title: 'Articles - Plurality Tokyo',
-    description: 'News and articles from the Plurality ecosystem',
+    title: 'Articles',
+    description: 'Articles related to Plurality',
 }
 
 export default function ArticlesPage() {
+    // サーバーサイドでロケールを取得
+    const cookieStore = cookies();
+    const localeCookie = cookieStore.get('NEXT_LOCALE');
+    const locale = (localeCookie?.value || defaultLocale) as Locale;
+
+    const t = (key: string) => translate(locale, key);
     const articles = getAllArticles()
 
     return (
         <div className="bg-black text-white min-h-screen">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
-                <PageHeader title="News from the Ecosystem" backLink={{ href: "/", label: "Home" }} />
+                <h1 className="text-4xl sm:text-6xl font-bold mb-12">
+                    {t('navigation.articles')}
+                </h1>
 
-                <div className="grid grid-cols-1 gap-8 sm:gap-16">
-                    {articles.map((article) => (
-                        <article key={article.id} className="border-b border-gray-700 pb-8 last:border-0">
-                            <div className="flex flex-col space-y-3">
-                                <Link
-                                    href={article.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-xl font-semibold text-lime-400 hover:text-lime-300 transition-colors group flex items-center"
-                                >
-                                    {article.title}{' '}
-                                    <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                </Link>
-
-                                <div className="flex items-center gap-4 text-sm text-gray-400">
-                                    <span>{article.author}</span>
-                                    <span>•</span>
-                                    <time dateTime={article.date}>{format(new Date(article.date), 'MMMM d, yyyy')}</time>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {articles.map((item) => (
+                        <div key={item.id} className="bg-gray-900 p-6 rounded-lg">
+                            <Link
+                                href={item.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block"
+                            >
+                                <h3 className="text-xl font-bold mb-3 hover:text-lime-400">{item.title}</h3>
+                            </Link>
+                            <p className="text-gray-300 text-sm mb-4">{item.description}</p>
+                            <div className="flex flex-col gap-3">
+                                <div className="flex items-center text-gray-400 text-sm">
+                                    <span>{item.author}</span>
                                 </div>
-
-                                <p className="text-gray-300">
-                                    {article.description}
-                                </p>
-
-                                {article.tags && article.tags.length > 0 && (
-                                    <div className="flex flex-wrap gap-2 mt-2">
-                                        {article.tags.map((tag) => (
-                                            <span
-                                                key={tag}
-                                                className="px-2 py-1 text-xs bg-gray-800 text-gray-300 rounded-full"
-                                            >
+                                <div className="flex justify-between items-center">
+                                    <div className="flex flex-wrap gap-2">
+                                        {item.tags && item.tags.map((tag) => (
+                                            <span key={tag} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
-                                )}
+                                    <span className="text-xs text-gray-400">{item.date}</span>
+                                </div>
                             </div>
-                        </article>
+                        </div>
                     ))}
                 </div>
             </div>

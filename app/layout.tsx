@@ -1,9 +1,11 @@
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import type { Metadata } from "next"
+import { cookies } from 'next/headers'
+import { defaultLocale } from "@/lib/i18n"
+import Providers from "@/components/Providers"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,17 +22,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Cookieからロケールを取得
+  const cookieStore = cookies();
+  const localeCookie = cookieStore.get('NEXT_LOCALE');
+  const locale = localeCookie?.value || defaultLocale;
+
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={inter.className}>
         <div className="h-screen">
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <Providers>
             <div className="flex min-h-screen flex-col bg-black text-white">
               <Navbar />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
-          </ThemeProvider>
+          </Providers>
         </div>
       </body>
     </html>

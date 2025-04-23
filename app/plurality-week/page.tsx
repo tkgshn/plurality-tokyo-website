@@ -120,7 +120,7 @@ export default function PluralityWeekPage() {
                                 Special Events
                             </div>
                             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 text-white">
-                                Plurality Tokyo Week 2025
+                                Tokyo Plurality Week 2025
                             </h1>
                             <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl">
                                 A special week of exploring plurality across Tokyo from May 6-12, 2025
@@ -129,6 +129,37 @@ export default function PluralityWeekPage() {
                     </div>
                 </div>
 
+                {/* Overview Section */}
+                <section className="mb-20 sm:mb-28 bg-gray-900 rounded-3xl p-8 sm:p-12">
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-6">Pluralityとは</h2>
+                    <div className="prose prose-invert max-w-none">
+                        <p className="text-lg leading-relaxed text-gray-300">
+                            Pluralityは「社会的差異を超えたコラボレーションのための技術」を意味し、オードリー・タンやグレン・ワイルによって提唱されています。
+                            彼らは、この運動をテクノリバタリアンやテクノクラシーに並ぶ第三の技術社会思想として発展させることを目指しており、
+                            <Link href="https://www.plurality.institute/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Plurality Institute</Link>を設立したり
+                            <Link href="https://www.plurality.net/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Plurality Book</Link>という本を2024年に出版しました。
+                        </p>
+                        <p className="text-lg leading-relaxed text-gray-300 mt-4">
+                            2025年5月2日には、Pluraity Bookの日本語版の出版が予定されており、
+                            <Link href="https://drive.google.com/file/d/1uiKYvQY5oUsboudgNMyVRwSglhm-3y2G/view" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">最終ゲラ原稿のPDF</Link>をこちらで読むことができます。また、
+                            <Link href="https://nameteki.kensuzuki.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">「なめらかな社会とその敵」</Link>の著者でもある
+                            東京大学特任研究員の鈴木健が<Link href="https://docs.google.com/document/d/125ac1o7s6X5etSHy_56eevnzFeSLYa1genKpba4lC1I/edit?tab=t.0#heading=h.fq6vj8qwy89i" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">日本語版の解説</Link>を寄稿しているので、読解の参考として最初に読まれることをおすすめします。
+                        </p>
+                        <div className="mt-6 flex items-center">
+                            <Button asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                                <Link
+                                    href="https://docs.google.com/document/d/1wsASR3ufPug_t0gyeN3LE1AYWHgxiTLnCRp7gi5qjgo/edit?tab=t.0"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center"
+                                >
+                                    <span>続きを読む</span>
+                                    <ExternalLink className="ml-2 h-4 w-4" />
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Calendar Section */}
                 <section className="mb-20 sm:mb-28">
@@ -267,11 +298,17 @@ export default function PluralityWeekPage() {
                                         )}
 
                                         <div className="flex flex-wrap gap-4 mt-6">
-                                            <Button asChild className="bg-white hover:bg-gray-200 text-black">
-                                                <Link href={event.url || "#"} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                                                    詳細を見る <ExternalLink className="ml-2 h-4 w-4" />
-                                                </Link>
-                                            </Button>
+                                            {event.url ? (
+                                                <Button asChild className="bg-white hover:bg-gray-200 text-black">
+                                                    <Link href={event.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                                        詳細を見る <ExternalLink className="ml-2 h-4 w-4" />
+                                                    </Link>
+                                                </Button>
+                                            ) : event.id === "tokyo-college" ? (
+                                                <Button disabled className="bg-gray-500 text-white cursor-not-allowed">
+                                                    非公開イベント
+                                                </Button>
+                                            ) : null}
 
                                             {event.secondaryUrl && (
                                                 <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black">
@@ -340,7 +377,7 @@ export default function PluralityWeekPage() {
                                     </Button>
                                     <Button asChild variant="outline" className="bg-white border-black text-black hover:bg-black hover:text-white text-sm">
                                         <Link
-                                            href="https://www.plurality.net/"
+                                            href="https://cybozushiki.cybozu.co.jp/books/plurality/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center"

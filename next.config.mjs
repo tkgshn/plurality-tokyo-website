@@ -46,6 +46,11 @@ const nextConfig = {
     }
     return config;
   },
+  // App Routerを使用しているため、i18n設定はミドルウェアで行う
+  // i18n: {
+  //   locales: ['en', 'ja'],
+  //   defaultLocale: 'ja',
+  // },
 }
 
 export default withMDX()(nextConfig)

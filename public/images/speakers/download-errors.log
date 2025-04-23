@@ -1,0 +1,188 @@
+[
+  {
+    "title": "Yuko Koshiba",
+    "file": "content/authors/yuko-koshiba.md",
+    "url": "https://pa-inc.jp/images/about/koshiba_yuko.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pa-inc.jp/cms/404.html\nResponse: {\n  \"server\": \"nginx\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:28 GMT\",\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"vary\": \"Accept-Encoding\",\n  \"cache-control\": \"no-store, private\",\n  \"pragma\": \"no-cache\",\n  \"content-security-policy\": \"default-src 'self';script-src 'self' 'unsafe-inline' 'unsafe-eval' *.twitter.com *.line-scdn.net *.googletagmanager.com *.google-analytics.com *.googleapis.com *.google.com connect.facebook.net cdn.jsdelivr.net cdnjs.cloudflare.com *.fontawesome.com jpostal-1006.appspot.com msta.j-server.com;frame-src 'self' *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com *.line.me *.facebook.com;media-src 'self' *.youtube.com *.youtube-nocookie.com;object-src 'self' *.youtube.com *.youtube-nocookie.com;style-src 'self' 'unsafe-inline' *.googleapis.com *.google.com *.fontawesome.com cdn.jsdelivr.net cdnjs.cloudflare.com;img-src 'self' data: blob: *.twitter.com *.google-analytics.com *.google.com placehold.jp;font-src 'self' data: fonts.gstatic.com *.fontawesome.com;connect-src 'self' api.iconify.design *.google-analytics.com *.googleanalytics.com *.google.com stats.g.doubleclick.net msta-orig.j-server.com\",\n  \"access-control-allow-origin\": \"https://pa-inc.jp\",\n  \"access-control-allow-methods\": \"GET, POST\",\n  \"access-control-allow-headers\": \"Accept, X-Requested-With, Origin, Content-Type\",\n  \"set-cookie\": [\n    \"XSRF-TOKEN=eyJpdiI6IlZUWDR5b0RoRXhtUmlWNm1ZUFA1YkE9PSIsInZhbHVlIjoieE5odHVIRmVCcTFSbW1IWklFQ0ZyRm9SYXVveHN4eWJkSjF4NEhTNHZGUlgyZmh2R2lrNnhua3owUDh1ZUFQU2dGV3pQMEtscVBKdjhZL2U2TFZaNDNtVFlsRlp5VlgvalV1RWNOR0VKQ1M4TTRJcDJjQ094QWZuVGVVQVdVSC8iLCJtYWMiOiI4YmM5MmEyZmQzMWM3OWJjNzUwMTMxNjcxZWJiZDEzN2Q2MDFmMWZlYjlmODZmZTE3MThkOWMxM2IxZWM5YzAwIiwidGFnIjoiIn0%3D; expires=Sun, 22 Jun 2025 06:34:28 GMT; Max-Age=5184000; path=/; secure; httponly; samesite=lax\",\n    \"pa_inc_cms_session=eyJpdiI6IjV1cDlDa3R1Qm02Q2dlbVJLM0J1SFE9PSIsInZhbHVlIjoiR0RuN245ME0wZi9ITk5FVWwxUDZJZzRqSStTdngzZi9CbzdDZ1hOMHh0ZW5VZlR0UXR0NXc3Wk01RXl5ODBKT1NxNHJleEJIYWUzRXJReUZvZ293MHBrWW5xeXg5SU9HYnFaSmtQWUp1VHZrMmJLZkd1ZUJRRkRsYU1jdlZ1UFgiLCJtYWMiOiI2MjA3N2I0ZDkzMDY2YTkwMjU1MDNiMDI1Y2VlMjY0YmJjYjVlOTBlNjNhZTEwYzViMDI5Njc3ZDlhOWI0ZjJlIiwidGFnIjoiIn0%3D; path=/; httponly; samesite=lax\"\n  ],\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"strict-transport-security\": \"max-age=31536000; includeSubDomains\"\n}"
+  },
+  {
+    "title": "Waka Itagaki",
+    "file": "content/authors/waka-itagaki.md",
+    "url": "https://pbs.twimg.com/profile_images/1688383275821234176/5fXuFE71_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1688383275821234176/5fXuFE71_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"c81fcb7a0191e4cf\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:28 GMT\",\n  \"x-cache\": \"HIT\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700029-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=HIT, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Tshilidzi Marwala",
+    "file": "content/authors/tshilidzi-marwala.md",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Tshilidzi_Marwala_portrait.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://upload.wikimedia.org/wikipedia/commons/4/4a/Tshilidzi_Marwala_portrait.jpg\nResponse: {\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"content-length\": \"97\",\n  \"date\": \"Wed, 23 Apr 2025 06:29:33 GMT\",\n  \"server\": \"envoy\",\n  \"age\": \"295\",\n  \"x-cache\": \"cp5030 miss, cp5030 hit/3\",\n  \"x-cache-status\": \"hit-front\",\n  \"server-timing\": \"cache;desc=\\\"hit-front\\\", host;desc=\\\"cp5030\\\"\",\n  \"strict-transport-security\": \"max-age=106384710; includeSubDomains; preload\",\n  \"report-to\": \"{ \\\"group\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"endpoints\\\": [{ \\\"url\\\": \\\"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\\\" }] }\",\n  \"nel\": \"{ \\\"report_to\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"failure_fraction\\\": 0.05, \\\"success_fraction\\\": 0.0}\",\n  \"x-client-ip\": \"2405:1204:d105:2200:9808:1874:5621:38d\",\n  \"x-content-type-options\": \"nosniff\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache\",\n  \"timing-allow-origin\": \"*\"\n}"
+  },
+  {
+    "title": "Teruka Sumiya",
+    "file": "content/authors/teruka-sumiya.md",
+    "url": "https://media.licdn.com/dms/image/C5603AQF6mH1ahGWHww/profile-displayphoto-shrink_400_400/0/1588662403002",
+    "error": "画像のダウンロードに失敗しました: 403 - https://media.licdn.com/dms/image/C5603AQF6mH1ahGWHww/profile-displayphoto-shrink_400_400/0/1588662403002\nResponse: {\n  \"server\": \"AkamaiGHost\",\n  \"mime-version\": \"1.0\",\n  \"content-type\": \"text/html\",\n  \"content-length\": \"484\",\n  \"expires\": \"Wed, 23 Apr 2025 06:34:29 GMT\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:29 GMT\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=93600,h3-29=\\\":443\\\"; ma=93600,quic=\\\":443\\\"; ma=93600; v=\\\"43\\\"\",\n  \"connection\": \"keep-alive\",\n  \"x-cache\": \"TCP_MISS\",\n  \"x-cdn-rcode\": \"1a\",\n  \"x-cdn-proto\": \"HTTP1\",\n  \"x-cdn-client-ip-version\": \"IPV6\",\n  \"timing-allow-origin\": \"*\",\n  \"access-control-allow-origin\": \"*\",\n  \"x-akamai-deny\": \"invalid key version, missing-outoforder-query-parameters\",\n  \"x-cdn\": \"AKAM-STLS\"\n}"
+  },
+  {
+    "title": "Takahiro Yasuno",
+    "file": "content/authors/takahiro-yasuno.md",
+    "url": "https://pbs.twimg.com/profile_images/1688240445249798144/GHKPdc8z_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1688240445249798144/GHKPdc8z_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"edd51261c9e6e3fb\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:29 GMT\",\n  \"x-cache\": \"HIT\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700022-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=HIT, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Shogo Ochiai",
+    "file": "content/authors/shogo-ochiai.md",
+    "url": "https://2023.webx-asia.com/wp-content/uploads/2023/06/shogo-ochiai.jpeg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://2023.webx-asia.com/wp-content/uploads/2023/06/shogo-ochiai.jpeg\nResponse: {\n  \"connection\": \"Keep-Alive\",\n  \"keep-alive\": \"timeout=5, max=100\",\n  \"expires\": \"Wed, 11 Jan 1984 05:00:00 GMT\",\n  \"cache-control\": \"no-cache, must-revalidate, max-age=0\",\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"link\": \"<https://2023.webx-asia.com/wp-json/>; rel=\\\"https://api.w.org/\\\"\",\n  \"transfer-encoding\": \"chunked\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:29 GMT\",\n  \"server\": \"LiteSpeed\",\n  \"vary\": \"User-Agent\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=2592000, h3-29=\\\":443\\\"; ma=2592000, h3-Q050=\\\":443\\\"; ma=2592000, h3-Q046=\\\":443\\\"; ma=2592000, h3-Q043=\\\":443\\\"; ma=2592000, quic=\\\":443\\\"; ma=2592000; v=\\\"43,46\\\"\"\n}"
+  },
+  {
+    "title": "Shinya Mori",
+    "file": "content/authors/shinya-mori.md",
+    "url": "https://pbs.twimg.com/profile_images/1751835690569752576/RFQ7Hec2_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1751835690569752576/RFQ7Hec2_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"517d77bf7b5838e1\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:29 GMT\",\n  \"x-cache\": \"HIT\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700061-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=HIT, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Shin'ichiro Matsuo",
+    "file": "content/authors/shinichiro-matsuo.md",
+    "url": "https://people.cs.georgetown.edu/matsuo/matsuo.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://people.cs.georgetown.edu/matsuo/matsuo.jpg\nResponse: {\n  \"date\": \"Wed, 23 Apr 2025 06:34:30 GMT\",\n  \"server\": \"Apache/2.4.62 (Rocky Linux) OpenSSL/3.2.2\",\n  \"content-length\": \"196\",\n  \"keep-alive\": \"timeout=5, max=100\",\n  \"connection\": \"Keep-Alive\",\n  \"content-type\": \"text/html; charset=iso-8859-1\"\n}"
+  },
+  {
+    "title": "Ryota Kanai, Ph.D.",
+    "file": "content/authors/ryota-kanai.md",
+    "url": "https://research.araya.org/wp-content/uploads/2021/04/ryota-kanai-400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://research.araya.org/wp-content/uploads/2021/04/ryota-kanai-400x400.jpg\nResponse: {\n  \"server\": \"nginx\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:30 GMT\",\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"vary\": \"Accept-Encoding\",\n  \"expires\": \"Wed, 11 Jan 1984 05:00:00 GMT\",\n  \"cache-control\": \"no-cache, must-revalidate, max-age=0, no-store, private\",\n  \"link\": \"<https://research.araya.org/wp-json/>; rel=\\\"https://api.w.org/\\\"\"\n}"
+  },
+  {
+    "title": "Paul Kohlhaas",
+    "file": "content/authors/paul-kohlhaas.md",
+    "url": "https://pbs.twimg.com/profile_images/1767910564707866624/7c75riR1_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1767910564707866624/7c75riR1_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"c2f7adac5de7c7b8\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:30 GMT\",\n  \"x-cache\": \"HIT\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700098-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=HIT, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Noah Yeh",
+    "file": "content/authors/noah-yeh.md",
+    "url": "https://wagmi-chain.s3.ap-southeast-1.amazonaws.com/wagmi/noah-yeh.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://wagmi-chain.s3.ap-southeast-1.amazonaws.com/wagmi/noah-yeh.jpg\nResponse: {\n  \"x-amz-request-id\": \"HC9Z0AXBG45GW094\",\n  \"x-amz-id-2\": \"u0w+NbdD9lSytdZ7oyCFd99RHTXgDAjk2o/B/qtIIi14g/rS8dNi+btUbphCozVNJhxjLMBGORIWE3rMISy9j0kFeHnW+HWPj+a4TSVOqjo=\",\n  \"content-type\": \"application/xml\",\n  \"transfer-encoding\": \"chunked\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:30 GMT\",\n  \"server\": \"AmazonS3\"\n}"
+  },
+  {
+    "title": "Miya Zhang",
+    "file": "content/authors/miya-zhang.md",
+    "url": "https://ipfs.filebase.io/ipfs/QmTqAnQ5a2dUr8hyFJHQ6ykcyDK6uHfvZj7G4s8pYZb5zF",
+    "error": "画像のダウンロードに失敗しました: 404 - https://ipfs.filebase.io/ipfs/QmTqAnQ5a2dUr8hyFJHQ6ykcyDK6uHfvZj7G4s8pYZb5zF\nResponse: {\n  \"date\": \"Wed, 23 Apr 2025 06:34:32 GMT\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"x-filebase-pop\": \"sgp1\",\n  \"x-filebase-request-id\": \"2f98620ff3d7ae5e7c856eceb5b4318d\",\n  \"server\": \"Filebase\",\n  \"content-security-policy\": \"default-src 'self'; img-src * data: blob: 'unsafe-inline'; style-src * 'unsafe-inline';\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-allow-methods\": \"GET, HEAD\",\n  \"access-control-allow-headers\": \"Content-Type, Range, User-Agent, X-Requested-With\",\n  \"access-control-expose-headers\": \"Content-Length, Content-Range, X-Chunked-Output, X-Ipfs-Path, X-Ipfs-Roots, X-Stream-Output\",\n  \"access-control-max-age\": \"1728000\"\n}"
+  },
+  {
+    "title": "Midori Kanemitsu",
+    "file": "content/authors/midori-kanemitsu.md",
+    "url": "https://bitflyer.com/pub/assets/images/directors/midori-kanemitsu.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://bitflyer.com/pub/assets/images/directors/midori-kanemitsu.jpg\nResponse: {\n  \"content-length\": \"215\",\n  \"content-type\": \"application/xml\",\n  \"server\": \"Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0\",\n  \"x-ms-request-id\": \"a890fd8a-a01e-0053-5f19-b470e6000000\",\n  \"x-ms-version\": \"2009-09-19\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:41 GMT\",\n  \"connection\": \"keep-alive\",\n  \"strict-transport-security\": \"max-age=31536000\"\n}"
+  },
+  {
+    "title": "Yen-Lin \"Mashbean\" Huang",
+    "file": "content/authors/mashbean.md",
+    "url": "https://pbs.twimg.com/profile_images/1466032820608518145/4Xnvpm-E_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1466032820608518145/4Xnvpm-E_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"6ad81e1e57e4fefe\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:42 GMT\",\n  \"x-cache\": \"HIT\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700083-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=HIT, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Masahiro Fukuhara",
+    "file": "content/authors/masahiro-fukuhara.md",
+    "url": "https://i-globalsociety.com/wp-content/uploads/2024/06/fukuhara.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://i-globalsociety.com/wp-content/uploads/2024/06/fukuhara.jpg\nResponse: {\n  \"server\": \"nginx\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:42 GMT\",\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"x-powered-by\": \"PHP/7.4.33\",\n  \"set-cookie\": [\n    \"mw-wp-form-token=758cb2148eb0bd0f79ebf1a75c077a33f2b3d80126aed1a464e8c5ac0d34ebc2; path=/; secure; HttpOnly\",\n    \"PHPSESSID=a85e39bc0f4f12924662b724976bff16; path=/\"\n  ],\n  \"expires\": \"Wed, 11 Jan 1984 05:00:00 GMT\",\n  \"cache-control\": \"private, no-store, no-cache, must-revalidate, max-age=0\",\n  \"pragma\": \"no-cache\",\n  \"link\": \"<https://i-globalsociety.com/wp-json/>; rel=\\\"https://api.w.org/\\\"\"\n}"
+  },
+  {
+    "title": "Masaaki Taira",
+    "file": "content/authors/masaaki-taira.md",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Masaaki_Taira_2023.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://upload.wikimedia.org/wikipedia/commons/3/39/Masaaki_Taira_2023.jpg\nResponse: {\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"content-length\": \"89\",\n  \"date\": \"Wed, 23 Apr 2025 06:29:33 GMT\",\n  \"server\": \"envoy\",\n  \"age\": \"309\",\n  \"x-cache\": \"cp5030 miss, cp5030 hit/3\",\n  \"x-cache-status\": \"hit-front\",\n  \"server-timing\": \"cache;desc=\\\"hit-front\\\", host;desc=\\\"cp5030\\\"\",\n  \"strict-transport-security\": \"max-age=106384710; includeSubDomains; preload\",\n  \"report-to\": \"{ \\\"group\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"endpoints\\\": [{ \\\"url\\\": \\\"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\\\" }] }\",\n  \"nel\": \"{ \\\"report_to\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"failure_fraction\\\": 0.05, \\\"success_fraction\\\": 0.0}\",\n  \"x-client-ip\": \"2405:1204:d105:2200:9808:1874:5621:38d\",\n  \"x-content-type-options\": \"nosniff\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache\",\n  \"timing-allow-origin\": \"*\"\n}"
+  },
+  {
+    "title": "Martin Schmidt, Ph.D.",
+    "file": "content/authors/martin-schmidt.md",
+    "url": "https://www.hiig.de/wp-content/uploads/2018/03/martin-schmidt.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://www.hiig.de/wp-content/uploads/2018/03/martin-schmidt.jpg\nResponse: {\n  \"date\": \"Wed, 23 Apr 2025 06:34:43 GMT\",\n  \"server\": \"Apache\",\n  \"content-length\": \"196\",\n  \"keep-alive\": \"timeout=15, max=500\",\n  \"connection\": \"Keep-Alive\",\n  \"content-type\": \"text/html; charset=iso-8859-1\"\n}"
+  },
+  {
+    "title": "Mariko Nishimura",
+    "file": "content/authors/mariko-nishimura.md",
+    "url": "https://savvytokyo.scdn3.secure.raxcdn.com/app/uploads/2022/10/MarikoNishimura_portrait.jpg",
+    "error": "getaddrinfo ENOTFOUND savvytokyo.scdn3.secure.raxcdn.com"
+  },
+  {
+    "title": "Kotaro Motoshima",
+    "file": "content/authors/kotaro-motoshima.md",
+    "url": "https://theme-weeks.expo2025.or.jp/storage/program/674575da878b6_kotaro_motoshima.jpg",
+    "error": "画像のダウンロードに失敗しました: 403 - https://theme-weeks.expo2025.or.jp/storage/program/674575da878b6_kotaro_motoshima.jpg\nResponse: {\n  \"content-type\": \"text/html\",\n  \"content-length\": \"12290\",\n  \"connection\": \"keep-alive\",\n  \"date\": \"Wed, 23 Apr 2025 02:41:25 GMT\",\n  \"last-modified\": \"Tue, 22 Apr 2025 03:45:38 GMT\",\n  \"etag\": \"\\\"a5265d5c0b581cd9bfe0473a13a6c6e3\\\"\",\n  \"x-amz-server-side-encryption\": \"AES256\",\n  \"x-amz-version-id\": \"DdDygLFnx3qQ1HqJyWjMhk_oZcdw2nvY\",\n  \"accept-ranges\": \"bytes\",\n  \"server\": \"AmazonS3\",\n  \"x-cache\": \"Error from cloudfront\",\n  \"via\": \"1.1 54197886bbc74a496869a3ffeebf1d98.cloudfront.net (CloudFront)\",\n  \"x-amz-cf-pop\": \"KIX56-C1\",\n  \"x-amz-cf-id\": \"QqCALvPSmOQrRey3gYhE_3BNur8IHQfweyXz6qItA4TgRMZaxK6VFA==\",\n  \"age\": \"14000\"\n}"
+  },
+  {
+    "title": "Kyra \"Kiki\" Bowman",
+    "file": "content/authors/kiki-bowman.md",
+    "url": "https://unu.edu/sites/default/files/2022-08/Kyra-Bowman-UNU.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://unu.edu/sites/default/files/2022-08/Kyra-Bowman-UNU.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"220\",\n  \"content-language\": \"en\",\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"expires\": \"Sun, 19 Nov 1978 05:00:00 GMT\",\n  \"server\": \"nginx\",\n  \"strict-transport-security\": \"max-age=300; includeSubDomains\",\n  \"x-drupal-cache\": \"HIT\",\n  \"x-generator\": \"Drupal 10 (https://www.drupal.org)\",\n  \"x-pantheon-styx-hostname\": \"styx-fe2-b-7b5dbfcc48-d5zgw\",\n  \"x-styx-req-id\": \"0b514432-200d-11f0-9e69-262b1422b7f8\",\n  \"cache-control\": \"public, max-age=30\",\n  \"age\": \"0\",\n  \"accept-ranges\": \"bytes\",\n  \"via\": \"1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:44 GMT\",\n  \"x-served-by\": \"cache-syd10136-SYD, cache-syd10136-SYD, cache-itm1220056-ITM, cache-itm1220056-ITM\",\n  \"x-cache\": \"MISS, MISS, MISS, MISS\",\n  \"x-cache-hits\": \"0, 0, 0, 0\",\n  \"x-timer\": \"S1745390084.320593,VS0,VE436\",\n  \"vary\": \"Accept-Encoding, Cookie\"\n}"
+  },
+  {
+    "title": "Joichi \"Joi\" Ito",
+    "file": "content/authors/joi-ito.md",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Joichi_Ito_Headshot_2007.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://upload.wikimedia.org/wikipedia/commons/b/bf/Joichi_Ito_Headshot_2007.jpg\nResponse: {\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"content-length\": \"95\",\n  \"date\": \"Wed, 23 Apr 2025 06:31:34 GMT\",\n  \"server\": \"envoy\",\n  \"age\": \"190\",\n  \"x-cache\": \"cp5030 miss, cp5030 hit/2\",\n  \"x-cache-status\": \"hit-front\",\n  \"server-timing\": \"cache;desc=\\\"hit-front\\\", host;desc=\\\"cp5030\\\"\",\n  \"strict-transport-security\": \"max-age=106384710; includeSubDomains; preload\",\n  \"report-to\": \"{ \\\"group\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"endpoints\\\": [{ \\\"url\\\": \\\"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\\\" }] }\",\n  \"nel\": \"{ \\\"report_to\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"failure_fraction\\\": 0.05, \\\"success_fraction\\\": 0.0}\",\n  \"x-client-ip\": \"2405:1204:d105:2200:9808:1874:5621:38d\",\n  \"x-content-type-options\": \"nosniff\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache\",\n  \"timing-allow-origin\": \"*\"\n}"
+  },
+  {
+    "title": "Hal Seki",
+    "file": "content/authors/hal-seki.md",
+    "url": "https://www.halsk.xyz/img/hal_seki.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://www.halsk.xyz/img/hal_seki.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"9379\",\n  \"server\": \"GitHub.com\",\n  \"content-type\": \"text/html; charset=utf-8\",\n  \"access-control-allow-origin\": \"*\",\n  \"etag\": \"\\\"64d39a40-24a3\\\"\",\n  \"content-security-policy\": \"default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'\",\n  \"x-proxy-cache\": \"MISS\",\n  \"x-github-request-id\": \"3E94:1A4FE8:5DC1CC:60CA71:68088947\",\n  \"accept-ranges\": \"bytes\",\n  \"age\": \"190\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:45 GMT\",\n  \"via\": \"1.1 varnish\",\n  \"x-served-by\": \"cache-itm1220033-ITM\",\n  \"x-cache\": \"HIT\",\n  \"x-cache-hits\": \"0\",\n  \"x-timer\": \"S1745390085.194613,VS0,VE1\",\n  \"vary\": \"Accept-Encoding\",\n  \"x-fastly-request-id\": \"00c68bdbacc8eb39b776375bd60c05686876ebf3\"\n}"
+  },
+  {
+    "title": "E. Glen Weyl",
+    "file": "content/authors/glen-weyl.md",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Glen_Weyl_2019.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://upload.wikimedia.org/wikipedia/commons/9/9a/Glen_Weyl_2019.jpg\nResponse: {\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"content-length\": \"85\",\n  \"date\": \"Wed, 23 Apr 2025 06:31:35 GMT\",\n  \"server\": \"envoy\",\n  \"age\": \"189\",\n  \"x-cache\": \"cp5030 miss, cp5030 hit/2\",\n  \"x-cache-status\": \"hit-front\",\n  \"server-timing\": \"cache;desc=\\\"hit-front\\\", host;desc=\\\"cp5030\\\"\",\n  \"strict-transport-security\": \"max-age=106384710; includeSubDomains; preload\",\n  \"report-to\": \"{ \\\"group\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"endpoints\\\": [{ \\\"url\\\": \\\"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\\\" }] }\",\n  \"nel\": \"{ \\\"report_to\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"failure_fraction\\\": 0.05, \\\"success_fraction\\\": 0.0}\",\n  \"x-client-ip\": \"2405:1204:d105:2200:9808:1874:5621:38d\",\n  \"x-content-type-options\": \"nosniff\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache\",\n  \"timing-allow-origin\": \"*\"\n}"
+  },
+  {
+    "title": "David Casey",
+    "file": "content/authors/david-casey.md",
+    "url": "https://pbs.twimg.com/profile_images/1543730529949997056/AA-5hp2m_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1543730529949997056/AA-5hp2m_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"97f300a0838a4d8e\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:45 GMT\",\n  \"x-cache\": \"MISS\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700090-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=MISS, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Christopher Szymczak",
+    "file": "content/authors/christopher-szymczak.md",
+    "url": "https://pbs.twimg.com/profile_images/1622602049475211266/8HvwY_m2_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1622602049475211266/8HvwY_m2_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"d842651cd6422502\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:45 GMT\",\n  \"x-cache\": \"MISS\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700045-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=MISS, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Cheryl Ng",
+    "file": "content/authors/cheryl-ng.md",
+    "url": "https://pbs.twimg.com/profile_images/1648932908110512128/8dZ0pKcp_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1648932908110512128/8dZ0pKcp_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"36f617e519c143c6\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:45 GMT\",\n  \"x-cache\": \"MISS\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700021-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=MISS, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Cheeky Gorilla",
+    "file": "content/authors/cheeky-gorilla.md",
+    "url": "https://pbs.twimg.com/profile_images/1656779693262299137/ae1QhWjK_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1656779693262299137/ae1QhWjK_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"bc88d4663b7203b3\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:46 GMT\",\n  \"x-cache\": \"MISS\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700022-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=MISS, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Beth McCarthy",
+    "file": "content/authors/beth-mccarthy.md",
+    "url": "https://pbs.twimg.com/profile_images/1701471879208673280/UMVImV1T_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1701471879208673280/UMVImV1T_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"b479b3a5786d475a\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:46 GMT\",\n  \"x-cache\": \"MISS\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700060-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=MISS, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Aya Miyaguchi",
+    "file": "content/authors/aya-miyaguchi.md",
+    "url": "https://pbs.twimg.com/profile_images/1647158076246528002/IrwgdLWD_400x400.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://pbs.twimg.com/profile_images/1647158076246528002/IrwgdLWD_400x400.jpg\nResponse: {\n  \"connection\": \"keep-alive\",\n  \"content-length\": \"0\",\n  \"perf\": \"7402827104\",\n  \"cache-control\": \"max-age=300, must-revalidate\",\n  \"x-transaction-id\": \"27cb7d89e14cd3eb\",\n  \"timing-allow-origin\": \"https://twitter.com, https://mobile.twitter.com\",\n  \"strict-transport-security\": \"max-age=631138519\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Content-Length\",\n  \"cross-origin-resource-policy\": \"cross-origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"image/jpeg\",\n  \"accept-ranges\": \"bytes\",\n  \"date\": \"Wed, 23 Apr 2025 06:34:46 GMT\",\n  \"x-cache\": \"MISS\",\n  \"x-tw-cdn\": \"FT\",\n  \"x-served-by\": \"cache-nrt-rjtf7700061-NRT, cache-tw-ZZZ1\",\n  \"server-timing\": \"x-cache;desc=MISS, x-tw-cdn;desc=FT\"\n}"
+  },
+  {
+    "title": "Audrey Tang",
+    "file": "content/authors/audrey-tang.md",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Minister_Audrey_Tang_official_portrait_crop.jpg",
+    "error": "画像のダウンロードに失敗しました: 404 - https://upload.wikimedia.org/wikipedia/commons/c/c4/Minister_Audrey_Tang_official_portrait_crop.jpg\nResponse: {\n  \"content-type\": \"text/html; charset=UTF-8\",\n  \"content-length\": \"114\",\n  \"date\": \"Wed, 23 Apr 2025 06:29:33 GMT\",\n  \"server\": \"envoy\",\n  \"age\": \"313\",\n  \"x-cache\": \"cp5030 miss, cp5030 hit/3\",\n  \"x-cache-status\": \"hit-front\",\n  \"server-timing\": \"cache;desc=\\\"hit-front\\\", host;desc=\\\"cp5030\\\"\",\n  \"strict-transport-security\": \"max-age=106384710; includeSubDomains; preload\",\n  \"report-to\": \"{ \\\"group\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"endpoints\\\": [{ \\\"url\\\": \\\"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\\\" }] }\",\n  \"nel\": \"{ \\\"report_to\\\": \\\"wm_nel\\\", \\\"max_age\\\": 604800, \\\"failure_fraction\\\": 0.05, \\\"success_fraction\\\": 0.0}\",\n  \"x-client-ip\": \"2405:1204:d105:2200:9808:1874:5621:38d\",\n  \"x-content-type-options\": \"nosniff\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-expose-headers\": \"Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache\",\n  \"timing-allow-origin\": \"*\"\n}"
+  },
+  {
+    "title": "Akio Hoshi",
+    "file": "content/authors/akio-hoshi.md",
+    "url": "https://coindeskjapan.scdn3.secure.raxcdn.com/wp-content/uploads/2022/07/akio-hoshi_avatar.png",
+    "error": "getaddrinfo ENOTFOUND coindeskjapan.scdn3.secure.raxcdn.com"
+  }
+]

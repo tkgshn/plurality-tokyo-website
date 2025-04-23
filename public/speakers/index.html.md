@@ -1,0 +1,41 @@
+# スピーカー一覧
+
+- [Akio Hoshi](/speakers/akio-hoshi.html.md): IT Journalist at Commons Media
+- [Atsushi Hayashi](/speakers/atsushi-hayashi.html.md): Founder, Next Commons Lab at Next Commons Lab
+- [Audrey Tang](/speakers/audrey-tang.html.md): President-designate, Plurality Institute; Former Digital Minister of Taiwan at Plurality Institute
+- [Aya Miyaguchi](/speakers/aya-miyaguchi.html.md): President, Ethereum Foundation at Ethereum Foundation
+- [Beth McCarthy](/speakers/beth-mccarthy.html.md): Research Lead at Funding the Commons
+- [Cheeky Gorilla](/speakers/cheeky-gorilla.html.md): Core Contributor, Protocol Guild at Protocol Guild
+- [Cheryl Ng](/speakers/cheryl-ng.html.md): Portfolio Manager at UNICEF Innovation
+- [Christopher Szymczak](/speakers/christopher-szymczak.html.md): Lead, Digital Public Goods at UNICEF Innovation
+- [David Casey](/speakers/david-casey.html.md): Co-founder at Funding the Commons
+- [E. Glen Weyl](/speakers/glen-weyl.html.md): Research Lead, Microsoft Research; Founder, RadicalxChange & Plurality Institute at Microsoft Research, RadicalxChange Foundation
+- [Hal Seki](/speakers/hal-seki.html.md): Founder & CEO at Code for Japan / Georepublic
+- [Hirokazu Nishio](/speakers/hirokazu-nishio.html.md): Engineer at Cybozu Labs
+- [Joichi "Joi" Ito](/speakers/joi-ito.html.md): President, Chiba Institute of Technology at Chiba Institute of Technology
+- [Ken Suzuki](/speakers/ken-suzuki.html.md): Executive Chair, SmartNews at SmartNews Inc.
+- [Kevin Owocki](/speakers/kevin-owocki.html.md): Founder, Gitcoin & Supermodular at Gitcoin, Supermodular
+- [Kyra "Kiki" Bowman](/speakers/kiki-bowman.html.md): Head of Communications at UNU
+- [Kotaro Motoshima](/speakers/kotaro-motoshima.html.md): Attorney & Rep. Holder at RuleMakers DAO
+- [Mariko Nishimura](/speakers/mariko-nishimura.html.md): CEO & Co-Founder at HEART CATCH Inc.
+- [Martin Schmidt, Ph.D.](/speakers/martin-schmidt.html.md): Researcher at HIIG Berlin
+- [Masaaki Taira](/speakers/masaaki-taira.html.md): Diet Member at House of Representatives, Japan
+- [Masahiro Fukuhara](/speakers/masahiro-fukuhara.html.md): Founder & CEO, IGS at Institution for a Global Society
+- [Yen-Lin "Mashbean" Huang](/speakers/mashbean.html.md): Web3 Architect at Ministry of Digital Affairs, Taiwan
+- [Michiaki Matsushima](/speakers/michiaki-matsushima.html.md): Editor-in-Chief, WIRED Japan at Condé Nast Japan
+- [Midori Kanemitsu](/speakers/midori-kanemitsu.html.md): Executive Officer at bitFlyer Holdings
+- [Miya Zhang](/speakers/miya-zhang.html.md): Indie Creator at Self-employed
+- [Noah Yeh](/speakers/noah-yeh.html.md): Organizer at da0 / g0v
+- [Paul Kohlhaas](/speakers/paul-kohlhaas.html.md): CEO at Molecule DAO
+- [Ryota Kanai, Ph.D.](/speakers/ryota-kanai.html.md): Founder & CEO, Araya Inc. at Araya Inc.
+- [Shin'ichiro Matsuo](/speakers/shinichiro-matsuo.html.md): Research Professor at Georgetown University
+- [Shinya Mori](/speakers/shinya-mori.html.md): Research Lead at Fracton Ventures
+- [Shogo Ochiai](/speakers/shogo-ochiai.html.md): CEO at Solidity House
+- [Shunsuke Takagi](/speakers/shunsuke-takagi.html.md): Founder, Plurality Tokyo at Plurality Tokyo
+- [Hiro "Taiyo" Hamada](/speakers/taiyo-hamada.html.md): Research Team Lead, Araya Inc.; Chair, DeSci Tokyo at Araya Inc.
+- [Takahiro Yasuno](/speakers/takahiro-yasuno.html.md): Founder at Digital Democracy 2030
+- [Teruka Sumiya](/speakers/teruka-sumiya.html.md): Project Specialist at WEF C4IR Japan
+- [Tshilidzi Marwala](/speakers/tshilidzi-marwala.html.md): Rector at United Nations University
+- [Waka Itagaki](/speakers/waka-itagaki.html.md): Deputy Director at Ministry of Economy, Trade & Industry (METI)
+- [Yoshiro Tasaka](/speakers/yoshiro-tasaka.html.md): Director, Shibuya Startup Support at Shibuya City Office
+- [Yuko Koshiba](/speakers/yuko-koshiba.html.md): Co-CEO, Philanthropy Advisors Inc. at Philanthropy Advisors Inc.

@@ -8,6 +8,7 @@ export interface Speaker {
     name: string;
     role?: string;
     bio?: string;
+    avatar_url?: string;
 }
 
 export interface Event {

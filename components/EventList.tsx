@@ -3,12 +3,26 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { EventContent } from '@/types/content';
+import { cookies } from 'next/headers';
+import { Locale, defaultLocale, translate } from '@/lib/i18n';
+import { SpeakerAvatar } from './SpeakerAvatar';
+
+interface SpeakerMetadata {
+    name: string;
+    avatar_url?: string;
+    authorInfo?: {
+        metadata: {
+            avatar_url?: string;
+        };
+    };
+}
 
 interface EventListProps {
     events: EventContent[];
     showPast?: boolean;
     showUpcoming?: boolean;
     maxItems?: number;
+    showHeaders?: boolean;
 }
 
 /**
@@ -18,13 +32,21 @@ interface EventListProps {
  * @param showPast - Whether to show past events (default: true)
  * @param showUpcoming - Whether to show upcoming events (default: true)
  * @param maxItems - Maximum number of items to display per section (optional)
+ * @param showHeaders - Whether to show section headers (default: true)
  */
 export const EventList: React.FC<EventListProps> = ({
     events,
     showPast = true,
     showUpcoming = true,
     maxItems,
+    showHeaders = true,
 }) => {
+    // サーバーサイドでロケールを取得
+    const cookieStore = cookies();
+    const localeCookie = cookieStore.get('NEXT_LOCALE');
+    const locale = (localeCookie?.value || defaultLocale) as Locale;
+
+    const t = (key: string) => translate(locale, key);
     const now = new Date();
 
     // Sort events by date
@@ -57,10 +79,10 @@ export const EventList: React.FC<EventListProps> = ({
             ? "block p-6 border border-lime-500 rounded-lg hover:shadow-lg hover:border-lime-400 transition-all duration-200 bg-gradient-to-br from-gray-900 to-gray-800"
             : "block p-6 border border-gray-700 rounded-lg hover:shadow-lg hover:border-gray-500 transition-all duration-200 bg-gray-900";
 
-        // Badge for upcoming events
+        // Badge for upcoming events with i18n support
         const upcomingBadge = isUpcoming && (
             <div className="absolute top-4 right-4 bg-lime-500 text-black px-3 py-1 rounded-full font-medium text-sm z-10">
-                Coming Soon
+                {t('events.comingSoon')}
             </div>
         );
 
@@ -107,18 +129,28 @@ export const EventList: React.FC<EventListProps> = ({
                 {/* Speaker display */}
                 {event.metadata.speakers && event.metadata.speakers.length > 0 && (
                     <div className="mt-4">
-                        <h3 className="text-sm font-medium text-gray-400 mb-2">Speakers</h3>
+                        <h3 className="text-sm font-medium text-gray-400 mb-2">{t('common.speakers')}</h3>
                         <div className="flex -space-x-2 overflow-hidden">
-                            {event.metadata.speakers.map((speaker, index) => (
-                                <div key={index} className="relative inline-block w-8 h-8 rounded-full overflow-hidden border border-gray-800">
-                                    <Image
-                                        src={`/images/speakers/${speaker.name.toLowerCase().replace(/\s+/g, '-')}.jpg`}
+                            {event.metadata.speakers.map((speaker: SpeakerMetadata, index) => {
+                                const speakerSlug = speaker.name.toLowerCase()
+                                    .replace(/\s+/g, '-')
+                                    .replace(/^e\.\s+/, '')
+                                    .replace(/^dr\.\s+/, '')
+                                    .replace(/^prof\.\s+/, '')
+                                    .replace(/['"]/g, '');
+
+                                const imageSource = speaker.avatar_url ||
+                                    (speaker.authorInfo?.metadata?.avatar_url) ||
+                                    `/images/speakers/${speakerSlug}.jpg`;
+
+                                return (
+                                    <SpeakerAvatar
+                                        key={index}
+                                        src={imageSource}
                                         alt={speaker.name}
-                                        fill
-                                        className="object-cover"
                                     />
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 )}
@@ -139,7 +171,7 @@ export const EventList: React.FC<EventListProps> = ({
                 {isUpcoming && (
                     <div className="mt-6">
                         <button className="w-full py-2 px-4 bg-lime-500 hover:bg-lime-600 text-black font-medium rounded transition-colors duration-200">
-                            View Details
+                            {t('home.viewDetails')}
                         </button>
                     </div>
                 )}
@@ -152,7 +184,7 @@ export const EventList: React.FC<EventListProps> = ({
             {/* Upcoming Events */}
             {showUpcoming && limitedUpcomingEvents.length > 0 && (
                 <section>
-                    <h2 className="text-3xl font-bold mb-8 text-lime-400">Upcoming Events</h2>
+                    {showHeaders && <h2 className="text-3xl font-bold mb-8 text-lime-400">{t('home.upcomingEvents')}</h2>}
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {limitedUpcomingEvents.map((event) => renderEventCard(event, true))}
                     </div>
@@ -162,7 +194,7 @@ export const EventList: React.FC<EventListProps> = ({
                                 href="/events"
                                 className="inline-block px-4 py-2 rounded bg-lime-800 hover:bg-lime-700 transition-colors"
                             >
-                                View All Upcoming Events
+                                {t('events.viewAllEvents')}
                             </Link>
                         </div>
                     )}
@@ -172,7 +204,7 @@ export const EventList: React.FC<EventListProps> = ({
             {/* Past Events */}
             {showPast && limitedPastEvents.length > 0 && (
                 <section>
-                    <h2 className="text-3xl font-bold mb-8">Past Events</h2>
+                    {showHeaders && <h2 className="text-3xl font-bold mb-8">{t('home.pastEvents')}</h2>}
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {limitedPastEvents.map((event) => renderEventCard(event, false))}
                     </div>

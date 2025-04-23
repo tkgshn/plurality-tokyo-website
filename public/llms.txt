@@ -6,21 +6,27 @@ Plurality Tokyoは、技術とコミュニティの交差点にあるEventsシ�
 
 ## Events
 
-- [Future Tech Summit 2024](/events/future-tech-summit-2024.html.md): 2025/12/10にTokyo, Roppongi Hillsで開催。International summit exploring the future of technology and plurality
-- [Plurality Practice Workshop 2024](/events/plurality-workshop-2024.html.md): 2024/8/15にTokyo, Shibuyaで開催。Workshop for learning practical methods of digital democracy
-- [Glen in Japan 2024](/events/glen-in-japan-2024.html.md): 2024/5/20にTokyo, Japanで開催。A series of talks and workshops by Glen Weyl on Plurality, Digital Democracy, and the Future of Governance
-- [Funding the Commons Tokyo 2024](/events/funding-the-commons-tokyo-2024.html.md): 2024/5/17にTokyo, Japanで開催。A three-day conference exploring innovative funding mechanisms for public goods, with a focus on Japan and Asia
-- [April 23 Meetup](/events/april-23-meetup-2024.html.md): 2024/4/23にTokyo, Japanで開催。A casual meetup for Plurality enthusiasts to discuss and share ideas
+- [Plurality Book JP — Builder Session 2025](/events/plurality-book-jp-builder-session-2025.html.md): 2025/5/10にKeio University East Bldg 8F, Minato City, Tokyoで開催。Hands-on builder workshop celebrating the Japanese edition of *Plurality: The Future of Collaborative Technology and Democracy*, gathering researchers, policymakers and technologists for interactive sessions.
+- [Plurality Tokyo Namerakaigi 2025](/events/plurality-tokyo-namerakaigi-2025.html.md): 2025/2/25にSmartNews HQ, Shibuya City, Tokyoで開催。A community 'smooth-discussion' meetup recapping Funding the Commons Tokyo 2024 and previewing the Plurality Mechanisms PMF report, with lightning talks and open Q&A.
+- [Funding the Commons Tokyo 2024](/events/funding-the-commons-tokyo-2024.html.md): 2024/7/24にUnited Nations University, Shibuya City, Tokyoで開催。The 10th Funding the Commons conference—co-produced with DeSci Tokyo and Plurality Tokyo—brought 538 global participants to explore regenerative funding mechanisms for public goods.
+- [#GleninJapan](/events/glen-in-japan-2024.html.md): 2024/1/3にCrypto Cafe & Bar, Shibuya City, Tokyoで開催。Political-economist E. Glen Weyl's first public talk in Japan.  A lightning-talk session and a moderated panel with thought-leaders from WIRED Japan, Next Commons Lab, and Shibuya Ward explored how the [Plurality] paradigm can reshape technology and governance.
+- [#1 Plurality Tokyo Conference 2023](/events/plurality-tokyo-conference-2023.html.md): 2023/4/23にSmartNews HQ, Shibuya City, Tokyoで開催。The inaugural Plurality Tokyo community conference featuring 18 speakers—including recorded keynotes by Audrey Tang and Kevin Owocki—and attracting more than 150 on-site participants.
 
 ## 記事
 
-- [The Future of Web3 and Decentralized Society](/articles/web3-future.html.md): An exploration of how Web3 technologies are transforming society
-- [The Future of AI and Creativity](/articles/ai-creativity.html.md): An analysis of how AI impacts creative work
-- [New Forms of Organizational Management with DAOs](/articles/dao-governance.html.md): Innovations in organizational management brought by Decentralized Autonomous Organizations (DAOs)
+- [Pluralityとは何か](/articles/Pluralityとは何か.html.md): 鈴木　健（『なめらかな社会とその敵』著者）によるPlurality日本語版解説
+- [デジタル公共財の未来を拓く濃密な2日間 - Funding the Commons Tokyo 2024](/articles/DigitalPublicGoodsFtC.html.md): Code for Japan 創設者が語る、デジタル公共財とFunding the Commons Tokyoへの期待
+- [クリプトと経済学の架け橋｜Funding the Commons Tokyo開催](/articles/CryptoBridgeFtC.html.md): Funding the Commons Tokyoにおけるクリプトと経済学の融合について
+- [研究の未来、そして公共の未来の探索に向けて - DeSci Tokyo 2024 x Funding the Commons 2024](/articles/DesciTokyoFtC.html.md): DeSci Tokyo 2024とFunding the Commons 2024の合同開催における研究と公共財の未来像
+- [Funding the Commons（FtC）Tokyo 日本開催に向けて](/articles/FundingTheCommonsTokyo.html.md): 2024年7月に開催予定のFunding the Commons Tokyoについての意気込みや文脈を解説
 
 ## スピーカー
 
-- [Glen Weyl](/speakers/glen-weyl.html.md): Principal Fellow at Microsoft, Founder of RadicalxChange at Microsoft, RadicalxChange
+- [Akio Hoshi](/speakers/akio-hoshi.html.md): IT Journalist at Commons Media
+- [Atsushi Hayashi](/speakers/atsushi-hayashi.html.md): Founder, Next Commons Lab at Next Commons Lab
+- [Audrey Tang](/speakers/audrey-tang.html.md): President-designate, Plurality Institute; Former Digital Minister of Taiwan at Plurality Institute
+- [Aya Miyaguchi](/speakers/aya-miyaguchi.html.md): President, Ethereum Foundation at Ethereum Foundation
+- [Beth McCarthy](/speakers/beth-mccarthy.html.md): Research Lead at Funding the Commons
 
 ## Optional
 

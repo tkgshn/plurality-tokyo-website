@@ -27,12 +27,17 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-120px * 5 - 5rem));
+      transform: translateX(calc(-200% - 160px));
     }
   }
 
   .animate-scroll {
     animation: scroll 40s linear infinite;
+  }
+
+  /* ホバー時に全てのアニメーションを停止 */
+  .hover\:pause-all-animations:hover * {
+    animation-play-state: paused !important;
   }
 
   .animate-scroll:hover {

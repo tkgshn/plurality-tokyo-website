@@ -2,7 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { getEventBySlug, getAllEvents, Event } from "@/lib/events"
+import { getEventBySlug, getAllEvents, Event, Speaker } from "@/lib/events"
+import { getAuthorBySlug } from "@/lib/content"
 import { EventContent } from "@/types/content"
 import { Metadata } from "next"
 import ReactMarkdown from "react-markdown"
@@ -12,6 +13,16 @@ interface EventPageProps {
   params: {
     slug: string
   }
+}
+
+interface SpeakerWithAuthorInfo extends Speaker {
+  authorInfo?: {
+    metadata: {
+      [key: string]: any;
+      avatar_url?: string;
+    };
+    content: string;
+  };
 }
 
 export async function generateMetadata({ params }: EventPageProps): Promise<Metadata> {
@@ -24,13 +35,35 @@ export async function generateMetadata({ params }: EventPageProps): Promise<Meta
 
 export default function EventPage({ params }: EventPageProps) {
   const event: Event = getEventBySlug(params.slug)
-  const fallbackImage = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000"
   const isEventEnded = new Date(event.date) < new Date();
 
   // Eventsに登場するスピーカーの数
   const speakersCount = event.speakers?.length || 0;
   // 参加者数（仮）- 実際のデータがあればそれを使用
   const attendeesCount = event.attendees_count || 0;
+
+  // スピーカーに対応する著者情報を取得
+  const speakersWithAuthorInfo: SpeakerWithAuthorInfo[] = event.speakers?.map(speaker => {
+    try {
+      // スピーカー名からスラグを生成（全て小文字+スペースをハイフンに変換）
+      const possibleSlug = speaker.name.toLowerCase().replace(/\s+/g, '-');
+      // スラグを正規化（"e. glen weyl" → "glen-weyl" など）
+      const normalizedSlug = possibleSlug
+        .replace(/^e\.\s+/, '') // E. から始まる場合は削除
+        .replace(/^dr\.\s+/, '') // Dr. から始まる場合は削除
+        .replace(/^prof\.\s+/, ''); // Prof. から始まる場合は削除
+
+      const authorInfo = getAuthorBySlug(normalizedSlug);
+
+      return {
+        ...speaker,
+        authorInfo
+      } as SpeakerWithAuthorInfo;
+    } catch (error) {
+      // 著者情報が見つからない場合は元のスピーカー情報をそのまま返す
+      return speaker as SpeakerWithAuthorInfo;
+    }
+  }) || [];
 
   return (
     <div className="bg-black text-white">
@@ -93,7 +126,7 @@ export default function EventPage({ params }: EventPageProps) {
             {/* スライド情報 */}
             {event.slides_url && (
               <div className="mb-12">
-                <h2 className="text-3xl font-bold mb-6">Glen's talk slide</h2>
+                <h2 className="text-3xl font-bold mb-6">Presentation Slides</h2>
                 <Link href={event.slides_url} passHref>
                   <Button variant="outline" className="border-white hover:bg-white hover:text-black">
                     See the slide
@@ -108,7 +141,7 @@ export default function EventPage({ params }: EventPageProps) {
             {/* Events画像 */}
             <div className="relative aspect-video mb-8">
               <Image
-                src={event.coverImage || fallbackImage}
+                src={event.cover_image_url || event.coverImage || event.image || `/images/events/${event.slug}.jpg`}
                 alt={event.title}
                 fill
                 className="object-cover rounded-lg"
@@ -151,21 +184,39 @@ export default function EventPage({ params }: EventPageProps) {
           <div className="mt-16">
             <h2 className="text-5xl font-bold mb-8">Speakers</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {event.speakers.map((speaker, index) => (
-                <div key={index} className="mb-12">
-                  <div className="relative h-48 w-full mb-4">
-                    <Image
-                      src={`/images/speakers/${speaker.name.toLowerCase().replace(/\s+/g, '-')}.jpg`}
-                      alt={speaker.name}
-                      fill
-                      className="object-cover rounded-lg"
-                    />
+              {speakersWithAuthorInfo.map((speaker, index) => {
+                // 画像ソースの優先順位:
+                // 1. スピーカーのavatar_url
+                // 2. 著者情報のavatar_url
+                // 3. フォールバック画像
+                const speakerSlug = speaker.name.toLowerCase().replace(/\s+/g, '-')
+                  .replace(/^e\.\s+/, '')
+                  .replace(/^dr\.\s+/, '')
+                  .replace(/^prof\.\s+/, '');
+
+                const imageSource = speaker.avatar_url ||
+                  (speaker.authorInfo?.metadata?.avatar_url) ||
+                  `/images/speakers/${speakerSlug}.jpg`;
+
+                return (
+                  <div key={index} className="mb-12">
+                    <div className="relative h-48 w-full mb-4">
+                      <Image
+                        src={imageSource}
+                        alt={speaker.name}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{speaker.name}</h3>
+                    {speaker.role && <p className="text-gray-400 mb-3">{speaker.role}</p>}
+                    {speaker.bio && <p className="text-sm">{speaker.bio}</p>}
+                    {speaker.authorInfo?.metadata?.position && !speaker.role && (
+                      <p className="text-gray-400 mb-3">{speaker.authorInfo.metadata.position}</p>
+                    )}
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{speaker.name}</h3>
-                  {speaker.role && <p className="text-gray-400 mb-3">{speaker.role}</p>}
-                  {speaker.bio && <p className="text-sm">{speaker.bio}</p>}
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}

@@ -1,0 +1,92 @@
+{
+    "home": {
+        "title": "プルラリティ東京",
+        "subtitle": "みんなのためのプルラル未来を創るコミュニティ",
+        "about": "私たちについて",
+        "events": "イベント",
+        "articles": "記事",
+        "join": "参加する",
+        "copyForLLM": "LLM用にディレクトリをコピー",
+        "specialEvent": "特別イベント",
+        "viewDetails": "詳細を見る",
+        "newsFromEcosystem": "エコシステムからのニュース",
+        "seeAll": "すべて見る",
+        "upcomingEvents": "今後のイベント",
+        "pastEvents": "過去のイベント",
+        "ourEcosystem": "私たちのエコシステム",
+        "ecosystemDescription": "プルラリティ東京は、革新的な社会技術、デジタル民主主義、コミュニティガバナンスに焦点を当てた組織やイニシアチブのグローバルネットワークとつながっています。",
+        "joinCommunity": "コミュニティに参加する",
+        "joinDescription": "プルラリティに興味のある他のメンバーとつながり、今後のイベントについての最新情報を入手し、ディスカッションに参加しましょう。",
+        "joinDiscord": "Discordに参加",
+        "whatIsPluralityTokyo": "プルラリティ東京とは？",
+        "pluralityWeekTitle": "東京プルラリティウィーク 2025",
+        "pluralityWeekDescription": "5月6日から12日まで、オードリー・タンとE. グレン・ワイルと共に東京各地でプルラリティについての対話週間に参加しませんか。東京大学、慶應義塾大学、SusHi Tech Tokyo、東京カレッジでのセッションを特集する特別な週をお見逃しなく。"
+    },
+    "navigation": {
+        "home": "ホーム",
+        "about": "私たちについて",
+        "events": "イベント",
+        "articles": "記事",
+        "join": "参加する",
+        "blog": "ブログ",
+        "contact": "お問い合わせ"
+    },
+    "language": {
+        "en": "英語",
+        "ja": "日本語"
+    },
+    "events": {
+        "comingSoon": "近日開催",
+        "conference": "カンファレンス",
+        "meetup": "ミートアップ",
+        "discordGroup": "Discordグループ",
+        "conferenceDesc": "日本でプルラリティについての議論を促進するために不定期に開催されるカンファレンス。",
+        "discordDesc": "プルラリティについての日常的な議論やアイデア交換のためのオンラインコミュニティ。",
+        "meetupDesc": "より親密な交流の場として不定期に開催される小規模なミートアップ。",
+        "viewAllEvents": "すべてのイベントを見る",
+        "checkNextMeetup": "次回ミートアップを確認",
+        "joinDiscord": "Discordに参加する",
+        "internationalConference": "国際カンファレンス"
+    },
+    "about": {
+        "title": "プルラリティ東京について",
+        "backLink": "ホーム",
+        "introduction": "はじめに",
+        "introductionText": "プルラリティ東京は、東京を拠点とし、グローバルなプルラリティ運動にインスパイアされたコミュニティです。私たちは、テクノロジーがいかにして社会的・文化的な違いを超えて協力と多様性を育むことができるかを探求しています。",
+        "ourVision": "私たちのビジョン",
+        "visionText": "私たちは、テクノロジーを人間のつながりの代替物としてではなく、社会的多様性を進歩と成長へと導くツールとして活用することを信じています。私たちのアプローチは従来の還元主義的なシステムとは対照的に、繊細な枠組みを通じて多様な価値観を尊重することに焦点を当てています。",
+        "keyActivities": "主な活動",
+        "events": "イベント",
+        "eventsItems": [
+            "主要な会議やトーク",
+            "定期的なサロンやミートアップ",
+            "共同ワークショップ"
+        ],
+        "community": "コミュニティ",
+        "communityItems": [
+            "Scrapboxを通じた知識共有",
+            "活発なDiscordコミュニティ",
+            "グローバルなイニシアチブとのパートナーシップ"
+        ],
+        "ourNetwork": "私たちのネットワーク",
+        "networkText": "私たちは以下と協力しています：",
+        "networkItems": [
+            "プルラリティ研究所",
+            "Funding the Commons",
+            "DeSci Tokyo",
+            "グローバルなプルラリティ提唱者"
+        ],
+        "joinUs": "参加する",
+        "joinUsText": "より包括的で協力的な社会を創るためのテクノロジーの可能性を探求することに興味がある方なら誰でも歓迎します。学び、共有し、一緒に構築するために私たちのコミュニティにご参加ください。"
+    },
+    "common": {
+        "location": "場所",
+        "date": "日付",
+        "speakers": "スピーカー",
+        "tags": "タグ",
+        "from": "From",
+        "to": "To",
+        "and": "and",
+        "others": "他"
+    }
+}

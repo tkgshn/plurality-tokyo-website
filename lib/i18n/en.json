@@ -1,0 +1,61 @@
+{
+    "home": {
+        "title": "Plurality Tokyo",
+        "subtitle": "A community for building a plural future for everyone",
+        "about": "About Us",
+        "events": "Events",
+        "articles": "Articles",
+        "join": "Join Us",
+        "copyForLLM": "Copy directory for LLM",
+        "specialEvent": "Special Event",
+        "viewDetails": "View Details",
+        "newsFromEcosystem": "News from the Ecosystem",
+        "seeAll": "See all",
+        "upcomingEvents": "Upcoming Events",
+        "pastEvents": "Past Events",
+        "ourEcosystem": "Our Ecosystem",
+        "ecosystemDescription": "Plurality Tokyo connects with a global network of organizations and initiatives focused on innovative social technologies, digital democracy, and community governance.",
+        "joinCommunity": "Join Our Community",
+        "joinDescription": "Connect with other members interested in Plurality, stay updated about upcoming events, and participate in discussions.",
+        "joinDiscord": "Join Discord",
+        "whatIsPluralityTokyo": "What's the Plurality Tokyo?",
+        "pluralityWeekTitle": "Tokyo Plurality Week 2025",
+        "pluralityWeekDescription": "From May 6th to 12th, join us for a week of dialogue on plurality with Audrey Tang and E. Glen Weyl across Tokyo. Don't miss this special week featuring sessions at the University of Tokyo, Keio University, SusHi Tech Tokyo, and Tokyo College."
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "events": "Events",
+        "articles": "Articles",
+        "join": "Join Us",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "language": {
+        "en": "English",
+        "ja": "Japanese"
+    },
+    "events": {
+        "comingSoon": "Coming Soon",
+        "conference": "Conference",
+        "meetup": "Meetup",
+        "discordGroup": "Discord group",
+        "conferenceDesc": "Conferences held irregularly to promote discussions about plurality in Japan.",
+        "discordDesc": "An online community for daily discussions and exchange of ideas about plurality.",
+        "meetupDesc": "Smaller meetups held irregularly as a place for more intimate exchanges.",
+        "viewAllEvents": "View all events",
+        "checkNextMeetup": "Check next meetup",
+        "joinDiscord": "Join Discord",
+        "internationalConference": "International Conference"
+    },
+    "common": {
+        "location": "Location",
+        "date": "Date",
+        "speakers": "Speakers",
+        "tags": "Tags",
+        "from": "From",
+        "to": "To",
+        "and": "and",
+        "others": "others"
+    }
+}
