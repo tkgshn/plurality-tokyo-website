@@ -8,6 +8,8 @@ import { Globe, Users, Calendar, ArrowRight, CalendarDays, ExternalLink, Buildin
 import { getAllEvents } from "@/lib/content"
 import { Card, CardContent } from "@/components/ui/card"
 import { EventList } from "@/components/EventList"
+import { YouTubeSection } from "@/components/YouTubeSection"
+
 
 export const metadata: Metadata = {
   title: "Plurality Tokyo",
@@ -19,34 +21,42 @@ export default function Home() {
   const allEvents = getAllEvents()
   const now = new Date()
 
-  // Sort events by date (most recent first)
-  const sortedEvents = [...allEvents].sort((a, b) =>
-    new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
-  )
-
-  // Get upcoming events (events with a date in the future)
-  const upcomingEvents = sortedEvents
-    .filter(event =>
-      new Date(event.metadata.date) >= now ||
-      (event.metadata.end_date && new Date(event.metadata.end_date) >= now)
-    )
-    .slice(0, 3) // Get only the 3 most recent upcoming events
-
-  // Eventsセクションの画像パスを一時的にUnsplashのプレースホルダー画像に変更
+  // イベントデータの準備
   const events = [
     {
       title: 'Glen in Japan 2024',
       date: '2024-03-15',
-      description: 'Glen Weylと共に...',
+      description: 'Glen Weylと共に、Pluralityの未来について議論します。Web3とDAOの可能性を探ります。',
       image: 'https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=2000&auto=format&fit=crop',
-      link: '/events/glen-in-japan-2024'
+      link: '/events/glen-in-japan-2024',
     },
     {
       title: 'FTC Tokyo 2024',
       date: '2024-04-20',
-      description: 'FTCカンファレンス...',
+      description: 'Funding the Commonsカンファレンス東京編。公共財の未来を考えます。',
       image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2000&auto=format&fit=crop',
-      link: '/events/ftc-tokyo-2024'
+      link: '/events/ftc-tokyo-2024',
+    },
+    {
+      title: 'Plurality Week Tokyo 2023',
+      date: '2023-05-12',
+      description: '2023年に開催されたPlurality Week Tokyoのアーカイブ',
+      image: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2000&auto=format&fit=crop',
+      link: '/events/plurality-week-2023',
+    },
+    {
+      title: 'DeSci Tokyo Conference',
+      date: '2023-11-30',
+      description: '分散型サイエンスの可能性を探るカンファレンス',
+      image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2000&auto=format&fit=crop',
+      link: '/events/desci-tokyo-2023',
+    },
+    {
+      title: 'Plurality Salon #3',
+      date: '2023-09-15',
+      description: 'コミュニティメンバーとの少人数での深い対話セッション',
+      image: 'https://images.unsplash.com/photo-1544531585-9847b68c8c86?q=80&w=2000&auto=format&fit=crop',
+      link: '/events/plurality-salon-3',
     }
   ];
 
@@ -260,6 +270,9 @@ export default function Home() {
             maxItems={3}
           />
         </section>
+
+        {/* YouTube Section */}
+        <YouTubeSection className="mb-24" />
 
         {/* Ecosystem Section */}
         <section className="text-white py-20">
