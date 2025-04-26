@@ -8,6 +8,9 @@ const config: Config = {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 		"*.{js,ts,jsx,tsx,mdx}"
 	],
+	corePlugins: {
+		preflight: false,
+	},
 	theme: {
 		extend: {
 			colors: {
