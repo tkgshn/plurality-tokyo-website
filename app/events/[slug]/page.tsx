@@ -70,7 +70,7 @@ export default function EventPage({ params }: EventPageProps) {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Eventsタイトルとステータス */}
         <div className="mb-12">
-          <h1 className="text-5xl font-bold mb-4">#{event.slug.replace(/-/g, '')}</h1>
+          <h1 className="text-5xl font-bold mb-4">{event.title}</h1>
           {isEventEnded && (
             <div className="text-red-500 text-xl mb-6">THIS EVENT HAS ENDED, Thank you</div>
           )}
