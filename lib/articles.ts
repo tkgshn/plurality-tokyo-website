@@ -4,6 +4,13 @@ import matter from 'gray-matter'
 
 const articlesDirectory = path.join(process.cwd(), 'content/articles')
 
+export interface Author {
+    name: string;
+    role?: string;
+    bio?: string;
+    avatar_url?: string;
+}
+
 export interface ArticleItem {
     id: number
     title: string
@@ -11,6 +18,7 @@ export interface ArticleItem {
     author: string
     description?: string
     date: string
+    coverImage?: string;
     tags?: string[]
 }
 
@@ -27,6 +35,8 @@ export function getAllArticles(): ArticleItem[] {
             const fullPath = path.join(articlesDirectory, fileName)
             const fileContents = fs.readFileSync(fullPath, 'utf8')
             const { data } = matter(fileContents)
+            const coverImage = data.coverImage ? data.coverImage: null
+            const fallbackImage = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000"
 
             return {
                 id,
@@ -35,6 +45,7 @@ export function getAllArticles(): ArticleItem[] {
                 author: data.author,
                 description: data.description,
                 date: data.date,
+                coverImage: coverImage || fallbackImage,
                 tags: data.tags,
             } as ArticleItem
         })
