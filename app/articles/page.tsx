@@ -6,6 +6,9 @@ import PageHeader from '@/components/page-header'
 import { ExternalLink } from 'lucide-react'
 import { cookies } from 'next/headers'
 import { Locale, defaultLocale, translate } from "@/lib/i18n"
+import Image from "next/image";
+import React from "react";
+import {SpeakerAvatar} from "@/components/SpeakerAvatar";
 
 export const metadata: Metadata = {
     title: 'Articles',
@@ -31,6 +34,14 @@ export default function ArticlesPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {articles.map((item) => (
                         <div key={item.id} className="bg-gray-900 p-6 rounded-lg">
+                            <div className="relative w-full h-40 mb-4 overflow-hidden rounded">
+                            <Image
+                                src={item.coverImage}
+                                alt={item.title}
+                                fill
+                                className="object-cover"
+                            />
+                            </div>
                             <Link
                                 href={item.url}
                                 target="_blank"
@@ -42,6 +53,28 @@ export default function ArticlesPage() {
                             <p className="text-gray-300 text-sm mb-4">{item.description}</p>
                             <div className="flex flex-col gap-3">
                                 <div className="flex items-center text-gray-400 text-sm">
+                                    {/* Author display */}
+                                    {item.author && (() => { // Use an IIFE (Immediately Invoked Function Expression)
+                                        // Calculate slug based on the author string
+                                        const authorSlug = item.author.toLowerCase()
+                                            .replace(/\s+/g, '-') // Replace spaces with hyphens
+                                            .replace(/^e\.\s+/, '') // Remove "e. " prefix
+                                            .replace(/^dr\.\s+/, '') // Remove "dr. " prefix
+                                            .replace(/^prof\.\s+/, '') // Remove "prof. " prefix
+                                            .replace(/['"]/g, ''); // Remove quotes
+
+                                        const imageSource = `/images/speakers/${authorSlug}.png`;
+
+                                        return (
+                                                <div className="flex -space-x-2 overflow-hidden">
+                                                    <SpeakerAvatar
+                                                        key={item.id}
+                                                        src={imageSource}
+                                                        alt={item.author} // Use the author's name string for alt text
+                                                    />
+                                                </div>
+                                        );
+                                    })()}
                                     <span>{item.author}</span>
                                 </div>
                                 <div className="flex justify-between items-center">
