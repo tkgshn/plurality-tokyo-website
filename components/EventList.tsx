@@ -111,9 +111,9 @@ export const EventList: React.FC<EventListProps> = ({
 
                 <div className="flex items-center text-sm text-gray-400 mb-4">
                     <time dateTime={event.metadata.date}>
-                        {format(eventDate, 'MMMM d, yyyy')}
+                        {format(eventDate, locale === 'ja' ? 'yyyy年M月d日' : 'MMMM d, yyyy')}
                         {event.metadata.end_date && event.metadata.end_date !== event.metadata.date &&
-                            ` - ${format(new Date(event.metadata.end_date), 'MMMM d, yyyy')}`
+                            ` - ${format(new Date(event.metadata.end_date), locale === 'ja' ? 'yyyy年M月d日' : 'MMMM d, yyyy')}`
                         }
                     </time>
                     {event.metadata.location && (

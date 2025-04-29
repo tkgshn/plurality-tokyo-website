@@ -47,7 +47,10 @@ Plurality Tokyoは、技術とコミュニティの交差点にあるEventsシ�
 
     // 最新のEvents情報を追加
     events.slice(0, 5).forEach(event => {
-        const eventDate = event.metadata.date ? new Date(event.metadata.date).toLocaleDateString('ja-JP') : '日付未定';
+        const locale = process.env.NEXT_LOCALE || 'ja-JP';
+        const eventDate = event.metadata.date 
+            ? new Date(event.metadata.date).toLocaleDateString(locale) 
+            : locale === 'en-US' ? 'Date TBD' : '日付未定';
         llmsText += `- [${event.metadata.title}](/events/${event.metadata.slug}.html.md): ${eventDate}に${event.metadata.location}で開催。${event.metadata.description}\n`;
     });
 
@@ -116,7 +119,10 @@ export async function generateMarkdownVersions(): Promise<void> {
  * Eventsページのマークダウンコンテンツを生成
  */
 function generateEventMarkdown(event: any): string {
-    const eventDate = event.metadata.date ? new Date(event.metadata.date).toLocaleDateString('ja-JP') : '日付未定';
+    const locale = process.env.NEXT_LOCALE || 'ja-JP';
+    const eventDate = event.metadata.date 
+        ? new Date(event.metadata.date).toLocaleDateString(locale) 
+        : locale === 'en-US' ? 'Date TBD' : '日付未定';
     let markdown = `# ${event.metadata.title}\n\n`;
     markdown += `> ${eventDate}に${event.metadata.location}で開催\n\n`;
     markdown += `${event.metadata.description}\n\n`;
@@ -145,7 +151,9 @@ function generateArticleMarkdown(article: any): string {
     }
 
     if (article.metadata.date) {
-        markdown += `公開日: ${new Date(article.metadata.date).toLocaleDateString('ja-JP')}\n\n`;
+        const locale = process.env.NEXT_LOCALE || 'ja-JP';
+        const dateLabel = locale === 'en-US' ? 'Published on: ' : '公開日: ';
+        markdown += `${dateLabel}${new Date(article.metadata.date).toLocaleDateString(locale)}\n\n`;
     }
 
     markdown += article.content;
@@ -188,7 +196,10 @@ function generateIndexMarkdownPages(publicDir: string, events: any[], articles: 
     // Events一覧ページ
     let eventsIndex = `# Events一覧\n\n`;
     events.forEach(event => {
-        const eventDate = event.metadata.date ? new Date(event.metadata.date).toLocaleDateString('ja-JP') : '日付未定';
+        const locale = process.env.NEXT_LOCALE || 'ja-JP';
+        const eventDate = event.metadata.date 
+            ? new Date(event.metadata.date).toLocaleDateString(locale) 
+            : locale === 'en-US' ? 'Date TBD' : '日付未定';
         eventsIndex += `- [${event.metadata.title}](/events/${event.metadata.slug}.html.md): ${eventDate}に${event.metadata.location}で開催\n`;
     });
     fs.writeFileSync(path.join(publicDir, 'events', 'index.html.md'), eventsIndex, 'utf8');
