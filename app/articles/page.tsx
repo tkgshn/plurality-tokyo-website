@@ -8,7 +8,7 @@ import { cookies } from 'next/headers'
 import { Locale, defaultLocale, translate } from "@/lib/i18n"
 import Image from "next/image";
 import React from "react";
-import {SpeakerAvatar} from "@/components/SpeakerAvatar";
+import { SpeakerAvatar } from "@/components/SpeakerAvatar";
 
 export const metadata: Metadata = {
     title: 'Articles',
@@ -35,12 +35,21 @@ export default function ArticlesPage() {
                     {articles.map((item) => (
                         <div key={item.id} className="bg-gray-900 p-6 rounded-lg">
                             <div className="relative w-full h-40 mb-4 overflow-hidden rounded">
-                            <Image
-                                src={item.coverImage}
-                                alt={item.title}
-                                fill
-                                className="object-cover"
-                            />
+                                {item.coverImage ? (
+                                    <Image
+                                        src={item.coverImage}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                ) : (
+                                    <Image
+                                        src="/images/default-cover.png"
+                                        alt="No image"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                )}
                             </div>
                             <Link
                                 href={item.url}
@@ -66,13 +75,13 @@ export default function ArticlesPage() {
                                         const imageSource = `/images/speakers/${authorSlug}.png`;
 
                                         return (
-                                                <div className="flex -space-x-2 overflow-hidden">
-                                                    <SpeakerAvatar
-                                                        key={item.id}
-                                                        src={imageSource}
-                                                        alt={item.author} // Use the author's name string for alt text
-                                                    />
-                                                </div>
+                                            <div className="flex -space-x-2 overflow-hidden">
+                                                <SpeakerAvatar
+                                                    key={item.id}
+                                                    src={imageSource}
+                                                    alt={item.author} // Use the author's name string for alt text
+                                                />
+                                            </div>
                                         );
                                     })()}
                                     <span>{item.author}</span>
