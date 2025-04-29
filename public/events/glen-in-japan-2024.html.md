@@ -1,4 +1,4 @@
-# #GleninJapan
+# Glen in Japan
 
 > 2024/1/3にCrypto Cafe & Bar, Shibuya City, Tokyoで開催
 
@@ -13,40 +13,17 @@ Political-economist E. Glen Weyl's first public talk in Japan.  A lightning-talk
 - Shinya Mori (Research Lead, Fracton Ventures)
 - Hal Seki (Founder, Code for Japan)
 
-
-渋谷・Crypto Cafe & Bar で開催された本イベントでは、来日中の E. Glen Weyl 氏が [Plurality] の最新動向を解説。パネルでは公共財ファイナンスや都市政策への応用が議論され、106 名が参加しました。
+At Crypto Cafe & Bar, operated by Digital Garage, Glen Weyl explained the latest movement driven by [Plurality]. The panel discussion explored its application to Public Goods Finance and City Empowerment.
 
 ## Program
 
-### May 20: University Lecture
-
-- Topic: "Plurality and the Future of Digital Democracy"
-- Location: University of Tokyo
-- Time: 14:00-16:00
-
-### May 21: Public Talk
-
-- Topic: "Digital Democracy in Practice"
-- Location: Shibuya Hikarie
-- Time: 19:00-21:00
-
-### May 22: Workshop
-
-- Topic: "Building Pluralistic Systems"
-- Location: Impact Hub Tokyo
-- Time: 10:00-17:00
-
-### May 23: Panel Discussion
-
-- Topic: "The Future of Governance in Japan"
-- Location: Mori Building Digital Lab
-- Time: 18:00-20:00
-
-### May 24: Closing Session
-
-- Topic: "Q&A with E. Glen Weyl"
-- Location: Tokyo International Forum
-- Time: 15:00-17:00
+- Open
+- 5-10min Lightning Talk × few people
+- Introduction FtC Tokyo
+- Talk Session
+- Free discussion
+- Networking
+- Close
 
 ## How to Participate
 

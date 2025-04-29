@@ -8,6 +8,7 @@ import { EventContent } from "@/types/content"
 import { Metadata } from "next"
 import ReactMarkdown from "react-markdown"
 import { CalendarIcon, MapPinIcon, UserIcon, UsersIcon, FileTextIcon, ExternalLinkIcon, PlayIcon } from "lucide-react"
+import remarkGfm from "remark-gfm"
 
 interface EventPageProps {
   params: {
@@ -94,12 +95,16 @@ export default function EventPage({ params }: EventPageProps) {
                   </Link>
                 )}
                 {event.event_page_url && (
-                  <Link href={event.event_page_url} passHref>
+                  <a
+                    href={event.event_page_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button variant="outline" className="border-white hover:bg-white hover:text-black">
                       <ExternalLinkIcon className="mr-2 h-4 w-4" />
                       Event page
                     </Button>
-                  </Link>
+                  </a>
                 )}
               </div>
             </div>
@@ -202,7 +207,7 @@ export default function EventPage({ params }: EventPageProps) {
                   <div key={index} className="mb-12">
                     <div className="relative h-48 w-full mb-4">
                       <Image
-                        src={imageSource}
+                        src={imageSource || "/images/no-image.png"}
                         alt={speaker.name}
                         fill
                         className="object-cover rounded-lg"
@@ -223,7 +228,7 @@ export default function EventPage({ params }: EventPageProps) {
 
         {/* Events詳細コンテンツ */}
         <div className="mt-16 prose prose-lg prose-invert max-w-none">
-          <ReactMarkdown>{event.content}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.content}</ReactMarkdown>
         </div>
       </div>
     </div>

@@ -59,7 +59,7 @@ Events の本文をここに記述...
 
 - Next.js 14
 - TypeScript
-- Tailwind CSS
+- Tailwind CSS（プリフライトやリンク装飾のカスタマイズあり。詳細は `app/globals.css` および `tailwind.config.ts` を参照）
 - shadcn/ui
 - マークダウン（MDX）コンテンツ
 
@@ -107,6 +107,8 @@ title: 記事タイトル
 date: 2023-01-01
 excerpt: 記事の要約
 tags: [tag1, tag2]
+author: 著者名
+coverImage: /images/articles/記事画像ファイル名.png
 ---
 
 ここに本文を書きます。マークダウン形式で記述できます。
@@ -219,6 +221,9 @@ social:
 ```markdown
 ![画像の説明](/images/filename.jpg)
 ```
+
+3. 記事画像は `/public/images/articles/` に保存し、ファイル名は記事のスラッグやタイトルに合わせて命名してください（例: `CryptoBridgeFtC.png`）。
+4. スピーカー画像は `/public/images/speakers/` に保存し、ファイル名はスピーカー名（英語表記、ハイフン区切り）で命名してください（例: `shinya-mori.png`）。
 
 ### コンテンツのプレビュー
 

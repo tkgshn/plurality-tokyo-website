@@ -54,11 +54,24 @@ const events: EventItem[] = [
     {
         id: "keio",
         date: "2025-05-10",
-        title: "Plurality Book Launch Event",
-        location: "Mita Campus, Keio University",
-        description: "A session discussing plurality and its potential in Japanese society",
-        url: "https://lu.ma/ienn4p0k",
+        title: "Plurality Book JP — Builder Session 2025",
+        location: "慶應義塾大学三田キャンパス東館8階ホール",
+        description: "日本語版『Plurality』出版記念のビルダー向けワークショップ。多様な価値観が共存し、協働テクノロジーと民主主義の未来を議論します。",
+        url: "/events/plurality-book-jp-builder-session-2025",
         image: "/images/plurality-book.jpg",
+        time: "13:00～18:15（開場12:30）",
+        additionalInfo: [
+            "共催: スマートニュースメディア研究所、慶應義塾大学X Dignity センター、Plurality Tokyo、なめら会議",
+            "使用言語: 日本語・英語（同時通訳あり）",
+            "参加費: 無料、定員120名"
+        ],
+        schedule: [
+            { time: "13:00", title: "開会・イントロダクション" },
+            { time: "13:30", title: "基調講演: Audrey Tang, E. Glen Weyl" },
+            { time: "14:30", title: "パネル・ディスカッション" },
+            { time: "16:00", title: "ワークショップ・セッション" },
+            { time: "18:00", title: "クロージング" }
+        ]
     },
     {
         id: "tokyo-college",
@@ -237,7 +250,7 @@ export default function PluralityWeekPage() {
 
                 {/* Events一覧 */}
                 <section id="events" className="mb-20 sm:mb-32">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-10 sm:mb-14">Eventsスケジュール</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-10 sm:mb-14">Events schedule</h2>
 
                     <div className="space-y-14 sm:space-y-20">
                         {events.map((event) => (
@@ -406,3 +419,14 @@ export default function PluralityWeekPage() {
         </div>
     );
 }
+
+/**
+ * @fileoverview Plurality Weekイベントリストの「Plurality Book JP — Builder Session 2025」情報をmdxファイルに合わせて統一し、外部リンクから内部イベント詳細ページへのリンクに修正。
+ *
+ * @author Plurality Tokyo
+ */
+
+/**
+ * designdoc: この修正は、イベント情報の一貫性を保ち、ユーザーが外部サイトではなく自サイト内の詳細ページに遷移できるようにするためのものです。
+ * mdxファイルの内容に合わせてタイトル・説明・会場・時間・追加情報・スケジュールを統一しています。
+ */
