@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/generate-llms-txt.js",
+    "build": "next build && node scripts/generate-llms-txt.js && npx ts-node scripts/generate-sitemap.ts",
     "start": "next start",
     "lint": "next lint",
-    "generate-llms": "node scripts/generate-llms-txt.js"
+    "generate-llms": "node scripts/generate-llms-txt.js",
+    "generate-sitemap": "npx ts-node scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "@babel/preset-env": "^7.23.8",
