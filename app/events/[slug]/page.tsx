@@ -203,6 +203,9 @@ export default function EventPage({ params }: EventPageProps) {
                   (speaker.authorInfo?.metadata?.avatar_url) ||
                   `/images/speakers/${speakerSlug}.jpg`;
 
+                const speakerBio = speaker.bio ||
+                    speaker.authorInfo?.metadata?.bio || null;
+
                 return (
                   <div key={index} className="mb-12">
                     <div className="relative h-48 w-full mb-4">
@@ -215,7 +218,7 @@ export default function EventPage({ params }: EventPageProps) {
                     </div>
                     <h3 className="text-xl font-bold mb-2">{speaker.name}</h3>
                     {speaker.role && <p className="text-gray-400 mb-3">{speaker.role}</p>}
-                    {speaker.bio && <p className="text-sm">{speaker.bio}</p>}
+                    {speakerBio && <p className="text-sm">{speakerBio}</p>}
                     {speaker.authorInfo?.metadata?.position && !speaker.role && (
                       <p className="text-gray-400 mb-3">{speaker.authorInfo.metadata.position}</p>
                     )}
