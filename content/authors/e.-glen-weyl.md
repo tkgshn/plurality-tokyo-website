@@ -4,7 +4,7 @@ description: "Economist; Research Lead of the Plural Technology Collaboratory at
 position: "Research Lead, Microsoft Research; Founder, RadicalxChange & Plurality Institute"
 bio: "A political economist and social technologist, earned his Ph.D. in Economics from Princeton University just one year after graduating undergraduate. After completing a fellowship at Harvard University, he spent three years as an Assistant Professor at the University of Chicago, focusing on research and teaching. He later joined Microsoft Research and currently serves as Research Lead of the Plural Technology Collaboratory, having advised senior leaders on geopolitics, macroeconomics, and the future of technology"
 company: "Microsoft Research, RadicalxChange Foundation"
-avatar_url: "/images/speakers/glen-weyl.png"
+avatar_url: "/images/speakers/e.-glen-weyl.jpg"
 social:
   twitter: "glenweyl"
   linkedin: "eglenweyl"
