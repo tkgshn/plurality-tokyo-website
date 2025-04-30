@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home page -->
+  <url>
+    <loc>https://plurality.tokyo/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://plurality.tokyo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plurality.tokyo/en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About page -->
+  <url>
+    <loc>https://plurality.tokyo/about</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://plurality.tokyo/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plurality.tokyo/en/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Events page -->
+  <url>
+    <loc>https://plurality.tokyo/events</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://plurality.tokyo/events"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plurality.tokyo/en/events"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Articles page -->
+  <url>
+    <loc>https://plurality.tokyo/articles</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://plurality.tokyo/articles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plurality.tokyo/en/articles"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Join page -->
+  <url>
+    <loc>https://plurality.tokyo/join</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://plurality.tokyo/join"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plurality.tokyo/en/join"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Plurality Week page -->
+  <url>
+    <loc>https://plurality.tokyo/plurality-week</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://plurality.tokyo/plurality-week"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plurality.tokyo/en/plurality-week"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

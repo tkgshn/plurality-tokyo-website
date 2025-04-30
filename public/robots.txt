@@ -1,0 +1,10 @@
+# robots.txt for Plurality Tokyo Website
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://plurality.tokyo/sitemap.xml
+
+# Disallow access to admin or private areas if they exist
+# Disallow: /admin/
+# Disallow: /private/
