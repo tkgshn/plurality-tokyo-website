@@ -154,23 +154,10 @@ export default function PluralityWeekPage() {
                         </p>
                         <p className="text-lg leading-relaxed text-gray-300 mt-4">
                             2025年5月2日には、Pluraity Bookの日本語版の出版が予定されており、
-                            <Link href="https://drive.google.com/file/d/1uiKYvQY5oUsboudgNMyVRwSglhm-3y2G/view" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">最終ゲラ原稿のPDF</Link>をこちらで読むことができます。また、
+                            <Link href="https://scrapbox.io/plurality-japanese/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">コミュニティによる和訳</Link>をこちらで読むことができます。また、
                             <Link href="https://nameteki.kensuzuki.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">「なめらかな社会とその敵」</Link>の著者でもある
                             東京大学特任研究員の鈴木健が<Link href="https://docs.google.com/document/d/125ac1o7s6X5etSHy_56eevnzFeSLYa1genKpba4lC1I/edit?tab=t.0#heading=h.fq6vj8qwy89i" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">日本語版の解説</Link>を寄稿しているので、読解の参考として最初に読まれることをおすすめします。
                         </p>
-                        <div className="mt-6 flex items-center">
-                            <Button asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                                <Link
-                                    href="https://docs.google.com/document/d/1wsASR3ufPug_t0gyeN3LE1AYWHgxiTLnCRp7gi5qjgo/edit?tab=t.0"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center"
-                                >
-                                    <span>続きを読む</span>
-                                    <ExternalLink className="ml-2 h-4 w-4" />
-                                </Link>
-                            </Button>
-                        </div>
                     </div>
                 </section>
 
