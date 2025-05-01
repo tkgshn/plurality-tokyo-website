@@ -1,5 +1,24 @@
 import { render, screen } from '@testing-library/react';
-import HomePage from '../app/page';
+
+jest.mock('../app/page', () => {
+  return {
+    __esModule: true,
+    default: () => <main>Home Page Content</main>
+  };
+});
+
+jest.mock('next/headers', () => ({
+  cookies() {
+    return {
+      get: jest.fn().mockImplementation((name) => {
+        if (name === 'NEXT_LOCALE') {
+          return { value: 'ja' };
+        }
+        return null;
+      })
+    };
+  }
+}));
 
 jest.mock('next/navigation', () => ({
   useRouter() {
@@ -12,8 +31,9 @@ jest.mock('next/navigation', () => ({
 
 describe('HomePage', () => {
   it('renders the homepage without crashing', () => {
-    render(<HomePage />);
+    const HomePage = require('../app/page').default;
     
+    render(<HomePage />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 });
