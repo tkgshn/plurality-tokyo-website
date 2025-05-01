@@ -267,6 +267,10 @@ git push
 
 2. Vercel が自動的にデプロイを行い、変更が反映されます。
 
+## コントリビューション
+
+このプロジェクトに貢献する方法については、[コントリビューションガイド](CONTRIBUTING.md)を参照してください。
+
 ## LLMs.txt Support
 
 このプロジェクトは[llms.txt 仕様](https://llmstxt.org/)に対応しています。
