@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cross-env NODE_ENV=production node scripts/generate-llms-txt.js && cross-env NODE_ENV=production npx ts-node scripts/generate-sitemap.ts",
+    "build": "next build && cross-env NODE_ENV=production node scripts/generate-llms-txt.js && cross-env NODE_ENV=production node scripts/generate-sitemap.js",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "generate-llms": "node scripts/generate-llms-txt.js",
-    "generate-sitemap": "npx ts-node scripts/generate-sitemap.ts"
+    "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@babel/preset-env": "^7.23.8",
