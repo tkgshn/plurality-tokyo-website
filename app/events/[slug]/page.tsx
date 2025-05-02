@@ -52,8 +52,8 @@ export default function EventPage({ params }: EventPageProps) {
       const normalizedSlug = possibleSlug
         .replace(/^e\.\s+/, '') // E. から始まる場合は削除
         .replace(/^dr\.\s+/, '') // Dr. から始まる場合は削除
-        .replace(/^prof\.\s+/, ''); // Prof. から始まる場合は削除
-
+        .replace(/^prof\.\s+/, '') // Prof. から始まる場合は削除
+        .replace(/['"]/g, ''); // " を含む場合は削除
       const authorInfo = getAuthorBySlug(normalizedSlug);
 
       return {
@@ -197,7 +197,8 @@ export default function EventPage({ params }: EventPageProps) {
                 const speakerSlug = speaker.name.toLowerCase().replace(/\s+/g, '-')
                   .replace(/^e\.\s+/, '')
                   .replace(/^dr\.\s+/, '')
-                  .replace(/^prof\.\s+/, '');
+                  .replace(/^prof\.\s+/, '')
+                  .replace(/['"]/g, '');
 
                 const imageSource = speaker.avatar_url ||
                   (speaker.authorInfo?.metadata?.avatar_url) ||
