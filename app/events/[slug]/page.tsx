@@ -214,6 +214,7 @@ export default function EventPage({ params }: EventPageProps) {
                         src={imageSource || "/images/no-image.png"}
                         alt={speaker.name}
                         fill
+                        objectFit="contain"
                         className="object-cover rounded-lg"
                       />
                     </div>
