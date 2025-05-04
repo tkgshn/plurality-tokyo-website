@@ -33,7 +33,7 @@ export default function RootLayout({
     '@type': 'Organization',
     name: 'Plurality Tokyo',
     url: 'https://plurality.tokyo',
-    logo: 'https://plurality.tokyo/logo.png',
+    logo: 'https://plurality.tokyo/og-image.jpg',
     description: locale === 'en'
       ? 'Plurality Tokyo is a community focused on diversity and inclusivity.'
       : 'Plurality Tokyoは、多様性と包括性を重視したコミュニティです。'

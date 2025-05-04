@@ -17,7 +17,7 @@ export function getOrganizationSchema(locale: string = 'ja') {
     '@type': 'Organization',
     name: 'Plurality Tokyo',
     url: 'https://plurality.tokyo',
-    logo: 'https://plurality.tokyo/logo.png',
+    logo: 'https://plurality.tokyo/og-image.jpg',
     description,
     sameAs: [
       'https://twitter.com/plurality_tokyo',
@@ -80,7 +80,7 @@ export function getArticleSchema(article: any, locale: string = 'ja') {
       name: 'Plurality Tokyo',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://plurality.tokyo/logo.png'
+        url: 'https://plurality.tokyo/og-image.jpg'
       }
     },
     inLanguage: locale === 'en' ? 'en-US' : 'ja-JP'
