@@ -235,6 +235,53 @@ export default function EventPage({ params }: EventPageProps) {
         <div className="mt-16 prose prose-lg prose-invert max-w-none">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.content}</ReactMarkdown>
         </div>
+
+
+        {/* スポンサーセクション */}
+        {event.sponsors && event.sponsors.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-5xl font-bold mb-8">Sponsors</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {event.sponsors.map((sponsor, index) => {
+                // 画像ソースの優先順位:
+                // 1. スポンサーのavatar_url
+                // 2. スポンサーのavatar_url
+                // 3. フォールバック画像
+                const sponsorsSlug = sponsor.name.toLowerCase().replace(/\s+/g, '-')
+                  .replace(/^e\.\s+/, '')
+                  .replace(/^dr\.\s+/, '')
+                  .replace(/^prof\.\s+/, '')
+                  .replace(/['"]/g, '');
+
+                const imageSource = sponsor.avatar_url ||
+                  (sponsor.authorInfo?.metadata?.avatar_url) ||
+                  `/images/speakers/${sponsorsSlug}.jpg`;
+
+                return (
+                  <div key={index} className="mb-12">
+                    <div className="relative h-48 w-full mb-4">
+                      <Image
+                        src={imageSource || "/images/no-image.png"}
+                        alt={sponsor.name}
+                        fill
+                        objectFit="contain"
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{sponsor.name}</h3>
+                    {sponsor.role && <p className="text-gray-400 mb-3">{sponsor.role}</p>}
+                    {sponsor.authorInfo?.metadata?.position && !sponsor.role && (
+                      <p className="text-gray-400 mb-3">{sponsor.authorInfo.metadata.position}</p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+
+
       </div>
     </div>
   )
