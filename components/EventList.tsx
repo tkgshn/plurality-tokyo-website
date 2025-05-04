@@ -6,8 +6,12 @@ import { EventContent } from '@/types/content';
 import { cookies } from 'next/headers';
 import { Locale, defaultLocale, translate } from '@/lib/i18n';
 import { SpeakerAvatar } from './SpeakerAvatar';
+import {getAuthorBySlug} from "@/lib/content";
+import {Speaker} from "@/lib/events";
+import fs from 'fs';
+import path from "path";
 
-interface SpeakerMetadata {
+interface SpeakerMetadata  extends Speaker {
     name: string;
     avatar_url?: string;
     authorInfo?: {
@@ -79,6 +83,47 @@ export const EventList: React.FC<EventListProps> = ({
             ? "block p-6 border border-lime-500 rounded-lg hover:shadow-lg hover:border-lime-400 transition-all duration-200 bg-gradient-to-br from-gray-900 to-gray-800"
             : "block p-6 border border-gray-700 rounded-lg hover:shadow-lg hover:border-gray-500 transition-all duration-200 bg-gray-900";
 
+		// スピーカーに対応する著者情報を取得
+        const speakersWithAuthorInfo: SpeakerMetadata[] = event.metadata.speakers?.map(speaker => {
+            try {
+                // スピーカー名からスラグを生成（全て小文字+スペースをハイフンに変換）
+                const possibleSlug = speaker.name.toLowerCase().replace(/\s+/g, '-');
+                // スラグを正規化（"e. glen weyl" → "glen-weyl" など）
+                const normalizedSlug = possibleSlug
+                    .replace(/^e\.\s+/, '') // E. から始まる場合は削除
+                    .replace(/^dr\.\s+/, '') // Dr. から始まる場合は削除
+                    .replace(/^prof\.\s+/, '') // Prof. から始まる場合は削除
+                    .replace(/['"]/g, ''); // " を含む場合は削除
+                const authorInfo = getAuthorBySlug(normalizedSlug);
+
+                return {
+                    ...speaker,
+                    authorInfo
+                } as SpeakerMetadata;
+            } catch (error) {
+                // 著者情報が見つからない場合は元のスピーカー情報をそのまま返す
+                const possibleSlug = speaker.name.toLowerCase().replace(/\s+/g, '-');
+                // スラグを正規化（"e. glen weyl" → "glen-weyl" など）
+                const normalizedSlug = possibleSlug
+                    .replace(/^e\.\s+/, '') // E. から始まる場合は削除
+                    .replace(/^dr\.\s+/, '') // Dr. から始まる場合は削除
+                    .replace(/^prof\.\s+/, '') // Prof. から始まる場合は削除
+                    .replace(/['"]/g, ''); // " を含む場合は削除
+
+                const imageSource = speaker.avatar_url || null;
+                if (!imageSource) {
+                   const imagePath = path.join("content", "authors", `${normalizedSlug}.png`)
+                if (fs.existsSync(imagePath)) {
+                    speaker.avatar_url = imagePath
+                }
+                }
+
+                return speaker as SpeakerMetadata;
+            }
+        }) || [];
+
+
+
         // Badge for upcoming events with i18n support
         const upcomingBadge = isUpcoming && (
             <div className="absolute top-4 right-4 bg-lime-500 text-black px-3 py-1 rounded-full font-medium text-sm z-10">
@@ -131,7 +176,7 @@ export const EventList: React.FC<EventListProps> = ({
                     <div className="mt-4">
                         <h3 className="text-sm font-medium text-gray-400 mb-2">{t('common.speakers')}</h3>
                         <div className="flex -space-x-2 overflow-hidden">
-                            {event.metadata.speakers.map((speaker: SpeakerMetadata, index) => {
+                            {speakersWithAuthorInfo.map((speaker: SpeakerMetadata, index) => {
                                 const speakerSlug = speaker.name.toLowerCase()
                                     .replace(/\s+/g, '-')
                                     .replace(/^e\.\s+/, '')
@@ -140,13 +185,13 @@ export const EventList: React.FC<EventListProps> = ({
                                     .replace(/['"]/g, '');
 
                                 const imageSource = speaker.avatar_url ||
-                                    (speaker.authorInfo?.metadata?.avatar_url) ||
-                                    `/images/speakers/${speakerSlug}.jpg`;
+                                    (speaker.authorInfo?.metadata?.avatar_url) || null;
+                                    // `/images/speakers/${speakerSlug}.png`;
 
                                 return (
                                     <SpeakerAvatar
                                         key={index}
-                                        src={imageSource}
+                                        src={imageSource || "/images/no-image.png" }
                                         alt={speaker.name}
                                     />
                                 );

@@ -71,14 +71,17 @@ export default function ArticlesPage() {
                                             .replace(/^dr\.\s+/, '') // Remove "dr. " prefix
                                             .replace(/^prof\.\s+/, '') // Remove "prof. " prefix
                                             .replace(/['"]/g, ''); // Remove quotes
+                                        const imageSource = item.author.avatar_url ||
+                                          (item.author.authorInfo?.metadata?.avatar_url) || null;
 
-                                        const imageSource = `/images/speakers/${authorSlug}.png`;
+//                                      const imageSource = `/images/speakers/${authorSlug}.png`;
 
                                         return (
                                             <div className="flex -space-x-2 overflow-hidden">
                                                 <SpeakerAvatar
                                                     key={item.id}
-                                                    src={imageSource}
+//                                                  src={imageSource}
+                                                    src={imageSource || "/images/no-image.png"}
                                                     alt={item.author} // Use the author's name string for alt text
                                                 />
                                             </div>

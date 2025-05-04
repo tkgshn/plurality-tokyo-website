@@ -149,6 +149,7 @@ export default function EventPage({ params }: EventPageProps) {
                 src={event.cover_image_url || event.coverImage || event.image || `/images/events/${event.slug}.jpg`}
                 alt={event.title}
                 fill
+                sizes="100vw"
                 className="object-cover rounded-lg"
                 priority
               />
@@ -177,6 +178,7 @@ export default function EventPage({ params }: EventPageProps) {
                   src={event.slides_preview_image}
                   alt="Slide preview"
                   fill
+                  sizes="100vw"
                   className="object-cover rounded-lg"
                 />
               </div>
@@ -201,8 +203,7 @@ export default function EventPage({ params }: EventPageProps) {
                   .replace(/['"]/g, '');
 
                 const imageSource = speaker.avatar_url ||
-                  (speaker.authorInfo?.metadata?.avatar_url) ||
-                  `/images/speakers/${speakerSlug}.jpg`;
+                  (speaker.authorInfo?.metadata?.avatar_url) || null;
 
                 const speakerBio = speaker.bio ||
                     speaker.authorInfo?.metadata?.bio || null;
@@ -214,7 +215,10 @@ export default function EventPage({ params }: EventPageProps) {
                         src={imageSource || "/images/no-image.png"}
                         alt={speaker.name}
                         fill
-                        objectFit="contain"
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'contain',
+                        }}
                         className="object-cover rounded-lg"
                       />
                     </div>
@@ -254,8 +258,7 @@ export default function EventPage({ params }: EventPageProps) {
                   .replace(/['"]/g, '');
 
                 const imageSource = sponsor.avatar_url ||
-                  (sponsor.authorInfo?.metadata?.avatar_url) ||
-                  `/images/speakers/${sponsorsSlug}.jpg`;
+                  (sponsor.authorInfo?.metadata?.avatar_url) || null;
 
                 return (
                   <div key={index} className="mb-12">
@@ -264,7 +267,10 @@ export default function EventPage({ params }: EventPageProps) {
                         src={imageSource || "/images/no-image.png"}
                         alt={sponsor.name}
                         fill
-                        objectFit="contain"
+                        sizes="100vw max-h-48"
+                        style={{
+                          objectFit: 'contain',
+                        }}
                         className="object-cover rounded-lg"
                       />
                     </div>
