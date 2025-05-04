@@ -33,37 +33,67 @@ type EventItem = {
 
 const events: EventItem[] = [
     {
-        id: "sushitech",
-        date: "2025-05-08",
-        endDate: "2025-05-09",
-        title: "SusHi Tech Tokyo 2025",
-        location: "Tokyo Big Sight",
-        description: "Special content \"Focus on Plurality\" session at SusHi Tech Tokyo",
-        url: "https://sushitech-startup.metro.tokyo.lg.jp/en/focus-on/",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sushitech-startup.metro.tokyo.lg.jp%2Fogp.png%3Ftimestamp%3D20251107&f=1&ipt=c663c9c1e53a79bea7beec8ed2e5a77b3ba2c7068b0131ef5e258c4a8284270d",
-    },
-    {
         id: "ai-japan",
         date: "2025-05-06",
+        time: "13時〜18時",
         title: "UTokyo AI Research Institute Special Lecture",
-        location: "Yasuda Auditorium, University of Tokyo",
+        location: "東京大学本郷キャンパス　安田講堂",
         description: "A freewheeling discussion about the future of society and the potential of AI technology",
         url: "https://peatix.com/event/4337235",
         image: "https://cdn.peatix.com/event/4337235/cover-hKCBko6u1in7qZY5dYJbgXFHTAIYn64d.png",
+        additionalInfo: [
+            "出演者：オードリー・タン、落合陽一",
+            "形式：一般公開、無料、オンライン配信なし",
+            "主催: 東大AI研究会",
+        ],
+    },
+    {
+        id: "tmu",
+        date: "2025-05-08",
+        title: "デジタルの力でより良い社会を作る‐世代を超えた共創‐",
+        location: "八王子市南大沢文化会館",
+        description: "",
+        url: "https://global-lecture.houjin-tmu.ac.jp/news/info/2025_special_1.html",
+        image: "https://global-lecture.houjin-tmu.ac.jp/img/news2025/HPbanner.jpg",
+        time: "午後1時から午後2時30分まで（予定）",
+        additionalInfo: [
+            "出演者: オードリー・タン、大槻茂実",
+            "形式：一般公開、無料、オンライン配信なし",
+            "申込受付期間: 終了",
+            "主催: 東京都立大学",
+        ],
+    },
+    {
+        id: "sushitech",
+        date: "2025-05-08",
+        endDate: "2025-05-09",
+        time: "2025年5月9日 12時〜12時45分",
+        title: "Digital Public Goods & AI : Transforming the Society",
+        location: "東京ビッグサイト 東4・５・6ホール",
+        description: "Special content \"Focus on Plurality\" session at SusHi Tech Tokyo",
+        url: "https://sushitech-startup.metro.tokyo.lg.jp/en/focus-on/",
+        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sushitech-startup.metro.tokyo.lg.jp%2Fogp.png%3Ftimestamp%3D20251107&f=1&ipt=c663c9c1e53a79bea7beec8ed2e5a77b3ba2c7068b0131ef5e258c4a8284270d",
+        additionalInfo: [
+            "出演者: オードリー・タン、安野貴博、David Ha他",
+            "形式：一般公開、無料",
+            "主催: SusHi Tech Tokyo 2025",
+        ],
+
     },
     {
         id: "keio",
         date: "2025-05-10",
-        title: "Plurality Book JP — Builder Session 2025",
+        title: "Plurality Tokyo Namerakaigi #2 『Plurality Book日本語版』出版記念",
         location: "慶應義塾大学三田キャンパス東館8階ホール",
         description: "日本語版『Plurality』出版記念のビルダー向けワークショップ。多様な価値観が共存し、協働テクノロジーと民主主義の未来を議論します。",
         url: "/events/plurality-book-jp-builder-session-2025",
         image: "/images/plurality-book.jpg",
         time: "13:00～18:15（開場12:30）",
         additionalInfo: [
-            "共催: スマートニュースメディア研究所、慶應義塾大学X Dignity センター、Plurality Tokyo、なめら会議",
+            "出演者：オードリー・タン、グレン・ワイル、鈴木健、駒村圭吾、宇野重規、鈴木寛、安田洋祐、安野貴博他",
+            "主催: 慶應義塾大学X Dignity センター、スマートニュースメディア研究所、Plurality Tokyo、なめら会議",
             "使用言語: 日本語・英語（同時通訳あり）",
-            "参加費: 無料、定員120名"
+            "形式: 一般公開、無料、オンライン配信あり、同時通訳あり",
         ],
         schedule: [
             { time: "13:00", title: "開会・イントロダクション" },
@@ -83,19 +113,26 @@ const events: EventItem[] = [
         image: "/images/plurality-book.jpg",
         time: "11時〜13時",
         additionalInfo: [
-            "共催: サイボウズ式ブックス",
             "出演者: オードリー・タン、グレン・ワイル、竹下隆一郎",
             "形式: 一般公開、有料、配信あり",
-            "参加費: 無料、定員120名"
+            "参加費: 無料、定員120名",
+            "主催: サイボウズ式ブックス",
         ],
     },
     {
         id: "tokyo-college",
         date: "2025-05-12",
+        time: "15時〜16時40分",
         title: "Tokyo College Conference on \"The Future of Technology and Democracy\"",
-        location: "Ito International Research Center",
+        location: "東京大学本郷キャンパス　福武ホール",
         description: "International conference on the future of technology and democracy (English with Japanese interpretation)",
         image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fh7ojeomjzx511.jpg&f=1&ipt=5c9dbe76e5a79bb4f39a0ad70ef68ea089b66f14d4615f59e7d8843ead606b73",
+        additionalInfo: [
+            "出演者：オードリー・タン、グレン・ワイル、星岳雄、小島武仁、鈴木健他",
+            "形式: 研究者のみ完全招待制、無料、アーカイブ配信あり、英語のみ",
+            "参加費: 無料、定員120名",
+            "主催: 東京大学 東京カレッジ",
+        ],
     },
     {
         id: "ut-lab",
@@ -107,25 +144,26 @@ const events: EventItem[] = [
         image: "https://toggle.co.jp/wp-content/uploads/2025/04/250422-UT-LAB-ID-004-1200-630.png",
         time: "16時30分〜17時30分",
         additionalInfo: [
-            "主催: UT-LAB",
-            "開催日時: 2025年5月12日（月） 16:30-19:30（開場16:00）\n" +
+            "開催日時: 16:30-19:30（開場16:00）\n" +
             "※18:30以降はリアル会場での懇親会",
             "形式: 一般公開、無料、Zoom配信あり",
+            "主催: UT-LAB",
         ],
 
     },
     {
         id: "gateways-tech-takanawa",
         date: "2025-05-13",
-        title: "GATEWAY Tech TAKANAWA 2025",
+        title: '基調講演 Towards the realization of "global co-benefits"message',
         location: "TAKANAWA GATEWAY Convention Center",
-        description: '基調講演 Towards the realization of "global co-benefits"message',
+        description: "GATEWAY Tech TAKANAWA 2025",
         url: "https://www.takanawagateway-lish.com/gateway-tech/",
         image: "https://www.takanawagateway-lish.com/gateway-tech/assets/img/top/main.svg",
         time: "11時〜11時45分",
         additionalInfo: [
-            "主催: 東日本旅客鉄道株式会社 GATEWAY Tech TAKANAWA",
+            "出演者：オードリー・タン",
             "形式: 一般公開、有料／スタートアップ・学生、無料",
+            "主催: 東日本旅客鉄道株式会社 GATEWAY Tech TAKANAWA",
         ],
     },
 
@@ -245,7 +283,6 @@ export default function PluralityWeekPage() {
                                         <Card key={event.id} className="bg-gray-800 border-gray-700">
                                             <CardContent className="p-4 sm:p-5 flex items-start gap-4">
                                                 <div className="hidden sm:block w-16 h-16 rounded-lg overflow-hidden relative flex-shrink-0">
-                                                    test
                                                     <Image
                                                         src={event.image}
                                                         alt={event.title}
