@@ -74,13 +74,61 @@ const events: EventItem[] = [
         ]
     },
     {
+        id: "tsutaya",
+        date: "2025-05-11",
+        title: "【オードリー・タン × E・グレン・ワイルが語る、次世代の民主主義と日本の未来】",
+        location: "六本木 蔦屋書店　2階SHARE LOUNGE内イベントスペース",
+        description: " 『PLURALITY（プルラリティ）』サイボウズ式ブックス 刊行記念トークイベント",
+        url: "https://store.tsite.jp/roppongi/event/shop/46785-1840510414.html",
+        image: "/images/plurality-book.jpg",
+        time: "11時〜13時",
+        additionalInfo: [
+            "共催: サイボウズ式ブックス",
+            "出演者: オードリー・タン、グレン・ワイル、竹下隆一郎",
+            "形式: 一般公開、有料、配信あり",
+            "参加費: 無料、定員120名"
+        ],
+    },
+    {
         id: "tokyo-college",
         date: "2025-05-12",
         title: "Tokyo College Conference on \"The Future of Technology and Democracy\"",
         location: "Ito International Research Center",
         description: "International conference on the future of technology and democracy (English with Japanese interpretation)",
         image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fh7ojeomjzx511.jpg&f=1&ipt=5c9dbe76e5a79bb4f39a0ad70ef68ea089b66f14d4615f59e7d8843ead606b73",
-    }
+    },
+    {
+        id: "ut-lab",
+        date: "2025-05-12",
+        title: "デジタル民主主義の未来",
+        location: "東京都港区六本木1-6-1 泉ガーデンタワー36階",
+        description: "",
+        url: "https://toggle.co.jp/event/innovationdialogue004/",
+        image: "https://toggle.co.jp/wp-content/uploads/2025/04/250422-UT-LAB-ID-004-1200-630.png",
+        time: "16時30分〜17時30分",
+        additionalInfo: [
+            "主催: UT-LAB",
+            "開催日時: 2025年5月12日（月） 16:30-19:30（開場16:00）\n" +
+            "※18:30以降はリアル会場での懇親会",
+            "形式: 一般公開、無料、Zoom配信あり",
+        ],
+
+    },
+    {
+        id: "gateways-tech-takanawa",
+        date: "2025-05-13",
+        title: "GATEWAY Tech TAKANAWA 2025",
+        location: "TAKANAWA GATEWAY Convention Center",
+        description: '基調講演 Towards the realization of "global co-benefits"message',
+        url: "https://www.takanawagateway-lish.com/gateway-tech/",
+        image: "https://www.takanawagateway-lish.com/gateway-tech/assets/img/top/main.svg",
+        time: "11時〜11時45分",
+        additionalInfo: [
+            "主催: 東日本旅客鉄道株式会社 GATEWAY Tech TAKANAWA",
+            "形式: 一般公開、有料／スタートアップ・学生、無料",
+        ],
+    },
+
 ];
 
 export default function PluralityWeekPage() {
@@ -197,6 +245,7 @@ export default function PluralityWeekPage() {
                                         <Card key={event.id} className="bg-gray-800 border-gray-700">
                                             <CardContent className="p-4 sm:p-5 flex items-start gap-4">
                                                 <div className="hidden sm:block w-16 h-16 rounded-lg overflow-hidden relative flex-shrink-0">
+                                                    test
                                                     <Image
                                                         src={event.image}
                                                         alt={event.title}
@@ -249,6 +298,7 @@ export default function PluralityWeekPage() {
                                             src={event.image}
                                             alt={event.title}
                                             fill
+                                            objectFit="contain"
                                             className="object-cover"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
