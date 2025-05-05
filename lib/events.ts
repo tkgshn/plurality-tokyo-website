@@ -29,6 +29,7 @@ export interface Event {
     attendees_count?: number;
     speakers_count?: number;
     speakers?: Speaker[];
+    sponsors?: Speaker[];
     content: string;
 }
 
