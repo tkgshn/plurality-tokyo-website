@@ -63,31 +63,31 @@ export default function ArticlesPage() {
                             <div className="flex flex-col gap-3">
                                 <div className="flex items-center text-gray-400 text-sm">
                                     {/* Author display */}
-                                    {item.author && (() => { // Use an IIFE (Immediately Invoked Function Expression)
-                                        // Calculate slug based on the author string
-                                        const authorSlug = item.author.toLowerCase()
-                                            .replace(/\s+/g, '-') // Replace spaces with hyphens
-                                            .replace(/^e\.\s+/, '') // Remove "e. " prefix
-                                            .replace(/^dr\.\s+/, '') // Remove "dr. " prefix
-                                            .replace(/^prof\.\s+/, '') // Remove "prof. " prefix
-                                            .replace(/['"]/g, ''); // Remove quotes
-                                        const imageSource = item.author.avatar_url ||
-                                          (item.author.authorInfo?.metadata?.avatar_url) || null;
+                                    {item.authors.map((author, index) => {
+                                            // Calculate slug based on the author string
+                                            const authorSlug = author.name.toLowerCase()
+                                                .replace(/\s+/g, '-') // Replace spaces with hyphens
+                                                .replace(/^e\.\s+/, '') // Remove "e. " prefix
+                                                .replace(/^dr\.\s+/, '') // Remove "dr. " prefix
+                                                .replace(/^prof\.\s+/, '') // Remove "prof. " prefix
+                                                .replace(/['"]/g, ''); // Remove quotes
+                                            const imageSource = author.avatar_url ||
+                                                `/images/speakers/${authorSlug}.png` ||
+                                                null;
 
-//                                      const imageSource = `/images/speakers/${authorSlug}.png`;
-
-                                        return (
-                                            <div className="flex -space-x-2 overflow-hidden">
-                                                <SpeakerAvatar
-                                                    key={item.id}
-//                                                  src={imageSource}
-                                                    src={imageSource || "/images/no-image.png"}
-                                                    alt={item.author} // Use the author's name string for alt text
-                                                />
-                                            </div>
-                                        );
-                                    })()}
-                                    <span>{item.author}</span>
+                                            return (
+                                                <div className="flex items-center gap-2">
+                                                    <div className="flex -space-x-2 overflow-hidden">
+                                                        <SpeakerAvatar
+                                                            key={index}
+                                                            src={imageSource || "/images/no-image.png"}
+                                                            alt={author.name} // Use the author's name string for alt text
+                                                        />
+                                                    </div>
+                                                    <span>{author.name}</span>
+                                                </div>
+                                            );
+                                        })}
                                 </div>
                                 <div className="flex justify-between items-center">
                                     <div className="flex flex-wrap gap-2">

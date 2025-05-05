@@ -257,8 +257,7 @@ export default function EventPage({ params }: EventPageProps) {
                   .replace(/^prof\.\s+/, '')
                   .replace(/['"]/g, '');
 
-                const imageSource = sponsor.avatar_url ||
-                  (sponsor.authorInfo?.metadata?.avatar_url) || null;
+                const imageSource = sponsor.avatar_url || null;
 
                 return (
                   <div key={index} className="mb-12">
@@ -276,9 +275,6 @@ export default function EventPage({ params }: EventPageProps) {
                     </div>
                     <h3 className="text-xl font-bold mb-2">{sponsor.name}</h3>
                     {sponsor.role && <p className="text-gray-400 mb-3">{sponsor.role}</p>}
-                    {sponsor.authorInfo?.metadata?.position && !sponsor.role && (
-                      <p className="text-gray-400 mb-3">{sponsor.authorInfo.metadata.position}</p>
-                    )}
                   </div>
                 );
               })}

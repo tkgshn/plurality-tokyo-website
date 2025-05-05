@@ -273,7 +273,7 @@ export default function Home() {
                 <p className="text-gray-300 text-sm mb-4">{item.description}</p>
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center text-gray-400 text-sm">
-                    <span>{item.author}</span>
+                    <span>{item.authors[0].name}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="flex flex-wrap gap-2">

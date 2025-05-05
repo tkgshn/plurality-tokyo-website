@@ -15,7 +15,7 @@ export interface ArticleItem {
     id: number
     title: string
     url: string
-    author: string
+    authors: Author[]
     description?: string
     date: string
     coverImage?: string;
@@ -42,7 +42,7 @@ export function getAllArticles(): ArticleItem[] {
                 id,
                 title: data.title,
                 url: data.url || `https://example.com/articles/${fileName.replace(/\.mdx$/, '')}`,
-                author: data.author,
+                authors: data.authors,
                 description: data.description,
                 date: data.date,
                 coverImage: coverImage || fallbackImage,
@@ -69,5 +69,7 @@ export function getArticlesByTag(tag: string): ArticleItem[] {
  */
 export function getArticlesByAuthor(author: string): ArticleItem[] {
     const allArticles = getAllArticles()
-    return allArticles.filter(article => article.author === author)
+    return allArticles.filter(article => article.authors?.some(authorEntry =>
+        authorEntry.name === author)
+    )
 }
