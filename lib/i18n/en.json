@@ -48,6 +48,37 @@
         "joinDiscord": "Join Discord",
         "internationalConference": "International Conference"
     },
+    "about": {
+        "title": "About Plurality Tokyo",
+        "backLink": "Home",
+        "introduction": "Introduction",
+        "introductionText": "Plurality Tokyo is a community that is inspired by the global Plurality movement. Based in Tokyo yet working together across Japan, we thrive to explore and experiment how technology can develop ways to collaborate across social and cultural difference.",
+        "ourVision": "Our Vision",
+        "visionText": "We believe in using technology as a tool to guide progress and growth, rather than as a substitute for human connection. Our approach focuses on respecting diverse values through a delicate framework, as opposed to traditional reductionist systems.",
+        "keyActivities": "Activities",
+        "events": "Event",
+        "eventsItems": [
+            "Conferences",
+            "Regular salons and meetups",
+            "Collaborative workshops"
+        ],
+        "community": "Community",
+        "communityItems": [
+            "Knowledge co-creation and sharing using tools such as Cosense (Scrapbox)",
+            "Vibrant conversation on a Discord server",
+            "Partnerships with global initiatives"
+        ],
+        "ourNetwork": "Our network",
+        "networkText": "We work closely with",
+        "networkItems": [
+            "Plurality Institute",
+            "Funding the Commons",
+            "DeSci Tokyo",
+            "Global Plurality advocates"
+        ],
+        "joinUs": "How to join the community",
+        "joinUsText": "We welcome anyone who is passionate about and interested in exploring the possibilities of technology to create a more inclusive and collaborative society. Join our community to learn, share, and build together."
+    },
     "common": {
         "location": "Location",
         "date": "Date",
