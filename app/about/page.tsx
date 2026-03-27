@@ -110,11 +110,11 @@ export default function AboutPage() {
               <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-4">{t('about.events')}</h3>
                 <ul className="space-y-2 text-gray-300">
-                  {locale === 'ja' ? (
+                  {locale === 'ja' || locale === 'en' ? (
                     <>
-                      <li>• {t('about.eventsItems.0')}</li>
-                      <li>• {t('about.eventsItems.1')}</li>
-                      <li>• {t('about.eventsItems.2')}</li>
+                      <li>{t('about.eventsItems.0')}</li>
+                      <li>{t('about.eventsItems.1')}</li>
+                      <li>{t('about.eventsItems.2')}</li>
                     </>
                   ) : (
                     <>
@@ -128,11 +128,11 @@ export default function AboutPage() {
               <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-4">{t('about.community')}</h3>
                 <ul className="space-y-2 text-gray-300">
-                  {locale === 'ja' ? (
+                  {locale === 'ja' || locale === 'en' ? (
                     <>
-                      <li>• {t('about.communityItems.0')}</li>
-                      <li>• {t('about.communityItems.1')}</li>
-                      <li>• {t('about.communityItems.2')}</li>
+                      <li>{t('about.communityItems.0')}</li>
+                      <li>{t('about.communityItems.1')}</li>
+                      <li>{t('about.communityItems.2')}</li>
                     </>
                   ) : (
                     <>
@@ -156,12 +156,12 @@ export default function AboutPage() {
               {t('about.networkText')}
             </p>
             <ul className="space-y-2 text-gray-300">
-              {locale === 'ja' ? (
+              {locale === 'ja' || locale === 'en' ? (
                 <>
-                  <li>• {t('about.networkItems.0')}</li>
-                  <li>• {t('about.networkItems.1')}</li>
-                  <li>• {t('about.networkItems.2')}</li>
-                  <li>• {t('about.networkItems.3')}</li>
+                  <li>{t('about.networkItems.0')}</li>
+                  <li>{t('about.networkItems.1')}</li>
+                  <li>{t('about.networkItems.2')}</li>
+                  <li>{t('about.networkItems.3')}</li>
                 </>
               ) : (
                 <>
